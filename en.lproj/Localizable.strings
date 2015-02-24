@@ -1,0 +1,113 @@
+/* 
+  MyStrings.strings
+  DinerRouge
+
+  Created by Adrian Holzer on 23.10.12.
+  Copyright (c) 2012 Adrian Holzer. All rights reserved.
+*/
+
+
+
+
+// IMAGE PICKER SCREEN
+
+"PICKER_TITLE" = "COMRADE";
+
+"NEW_BUTTON" = "RESTART";
+
+"INCOME_FIELD_PLACEHOLDER" = "INCOME";
+
+"REVEAL_BUTTON" = "REVEAL";
+
+"HIDE_BUTTON"="HIDE";
+
+"ADD_COMRADE_LABEL_TOP" = "ADD";
+"ADD_COMRADE_LABEL_BOTTOM" = "COMRADE";
+
+// EDIT COMRADE SCREEN
+"ADD_BUTTON" = "ADD";
+
+"EDIT_TITLE" = "EDIT";
+
+"SAVE_BUTTON" = "UPDATE";
+
+"DELETE_BUTTON" = "DELETE";
+
+"CHECK_FIELD_PLACEHOLDER" = "ENTER AMOUNT";
+
+"BACK_BUTTON" = "BACK";
+
+
+// CHECKOUT SCREEN
+
+"CHECKOUT_TITLE" = "THE CHECK";
+
+// GALLERY SCREEN
+
+"GALLERY_TITLE" = "";
+
+"HIGH_BILL" = "EXPENSIVE MEAL";
+
+"EARNS" = "EARNS";
+
+"PAYS" = "PAYS";
+
+"EARNS_TOO_MUCH" = "A LOT";
+
+"PAYS_TOO_MUCH" = "A LOT";
+
+// INFO SCREEN
+
+"DONE_BUTTON" = "DONE";
+
+"WHO" = "WHO";
+
+"HOW" = "HOW";
+
+"WHAT" = "WHAT";
+
+"INFO_WHAT" = "SPLIT THE BILL ACCORDING TO INCOME";
+
+"INFO_HOW" = " 1 - Press 'ADD COMRADE' \n 2 - Add picture and income \n 3 - Press 'ADD' \n After everyone has completed steps 1 to 3 \n 4 - Enter the amount of the bill \n 6 - Press 'REVEAL' \n 7 - View how much each person has to pay";
+
+
+//"INFO_HOW" = "1 - Add your picture (optional) \n 2 - Enter your annual income \n 3 - Press 'ADD GUEST' \n After everyone has completed steps 1 to 3 \n 4 - Press 'CHECKOUT' \n 5 - Enter the amount of the bill \n 6 - Press 'CHECKOUT' \n 7 - View how much each guest has to pay";
+
+"INFO_WHO" = "CONCEPT S. Bendahan - CODE A. Holzer DESIGN A76 - ART G. Vulliens, B. Syfert \nNAME J. Salom  - ANDROID U. Rosselet \nWEB B. Fritscher - THANKS A. Métrailler,\nT. Boillat, F. Vessaz, F. Andreae";
+
+"INFO_GINI" = "The GINI coefficient is a measure of inequality ranging from 0 (equality) to 100 (maximal inequality). ";
+
+"COUNTRY" = "COUNTRY";
+
+"WEALTH" = "WEALTH";
+
+"INCOME" = "INCOME";
+
+"INEQUALITY" = "INEQUALITY";
+
+"WEALTH_INFO"="The distribution of wealth graph shows how much of the total wealth the top possesses.";
+
+"INCOME_INFO"="The distribution of income graph shows how much of the total income each quintile possesses. ";
+
+"Your table" = "Your table";
+
+"EXPLANATION" = "Countries from least to most unequal";
+"Equal Country" = "Equalistan";
+"INEXISTANT"="NONEXISTENT";
+"ALMOST INEXISTANT"="ALMOST NONEXISTENT";
+"VERY LOW"="VERY LOW";
+"LOW"="LOW";
+"MEDIUM"="MEDIUM";
+"MEDIUM HIGH"="MEDIUM HIGH";
+"HIGH"="HIGH";
+"VERY HIGH"="VERY HIGH";
+"VERY VERY HIGH"="VERY VERY HIGH";
+"EXTREME"="EXTREME";
+"MAXIMAL"="MAXIMAL";
+"ALMOST MAXIMAL"="ALMOST MAXIMAL";
+"HERE_INEQUALITY"="HERE THE %@ INEQUALITY IS";
+"YOU_INEQUALITY"="YOUR INEQUALITY IS";
+"RESET"="RESET";
+"REVEAL_BUTTON"="REVEAL";
+"HIDE"="HIDE";
+

@@ -1,0 +1,1302 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch.iPad" variant="6xAndEarlier" propertyAccessControl="none" promptedForUpgradeToXcode5="NO" initialViewController="emr-bj-0oU">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <development version="4600" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <scenes>
+        <!--Info View Controller-->
+        <scene sceneID="iYu-cE-xpv">
+            <objects>
+                <viewController id="WXU-CF-Mtl" customClass="InfoViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xdX-5L-Lo3">
+                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="OWg-G7-rbz">
+                                <rect key="frame" x="184" y="380" width="400" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">1 - Ajoutez votre photo (facultatif)
+2 - Entrez votre revenu annuel
+3 - Appuyez sur 'SUIVANT' 
+Quand tous ont effectué les étapes 1 à 3:
+4 - Appuyez sur 'PAYER'
+5 - Entrer le montant de l'addition
+7 - Vous voir ce que chacun doit payer</string>
+                                <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="MY FRIENDS " id="nag-3m-XPr">
+                                <rect key="frame" x="184" y="660" width="400" height="160"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="C8o-NH-cBG">
+                                <rect key="frame" x="597" y="920" width="130" height="40"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
+                                <state key="normal" title="DONE">
+                                    <color key="titleColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="done:" destination="WXU-CF-Mtl" eventType="touchUpInside" id="emu-8x-YuF"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="WHAT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sli-zo-Nyl">
+                                <rect key="frame" x="184" y="220" width="140" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
+                                <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="COMMENT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="B9r-1S-FNw">
+                                <rect key="frame" x="184" y="340" width="140" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
+                                <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="WHO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TtD-Zv-FmY">
+                                <rect key="frame" x="184" y="620" width="140" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
+                                <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="SOME INSPIRING THING" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bid-N4-YTj">
+                                <rect key="frame" x="184" y="260" width="400" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
+                                <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="vYk-D2-n8k">
+                                <rect key="frame" x="36" y="887" width="105" height="85"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="logo50.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToWebSite" destination="WXU-CF-Mtl" eventType="touchUpInside" id="hee-lv-4b1"/>
+                                </connections>
+                            </button>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="DinerRouge.png" id="YW4-bB-epR">
+                                <rect key="frame" x="234" y="31" width="300" height="150"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94466493979999999" green="0.0" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Bbh-3h-woN"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
+                    <connections>
+                        <outlet property="creditView" destination="nag-3m-XPr" id="ag9-E9-PO6"/>
+                        <outlet property="doneButton" destination="C8o-NH-cBG" id="TLb-Tm-aNd"/>
+                        <outlet property="howLabel" destination="B9r-1S-FNw" id="CwM-a8-cbS"/>
+                        <outlet property="instructionView" destination="OWg-G7-rbz" id="3xO-M6-bxO"/>
+                        <outlet property="titleView" destination="bid-N4-YTj" id="9NK-m6-YKO"/>
+                        <outlet property="whatLabel" destination="sli-zo-Nyl" id="UWx-Uz-OGi"/>
+                        <outlet property="whoLabel" destination="TtD-Zv-FmY" id="GCZ-yI-CRZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TWi-5Z-pBz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1429" y="-1184"/>
+        </scene>
+        <!--Friend Collection View Controller-->
+        <scene sceneID="sMC-31-U2u">
+            <objects>
+                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="gYY-QK-ffB" customClass="FriendCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="W0d-V6-8Hc">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="916"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.94466493979999999" green="0.0" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vvb-xc-hHy">
+                            <size key="itemSize" width="240" height="402"/>
+                            <size key="headerReferenceSize" width="50" height="69"/>
+                            <size key="footerReferenceSize" width="50" height="90"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="sNn-00-znZ" customClass="FriendCollectionViewCell">
+                                <rect key="frame" x="0.0" y="69" width="240" height="402"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="240" height="402"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lFr-Gp-8pz">
+                                            <rect key="frame" x="15" y="320" width="215" height="65"/>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YT3-BV-ZRR">
+                                            <rect key="frame" x="15" y="18" width="215" height="290"/>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="PAYS 20000.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2P9-fY-1sq">
+                                            <rect key="frame" x="17" y="353" width="212" height="24"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                                            <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="GAGNE 10000000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7V9-N1-FJ5">
+                                            <rect key="frame" x="21" y="326" width="203" height="22"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                            <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="dai-za-8gq">
+                                            <rect key="frame" x="30" y="32" width="185" height="260"/>
+                                            <color key="backgroundColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" image="filter.png" id="Kd8-UT-cms">
+                                            <rect key="frame" x="30" y="32" width="185" height="260"/>
+                                            <color key="backgroundColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AJOUTER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eRo-WE-q9q">
+                                            <rect key="frame" x="30" y="122" width="185" height="28"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
+                                            <color key="textColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CAMARADE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wgr-Y1-ryR">
+                                            <rect key="frame" x="16" y="173" width="208" height="28"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
+                                            <color key="textColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Rji-Zh-u5H">
+                                            <rect key="frame" x="15" y="320" width="215" height="65"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
+                                            <state key="normal" title="RESET">
+                                                <color key="titleColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="resetDinerRouge:" destination="gYY-QK-ffB" eventType="touchUpInside" id="ABB-pR-Kup"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <size key="customSize" width="240" height="402"/>
+                                <connections>
+                                    <outlet property="addComradeBottom" destination="wgr-Y1-ryR" id="Qm3-Gm-5mD"/>
+                                    <outlet property="addComradeTop" destination="eRo-WE-q9q" id="MlI-KY-kkH"/>
+                                    <outlet property="amountDuelabel" destination="2P9-fY-1sq" id="CXn-UB-q2H"/>
+                                    <outlet property="blackBannerLabel" destination="lFr-Gp-8pz" id="HGP-Vp-hiS"/>
+                                    <outlet property="blurImageView" destination="Kd8-UT-cms" id="ZiV-sB-Zy2"/>
+                                    <outlet property="imageView" destination="dai-za-8gq" id="LHI-I0-lif"/>
+                                    <outlet property="incomelabel" destination="7V9-N1-FJ5" id="gZz-ua-5TC"/>
+                                    <outlet property="resetButton" destination="Rji-Zh-u5H" id="4J5-Hg-wLH"/>
+                                    <segue destination="QmR-Ot-Iv6" kind="push" identifier="EDIT_SEGUE" id="uZx-D3-tZc"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="MyHeader" reuseIdentifier="MyHeader" id="xNZ-OV-lfJ" customClass="ReusableHeaderView">
+                            <rect key="frame" x="0.0" y="0.0" width="768" height="69"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <subviews>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="AMOUNT TO SPLIT" textAlignment="right" minimumFontSize="10" clearButtonMode="always" id="hhf-Qc-wJ1">
+                                    <rect key="frame" x="219" y="10" width="330" height="50"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="xNZ-OV-lfJ" id="OHS-vQ-Kzk"/>
+                                    </connections>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="DA1-qV-pUU">
+                                    <rect key="frame" x="565" y="10" width="185" height="50"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
+                                    <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
+                                    <state key="normal" title="OK">
+                                        <color key="titleColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="highlighted">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="okPressed:" destination="xNZ-OV-lfJ" eventType="touchUpInside" id="Bw5-Fe-76F"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <connections>
+                                <outlet property="checkoutButton" destination="DA1-qV-pUU" id="b7f-RW-7Z5"/>
+                                <outlet property="totalAmountTextField" destination="hhf-Qc-wJ1" id="tw5-83-djf"/>
+                            </connections>
+                        </collectionReusableView>
+                        <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="MyFooter" reuseIdentifier="MyFooter" id="7Ba-2h-1mm" customClass="ReusableFooterView">
+                            <rect key="frame" x="0.0" y="471" width="768" height="58"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="br3-Je-glr">
+                                    <rect key="frame" x="14" y="-5" width="740" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                    <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
+                                    <state key="normal" title="YOUR INEQUALITY IS VERY HIGH">
+                                        <color key="titleColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="highlighted">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <segue destination="Fwy-GW-V2a" kind="push" id="RHW-sE-9rI"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="X7u-gc-nZQ">
+                                    <rect key="frame" x="14" y="32" width="215" height="50"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
+                                    <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
+                                    <state key="normal" title="REVEAL">
+                                        <color key="titleColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="highlighted">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="revealPressed:" destination="7Ba-2h-1mm" eventType="touchUpInside" id="Amx-Zn-Rpe"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Bxv-zN-Jjd">
+                                    <rect key="frame" x="14" y="32" width="215" height="50"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
+                                    <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
+                                    <state key="normal" title="HIDE">
+                                        <color key="titleColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="highlighted">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="hidePressed:" destination="7Ba-2h-1mm" eventType="touchUpInside" id="d8b-7O-fCP"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="1nB-aM-IB0">
+                                    <rect key="frame" x="542" y="32" width="215" height="50"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
+                                    <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
+                                    <state key="normal" title="STAT">
+                                        <color key="titleColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="highlighted">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <segue destination="Fwy-GW-V2a" kind="push" id="9iM-Wy-bdg"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <connections>
+                                <outlet property="hideButton" destination="Bxv-zN-Jjd" id="msm-nb-JcJ"/>
+                                <outlet property="revealButton" destination="X7u-gc-nZQ" id="2Of-eX-wox"/>
+                                <outlet property="statButton" destination="1nB-aM-IB0" id="Qdt-sb-Mo0"/>
+                                <outlet property="youButton" destination="br3-Je-glr" id="cZ0-LH-EBh"/>
+                            </connections>
+                        </collectionReusableView>
+                        <connections>
+                            <outlet property="dataSource" destination="gYY-QK-ffB" id="LEv-iO-0HI"/>
+                            <outlet property="delegate" destination="gYY-QK-ffB" id="wTu-Wo-HzT"/>
+                        </connections>
+                    </collectionView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="RXE-hF-rhv">
+                        <barButtonItem key="leftBarButtonItem" image="a_bouton_info.png" id="GHQ-mi-89i">
+                            <color key="tintColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="WXU-CF-Mtl" kind="modal" id="Gmc-5C-PUp"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="an_unequal.png" id="TUa-4H-5ez">
+                            <color key="tintColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="Fwy-GW-V2a" kind="push" id="VxT-mr-Tya"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PLv-0r-lZc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1436" y="-63"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="IcM-G1-Az8">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="emr-bj-0oU" sceneMemberID="viewController">
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="23w-1p-9GE">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.94466493979999999" green="0.0" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.94466493979999999" green="0.0" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="gYY-QK-ffB" kind="relationship" relationship="rootViewController" id="bsp-Nd-6dA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3I7-DB-9eA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2321" y="-511"/>
+        </scene>
+        <!--GUESTS-->
+        <scene sceneID="XGy-kd-Mb7">
+            <objects>
+                <viewController autoresizesArchivedViewToFullSize="NO" id="QmR-Ot-Iv6" customClass="EditFriendViewController" sceneMemberID="viewController">
+                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="OB8-Uv-krp">
+                        <rect key="frame" x="0.0" y="64" width="768" height="916"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" id="mj7-VX-Nbz">
+                                <rect key="frame" x="345" y="99" width="360" height="50"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
+                                <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
+                                <state key="normal" title="SAVE">
+                                    <color key="titleColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveButtonTouched:" destination="QmR-Ot-Iv6" eventType="touchUpInside" id="65i-gn-AyH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" id="2Hv-iA-DsE">
+                                <rect key="frame" x="345" y="278" width="360" height="50"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
+                                <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
+                                <state key="normal" title="DELETE">
+                                    <color key="titleColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteButtonTouched:" destination="QmR-Ot-Iv6" eventType="touchUpInside" id="rqU-tG-aD9"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="INCOME" textAlignment="center" minimumFontSize="15" clearButtonMode="always" id="irJ-U8-hMh">
+                                <rect key="frame" x="345" y="30" width="360" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="35"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="QmR-Ot-Iv6" id="hSY-2o-sjP"/>
+                                </connections>
+                            </textField>
+                            <view contentMode="scaleToFill" id="M3J-re-a0D">
+                                <rect key="frame" x="60" y="30" width="225" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="aiF-0p-UFa">
+                                        <rect key="frame" x="20" y="20" width="185" height="260"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    </scrollView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="2un-7X-BxD">
+                                <rect key="frame" x="331" y="176" width="100" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <state key="normal" image="cameraButtonIPad.png">
+                                    <color key="titleColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="takePicture:" destination="QmR-Ot-Iv6" eventType="touchUpInside" id="deY-gw-xpd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94466493979999999" green="0.0" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="GUESTS" id="hVK-p3-wsC">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="wQj-YN-Oto">
+                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
+                    <connections>
+                        <outlet property="deleteButton" destination="2Hv-iA-DsE" id="UNk-kp-2xE"/>
+                        <outlet property="imageScrollView" destination="aiF-0p-UFa" id="8FC-Xh-wmO"/>
+                        <outlet property="incomeTextField" destination="irJ-U8-hMh" id="nil-BC-pQv"/>
+                        <outlet property="saveButton" destination="mj7-VX-Nbz" id="Ry9-fy-xBG"/>
+                        <outlet property="swipeView" destination="M3J-re-a0D" id="jgo-fc-ngi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pnq-fL-6fH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="U3o-TD-U9L"/>
+            </objects>
+            <point key="canvasLocation" x="-517" y="-16"/>
+        </scene>
+        <!--INEQUALITY-->
+        <scene sceneID="l2v-wj-Pjc">
+            <objects>
+                <tableViewController id="Fwy-GW-V2a" customClass="InequalityTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="60" sectionHeaderHeight="20" sectionFooterHeight="22" id="diW-7t-y7M">
+                        <rect key="frame" x="0.0" y="20" width="768" height="916"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.94509803920000002" green="0.0" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <inset key="insetFor6xAndEarlier" minX="0.0" minY="64" maxX="0.0" maxY="-64"/>
+                        <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" red="0.94509803920000002" green="0.0" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="uMb-QW-cPh">
+                            <rect key="frame" x="0.0" y="0.0" width="768" height="65"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" id="UGB-LQ-RK8">
+                                    <rect key="frame" x="0.0" y="-5" width="370" height="33"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="0.94509803920000002" green="0.0" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </view>
+                                <view contentMode="scaleToFill" id="Ia5-et-uae">
+                                    <rect key="frame" x="8" y="27" width="760" height="40"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                                <segmentedControl opaque="NO" contentMode="scaleToFill" highlighted="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="ica-Lz-g23">
+                                    <rect key="frame" x="6" y="-1" width="762" height="29"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <segments>
+                                        <segment title="BEST"/>
+                                        <segment title="RECENT"/>
+                                    </segments>
+                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <connections>
+                                        <action selector="changeType:" destination="Fwy-GW-V2a" eventType="valueChanged" id="Pxc-CK-0Ku"/>
+                                    </connections>
+                                </segmentedControl>
+                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bordered" selectedSegmentIndex="1" id="eVN-22-yBn">
+                                    <rect key="frame" x="0.0" y="35" width="770" height="29"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                    <segments>
+                                        <segment title="Country"/>
+                                        <segment title="Gini"/>
+                                    </segments>
+                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <connections>
+                                        <action selector="sort:" destination="Fwy-GW-V2a" eventType="valueChanged" id="nJ8-sc-lxd"/>
+                                    </connections>
+                                </segmentedControl>
+                                <view contentMode="scaleToFill" id="afb-4i-uqM">
+                                    <rect key="frame" x="0.0" y="-100" width="10" height="500"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="0.94509803920000002" green="0.0" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </view>
+                                <view contentMode="scaleToFill" id="SWP-0y-RtO">
+                                    <rect key="frame" x="0.0" y="0.0" width="770" height="1"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="0.94466493979999999" green="0.0" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </view>
+                                <view contentMode="scaleToFill" id="GdG-jM-1kv">
+                                    <rect key="frame" x="758" y="-100" width="10" height="500"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="0.94466493983957212" green="0.0" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </view>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="a_triangle.png" id="BT2-xX-0fX">
+                                    <rect key="frame" x="65" y="45" width="8" height="8"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="a_triangle.png" id="Yo2-UT-pIh">
+                                    <rect key="frame" x="724" y="45" width="8" height="8"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                                <view contentMode="scaleToFill" id="Ww7-f0-uQp">
+                                    <rect key="frame" x="10" y="-100" width="748" height="164"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Countries from least to most unequal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" id="YDi-fv-ni4">
+                                    <rect key="frame" x="20" y="33" width="730" height="25"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                    <color key="textColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="s8U-JP-MyX">
+                            <rect key="frame" x="0.0" y="235" width="768" height="22"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" id="KrZ-tz-fFV">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="25"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" id="FZj-io-hgj">
+                                            <rect key="frame" x="10" y="0.0" width="748" height="5"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.94509803920000002" green="0.0" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </view>
+                            </subviews>
+                        </view>
+                        <prototypes>
+                            <tableViewCell contentMode="TopLeft" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MyTableCell" rowHeight="60" id="tb0-sN-8dQ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="25"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="59"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" id="bPs-S9-hLy">
+                                            <rect key="frame" x="0.0" y="0.0" width="776" height="60"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <view tag="9" contentMode="scaleToFill" id="kMc-6T-pDt">
+                                                    <rect key="frame" x="240" y="15" width="420" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </view>
+                                                <view tag="8" contentMode="scaleToFill" id="0gw-6a-yNB">
+                                                    <rect key="frame" x="290" y="15" width="133" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.70342677040000001" green="0.66612905300000003" blue="0.5359649568" alpha="1" colorSpace="calibratedRGB"/>
+                                                </view>
+                                                <view tag="7" contentMode="scaleToFill" id="zQw-Ev-YT6">
+                                                    <rect key="frame" x="240" y="15" width="140" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.4926904506" green="0.46656658109999999" blue="0.37539773459999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                </view>
+                                                <view tag="6" contentMode="scaleToFill" id="hwG-dq-IlN">
+                                                    <rect key="frame" x="240" y="15" width="84" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.29523202790000003" green="0.27957797379999999" blue="0.2249473971" alpha="1" colorSpace="calibratedRGB"/>
+                                                </view>
+                                                <view tag="5" contentMode="scaleToFill" id="LMA-4z-M8C">
+                                                    <rect key="frame" x="240" y="15" width="72" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="1" green="0.94697711409999996" blue="0.76193426149999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <view contentMode="scaleToFill" id="JlR-V8-TvJ">
+                                            <rect key="frame" x="758" y="-100" width="10" height="500"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.94509803920000002" green="0.0" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DsG-xm-BYK">
+                                            <rect key="frame" x="25" y="17" width="51" height="25"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                                            <color key="textColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Rwk-53-321">
+                                            <rect key="frame" x="65" y="17" width="181" height="25"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                                            <color key="textColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="highlightedColor" red="0.79215686269999996" green="0.74509803919999995" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="83,2" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="K71-Fn-6wH">
+                                            <rect key="frame" x="690" y="17" width="51" height="25"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                                            <color key="textColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" id="D7j-aE-OYw">
+                                            <rect key="frame" x="0.0" y="-5" width="10" height="84"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.94509803920000002" green="0.0" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="64" maxX="0.0" maxY="-64"/>
+                                <connections>
+                                    <segue destination="vAE-aA-npQ" kind="push" identifier="IncomeToCountrySegue" id="HgQ-wb-T1a"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="TopLeft" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DistributionCell" rowHeight="60" id="L0X-tm-6sA">
+                                <rect key="frame" x="0.0" y="96" width="320" height="132"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="59"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" id="2hb-kF-FcJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="776" height="60"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <view tag="9" contentMode="scaleToFill" id="E41-IX-oNj">
+                                                    <rect key="frame" x="241" y="15" width="420" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </view>
+                                                <view tag="8" contentMode="scaleToFill" id="vUb-4V-1JI">
+                                                    <rect key="frame" x="241" y="15" width="183" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.70342677040000001" green="0.66612905300000003" blue="0.5359649568" alpha="1" colorSpace="calibratedRGB"/>
+                                                </view>
+                                                <view tag="7" contentMode="scaleToFill" id="UhM-Bn-NNs">
+                                                    <rect key="frame" x="241" y="15" width="140" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.4926904506" green="0.46656658109999999" blue="0.37539773459999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                </view>
+                                                <view tag="6" contentMode="scaleToFill" id="KGv-7P-uCD">
+                                                    <rect key="frame" x="241" y="15" width="84" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.29523202790000003" green="0.27957797379999999" blue="0.2249473971" alpha="1" colorSpace="calibratedRGB"/>
+                                                </view>
+                                                <view tag="5" contentMode="scaleToFill" id="xhi-Y9-ott">
+                                                    <rect key="frame" x="241" y="15" width="72" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="1" green="0.94697711409999996" blue="0.76193426149999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <view contentMode="scaleToFill" id="nZk-X6-PfN">
+                                            <rect key="frame" x="0.0" y="-5" width="10" height="300"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.94509803920000002" green="0.0" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </view>
+                                        <view contentMode="scaleToFill" id="5mN-bT-kQ1">
+                                            <rect key="frame" x="758" y="-100" width="10" height="500"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.94509803920000002" green="0.0" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yfz-3k-SKU">
+                                            <rect key="frame" x="25" y="15" width="51" height="25"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                            <color key="textColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yRI-6f-6zv">
+                                            <rect key="frame" x="65" y="15" width="213" height="25"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                            <color key="textColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="83,2" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vHK-mO-m08">
+                                            <rect key="frame" x="690" y="17" width="51" height="25"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                            <color key="textColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="64" maxX="0.0" maxY="-64"/>
+                                <connections>
+                                    <segue destination="vAE-aA-npQ" kind="push" identifier="IncomeToCountrySegue" id="snU-Rj-XCD"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="TopLeft" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DistributionWealthCell" rowHeight="60" id="c2u-Pv-VCo">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="59"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" id="OKx-GG-v9y">
+                                            <rect key="frame" x="0.0" y="0.0" width="776" height="60"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <view tag="5" contentMode="scaleToFill" id="whx-ae-cJb">
+                                                    <rect key="frame" x="241" y="15" width="420" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.6819340129" green="0.64841553880000002" blue="0.5303158241" alpha="1" colorSpace="calibratedRGB"/>
+                                                </view>
+                                                <view tag="6" contentMode="scaleToFill" id="kcv-Cx-fAW">
+                                                    <rect key="frame" x="329" y="15" width="229" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="1" green="0.97538732579999998" blue="0.56840012600000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </view>
+                                                <view tag="7" contentMode="scaleToFill" id="t50-cX-VA8">
+                                                    <rect key="frame" x="441" y="15" width="117" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="1" green="0.73381896800000002" blue="0.018280560580000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </view>
+                                                <view tag="8" contentMode="scaleToFill" id="Doq-C5-ajI">
+                                                    <rect key="frame" x="480" y="15" width="78" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="1" green="0.40214004879999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </view>
+                                                <view tag="9" contentMode="scaleToFill" id="4dt-V5-VL1">
+                                                    <rect key="frame" x="507" y="15" width="51" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="1" green="0.027737531079999999" blue="0.18717762730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <view contentMode="scaleToFill" id="7ZY-8v-L0B">
+                                            <rect key="frame" x="0.0" y="-5" width="10" height="300"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.94509803920000002" green="0.0" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </view>
+                                        <view contentMode="scaleToFill" id="Ppu-VS-rh4">
+                                            <rect key="frame" x="758" y="-105" width="10" height="500"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.94509803920000002" green="0.0" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="obi-wL-ts3">
+                                            <rect key="frame" x="25" y="17" width="51" height="25"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                            <color key="textColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fvr-v1-Vl1">
+                                            <rect key="frame" x="65" y="17" width="213" height="25"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                            <color key="textColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="83,2" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EA8-dP-RHS">
+                                            <rect key="frame" x="690" y="17" width="51" height="25"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                            <color key="textColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="64" maxX="0.0" maxY="-64"/>
+                                <connections>
+                                    <segue destination="oqC-HD-EbM" kind="push" identifier="WealthToCountrySegue" id="a5c-4y-992"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Fwy-GW-V2a" id="ROT-7k-geK"/>
+                            <outlet property="delegate" destination="Fwy-GW-V2a" id="J9k-WR-Noh"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="INEQUALITY" id="Ojy-vF-Y1u"/>
+                    <connections>
+                        <outlet property="blackBottomView" destination="Ia5-et-uae" id="cCY-Uz-QUQ"/>
+                        <outlet property="countryTriangleView" destination="BT2-xX-0fX" id="PUR-P6-GDh"/>
+                        <outlet property="explanationLine" destination="YDi-fv-ni4" id="BzI-Pl-f3F"/>
+                        <outlet property="fixedHeaderView" destination="uMb-QW-cPh" id="622-5u-RmS"/>
+                        <outlet property="giniTriangleView" destination="Yo2-UT-pIh" id="S7g-pd-Er3"/>
+                        <outlet property="leftRedLineView" destination="afb-4i-uqM" id="cG8-F7-OyU"/>
+                        <outlet property="rightRedLine" destination="GdG-jM-1kv" id="WZn-fO-Z35"/>
+                        <outlet property="segmentedControl" destination="ica-Lz-g23" id="dhl-II-oF4"/>
+                        <outlet property="sortSegmentedControl" destination="eVN-22-yBn" id="oKe-hf-mig"/>
+                        <outlet property="topRedLineView" destination="SWP-0y-RtO" id="6Br-xA-6wA"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R88-TG-XSH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-550" y="-1184"/>
+        </scene>
+        <!--Inequality Info View Controller-->
+        <scene sceneID="RP0-PA-Lwn">
+            <objects>
+                <viewController id="tbr-E5-NVZ" customClass="InequalityInfoViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rcy-Hu-rXF">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1004"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="GINI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nhy-KO-0KR">
+                                <rect key="frame" x="202" y="87" width="190" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="19"/>
+                                <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6Yx-VA-mHK">
+                                <rect key="frame" x="202" y="127" width="400" height="153"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
+                                <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="f5h-L3-4s2">
+                                <rect key="frame" x="202" y="383" width="400" height="386"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
+                                <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1st 20%  2nd 20%  3rd 20%  4th 20%  5th 20%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kT9-B8-Zbe">
+                                <rect key="frame" x="216" y="508" width="414" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view tag="9" contentMode="scaleToFill" id="l1T-AF-ALV">
+                                <rect key="frame" x="538" y="541" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view tag="8" contentMode="scaleToFill" id="WQT-wn-MLf">
+                                <rect key="frame" x="465" y="541" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.70342677040000001" green="0.66612905300000003" blue="0.5359649568" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view tag="7" contentMode="scaleToFill" id="33d-du-HMS">
+                                <rect key="frame" x="389" y="541" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.4926904506" green="0.46656658109999999" blue="0.37539773459999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view tag="6" contentMode="scaleToFill" id="xgn-HB-TI6">
+                                <rect key="frame" x="313" y="541" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.29523202790000003" green="0.27957797379999999" blue="0.2249473971" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view tag="5" contentMode="scaleToFill" id="dz3-Vh-paB">
+                                <rect key="frame" x="239" y="541" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.94697711409999996" blue="0.76193426149999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view tag="8" contentMode="scaleToFill" id="gyM-Mr-5gB">
+                                <rect key="frame" x="271" y="718" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.97538732579999998" blue="0.56840012600000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view tag="9" contentMode="scaleToFill" id="3CB-22-1RI">
+                                <rect key="frame" x="354" y="718" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.73381896800000002" blue="0.018280560580000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view tag="6" contentMode="scaleToFill" id="7xY-ZT-ygO">
+                                <rect key="frame" x="425" y="718" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.40214004879999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view tag="5" contentMode="scaleToFill" id="lZl-08-3Jf">
+                                <rect key="frame" x="499" y="718" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.027737531079999999" blue="0.18717762730000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="The GINI coefficient is a measure of wealth or income inequality ranging from 0 (equality) to 100 (maximal inequality)" id="dVQ-ws-ovz">
+                                <rect key="frame" x="215" y="132" width="375" height="154"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="The distribution of income shows how much of the total income each quintile possesses" id="tmp-Ft-zo2">
+                                <rect key="frame" x="215" y="399" width="375" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="The distribution of wealth graph shows how much of the total wealth the top possesses" id="kRi-45-BMy">
+                                <rect key="frame" x="215" y="600" width="375" height="91"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Top 20%  Top 10%   Top 5%   Top 1%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="scr-VT-UlZ">
+                                <rect key="frame" x="248" y="693" width="325" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="DISTRIBUTION" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ena-qp-u7w">
+                                <rect key="frame" x="202" y="343" width="190" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="19"/>
+                                <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Q4H-GR-OiW">
+                                <rect key="frame" x="600" y="920" width="130" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
+                                <state key="normal" title="DONE">
+                                    <color key="titleColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="done:" destination="tbr-E5-NVZ" eventType="touchUpInside" id="25D-qb-x1D"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94509803920000002" green="0.0" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8MT-B2-sEI"/>
+                    <connections>
+                        <outlet property="doneButton" destination="Q4H-GR-OiW" id="ORF-km-bdJ"/>
+                        <outlet property="giniInfo" destination="dVQ-ws-ovz" id="tbE-kD-zwp"/>
+                        <outlet property="incomeInfo" destination="tmp-Ft-zo2" id="o92-du-gxh"/>
+                        <outlet property="titleView" destination="6Yx-VA-mHK" id="1cX-5a-4cF"/>
+                        <outlet property="wealthInfo" destination="kRi-45-BMy" id="ocd-0m-N2C"/>
+                        <outlet property="whatLabel" destination="nhy-KO-0KR" id="hj7-R6-2tJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BAj-86-hiI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1450" y="-406"/>
+        </scene>
+        <!--Country View Controller-->
+        <scene sceneID="rJ8-aU-XYg">
+            <objects>
+                <viewController id="oqC-HD-EbM" customClass="CountryViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ePJ-dK-jrq">
+                        <rect key="frame" x="0.0" y="20" width="768" height="916"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HZK-xh-xrH">
+                                <rect key="frame" x="199" y="143" width="400" height="298"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
+                                <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="GINI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="V90-0t-UOz">
+                                <rect key="frame" x="243" y="148" width="300" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                                <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MNM-UK-dyu">
+                                <rect key="frame" x="199" y="482" width="400" height="290"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
+                                <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="The GINI coefficient is a measure of wealth or income inequality ranging from 0 (equality) to 100 (maximal inequality)" id="Ma6-Mp-rrb">
+                                <rect key="frame" x="210" y="308" width="378" height="113"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="132%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2pm-Ke-Lpu">
+                                <rect key="frame" x="225" y="159" width="349" height="168"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="120"/>
+                                <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view tag="5" contentMode="scaleToFill" id="H13-sD-Mgy">
+                                <rect key="frame" x="210" y="517" width="372" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                            </view>
+                            <view tag="6" contentMode="scaleToFill" id="1tN-EO-VL0">
+                                <rect key="frame" x="252" y="517" width="330" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.97538732579999998" blue="0.56840012600000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view tag="9" contentMode="scaleToFill" id="AsV-yi-dAq">
+                                <rect key="frame" x="301" y="517" width="281" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.73381896800000002" blue="0.018280560580000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view tag="8" contentMode="scaleToFill" id="7lM-ql-FGQ">
+                                <rect key="frame" x="296" y="725" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.97538732579999998" blue="0.56840012600000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view tag="8" contentMode="scaleToFill" id="l8x-jk-Pd9">
+                                <rect key="frame" x="423" y="517" width="159" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.40214004879999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view tag="9" contentMode="scaleToFill" id="ZLO-pW-4MZ">
+                                <rect key="frame" x="351" y="725" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.73381896800000002" blue="0.018280560580000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view tag="9" contentMode="scaleToFill" id="ujU-5d-woM">
+                                <rect key="frame" x="531" y="517" width="51" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.027737531079999999" blue="0.18717762730000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view tag="6" contentMode="scaleToFill" id="Q0n-wY-Kic">
+                                <rect key="frame" x="408" y="725" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.40214004879999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view tag="5" contentMode="scaleToFill" id="SJ7-iw-gsA">
+                                <rect key="frame" x="461" y="725" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.027737531079999999" blue="0.18717762730000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Top 20%  Top 10%   Top 5%   Top 1%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fXt-4K-zT8">
+                                <rect key="frame" x="281" y="700" width="236" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="13"/>
+                                <color key="textColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="DISTRIBUTION" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kr9-cu-pnW">
+                                <rect key="frame" x="249" y="485" width="300" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                                <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="The distribution of wealth graph shows how much of the total wealth the top possesses." id="cCe-pe-YQ5">
+                                <rect key="frame" x="206" y="594" width="387" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HERE THE WEALTH INEQUALITY IS VERY HIGH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="SYO-gk-UP9">
+                                <rect key="frame" x="199" y="62" width="400" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <color key="textColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94466493979999999" green="0.0" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wer-G2-aeh"/>
+                    <connections>
+                        <outlet property="giniInfo" destination="Ma6-Mp-rrb" id="P0u-JM-Y0Q"/>
+                        <outlet property="giniLabel" destination="2pm-Ke-Lpu" id="7Pq-Hq-Ftp"/>
+                        <outlet property="incomeInfo" destination="cCe-pe-YQ5" id="CBB-5h-JMa"/>
+                        <outlet property="inequalityLabel" destination="SYO-gk-UP9" id="A19-44-TL1"/>
+                        <outlet property="q1View" destination="H13-sD-Mgy" id="xJe-EY-TYR"/>
+                        <outlet property="q2View" destination="1tN-EO-VL0" id="7R6-hY-FQZ"/>
+                        <outlet property="q3View" destination="AsV-yi-dAq" id="5AB-QQ-Fao"/>
+                        <outlet property="q4View" destination="l8x-jk-Pd9" id="qsm-Bl-Jh6"/>
+                        <outlet property="q5View" destination="ujU-5d-woM" id="jWk-uQ-3lw"/>
+                        <outlet property="wealthInfo" destination="cCe-pe-YQ5" id="jZ6-l5-Nap"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S4T-Ea-ppc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="484" y="16"/>
+        </scene>
+        <!--Country View Controller-->
+        <scene sceneID="dA2-Xt-IZD">
+            <objects>
+                <viewController id="vAE-aA-npQ" customClass="CountryViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UBH-p8-Mdl">
+                        <rect key="frame" x="0.0" y="20" width="768" height="916"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WpB-hD-Eso">
+                                <rect key="frame" x="200" y="143" width="400" height="298"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
+                                <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="GINI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2be-8A-DTk">
+                                <rect key="frame" x="243" y="148" width="300" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
+                                <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8jD-4n-BEz">
+                                <rect key="frame" x="200" y="482" width="400" height="290"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
+                                <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="The GINI coefficient is a measure of wealth or income inequality ranging from 0 (equality) to 100 (maximal inequality)" id="8vU-Le-nru">
+                                <rect key="frame" x="210" y="308" width="384" height="113"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="132%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Nrg-HE-1ZE">
+                                <rect key="frame" x="225" y="159" width="349" height="168"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="120"/>
+                                <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HERE THE WEALTH INEQUALITY IS VERY HIGH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="BrI-gy-2nM">
+                                <rect key="frame" x="199" y="62" width="400" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <color key="textColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="DISTRIBUTION" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AZb-hV-5Ly">
+                                <rect key="frame" x="249" y="483" width="300" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
+                                <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="The distribution of wealth graph shows how much of the total wealth the top possesses" id="j88-Wg-cLH">
+                                <rect key="frame" x="207" y="594" width="387" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1st 20%  2nd 20%  3rd 20%  4th 20%  Top 20%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fFM-ry-v4x">
+                                <rect key="frame" x="259" y="704" width="280" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="13"/>
+                                <color key="textColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view tag="9" contentMode="scaleToFill" id="xs9-vS-6pV">
+                                <rect key="frame" x="497" y="734" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view tag="9" contentMode="scaleToFill" id="4io-5l-jLb">
+                                <rect key="frame" x="215" y="526" width="369" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view tag="8" contentMode="scaleToFill" id="KAY-eu-ox6">
+                                <rect key="frame" x="444" y="734" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.70342677040000001" green="0.66612905300000003" blue="0.5359649568" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view tag="7" contentMode="scaleToFill" id="RJV-4n-NOY">
+                                <rect key="frame" x="387" y="734" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.4926904506" green="0.46656658109999999" blue="0.37539773459999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view tag="6" contentMode="scaleToFill" id="V43-HW-WrL">
+                                <rect key="frame" x="332" y="734" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.29523202790000003" green="0.27957797379999999" blue="0.2249473971" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view tag="5" contentMode="scaleToFill" id="QlR-8V-UMA">
+                                <rect key="frame" x="273" y="734" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.94697711409999996" blue="0.76193426149999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view tag="8" contentMode="scaleToFill" id="nuF-9o-b3S">
+                                <rect key="frame" x="220" y="526" width="253" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.70342677040000001" green="0.66612905300000003" blue="0.5359649568" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view tag="7" contentMode="scaleToFill" id="jch-YV-boi">
+                                <rect key="frame" x="220" y="526" width="196" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.4926904506" green="0.46656658109999999" blue="0.37539773459999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view tag="6" contentMode="scaleToFill" id="XsL-Ob-IeR">
+                                <rect key="frame" x="220" y="526" width="141" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.29523202790000003" green="0.27957797379999999" blue="0.2249473971" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view tag="5" contentMode="scaleToFill" id="V1m-TW-EQm">
+                                <rect key="frame" x="215" y="526" width="84" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.94697711409999996" blue="0.76193426149999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94466493979999999" green="0.0" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="b6N-zM-5k4"/>
+                    <connections>
+                        <outlet property="giniInfo" destination="8vU-Le-nru" id="A8N-gC-HPm"/>
+                        <outlet property="giniLabel" destination="Nrg-HE-1ZE" id="Hp3-hZ-NZN"/>
+                        <outlet property="incomeInfo" destination="j88-Wg-cLH" id="K4V-RJ-CfV"/>
+                        <outlet property="inequalityLabel" destination="BrI-gy-2nM" id="rnM-c9-YCA"/>
+                        <outlet property="q1View" destination="V1m-TW-EQm" id="8Pu-v4-rwQ"/>
+                        <outlet property="q2View" destination="XsL-Ob-IeR" id="tqQ-Js-JlX"/>
+                        <outlet property="q3View" destination="jch-YV-boi" id="KVW-85-6Nh"/>
+                        <outlet property="q4View" destination="nuF-9o-b3S" id="AGq-Sj-d4p"/>
+                        <outlet property="q5View" destination="4io-5l-jLb" id="xoU-If-fmw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fez-e6-PHw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="432" y="-1178"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="DinerRouge.png" width="300" height="150"/>
+        <image name="a_bouton_info.png" width="30" height="30"/>
+        <image name="a_triangle.png" width="10" height="10"/>
+        <image name="an_unequal.png" width="30" height="30"/>
+        <image name="cameraButtonIPad.png" width="100" height="50"/>
+        <image name="filter.png" width="100" height="140"/>
+        <image name="logo50.png" width="80" height="80"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="VxT-mr-Tya"/>
+        <segue reference="HgQ-wb-T1a"/>
+    </inferredMetricsTieBreakers>
+</document>

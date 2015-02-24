@@ -1,0 +1,123 @@
+/* 
+  MyStrings.strings
+  DinerRouge
+
+  Created by Adrian Holzer on 23.10.12.
+  Copyright (c) 2012 Adrian Holzer. All rights reserved.
+*/
+
+
+// IMAGE PICKER SCREEN
+
+"PICKER_TITLE" = "CAMARADE";
+
+"NEW_BUTTON" = "NOUVEAU";
+
+"YOUR_PHOTO" = "VOTRE PHOTO";
+
+"ADD_BUTTON" = "AJOUTER";
+
+"ADD_COMRADE_LABEL_TOP" = "AJOUTER";
+"ADD_COMRADE_LABEL_BOTTOM" = "CAMARADE";
+
+"CHECKOUT_BUTTON" = "PAYER";
+
+"PICKER_NO_ONE" = "POUR L'INSTANT PERSONNE N'EST PRET A PAYER";
+
+"PICKER_ONE" = "UNE PERSONNE PAYE TOUT?";
+
+"PICKER_MANY" = "CAMARADES SE PARTAGENT L'ADDITION";
+
+"INCOME_FIELD_PLACEHOLDER" = "REVENU";
+
+"REVEAL_BUTTON" = "DEVOILER";
+
+"HIDE_BUTTON"="CACHER";
+
+
+// EDIT COMRADE SCREEN
+
+"EDIT_TITLE" = "EDITER";
+
+"SAVE_BUTTON" = "ACTUALISER";
+
+"DELETE_BUTTON" = "SUPPRIMER";
+
+
+
+// CHECKOUT SCREEN
+
+"CHECKOUT_TITLE" = "L'ADDITION";
+
+"CHECK_FIELD_PLACEHOLDER" = "ENTRER L'ADDITION";
+
+"BACK_BUTTON" = "RETOUR";
+
+// GALLERY SCREEN
+
+"GALLERY_TITLE" = "";
+
+"HIGH_BILL" = "REPAS CHER";
+
+"EARNS" = "GAGNE";
+
+"PAYS" = "DOIT";
+
+"EARNS_TOO_MUCH" = "TROP";
+
+"PAYS_TOO_MUCH" = "TROP";
+
+// INFO SCREEN
+
+"DONE_BUTTON" = "OK";
+
+"WHO" = "QUI";
+
+"HOW" = "COMMENT";
+
+"WHAT" = "QUOI";
+
+"INFO_WHAT" = "PARTAGER L'ADDITION SELON LE REVENU";
+
+
+"INFO_HOW" = " 1 - Appuyer sur 'AJOUTER CAMARADE' \n 2 - Ajouter sa photo et son revenu \n 3 - Appuyer sur 'AJOUTER' \n Quand tous ont effectué les étapes 1 à 3 \n 4 - Entrer le montant de l'addition \n 5 - Appuyer sur 'REVELER' \n 6 - Voir ce que chacun doit payer";
+
+//"INFO_HOW" = "1 - Ajouter sa photo (facultatif) \n 2 - Entrer son revenu annuel \n 3 - Appuyer sur 'AJOUTER' \n Quand tous ont effectué les étapes 1 à 3 \n 4 - Appuyer sur 'PAYER' \n 5 - Entrer le montant de l'addition \n 6 - Appuyer sur 'PAYER' \n 7 - Vous pouvez voir ce que chacun doit payer";
+
+"INFO_WHO" = "CONCEPT S. Bendahan - CODE A. Holzer DESIGN A76 - ART G. Vulliens, B. Syfert \nNOM J. Salom  -  ANDROID U. Rosselet \nWEB B. Fritscher - MERCI A. Métrailler, \nT. Boillat, F. Vessaz, F. Andreae";
+
+"INFO_GINI" = "Le coefficient de GINI est une mesure d'inégalité variant entre 0 (égalité) et 100 (inégalité maximale).";
+
+"COUNTRY" = "  PAYS  ";
+
+"WEALTH" = "FORTUNE";
+
+"INCOME" = "REVENU";
+"INEQUALITY" = "INEGALITE";
+
+"WEALTH_INFO"="La barre de distribution de la fortune montre combien de la fortune totale est possedée par les plus riches.";
+
+"INCOME_INFO"="La barre de distribution du revenu montre combien du revenu total possède chaque tranche de 20% de la population des plus pauvres au plus riches.";
+
+"Your table" = "Votre tablée";
+
+"EXPLANATION" = "Pays du moins au plus inégalitaire";
+
+"Equal Country" = "Egalistan";
+"INEXISTANT"="INEXISTANTE";
+"ALMOST INEXISTANT"="QUASI INEXISTANTE";
+"VERY LOW"="TRES FAIBLE";
+"LOW"="FAIBLE";
+"MEDIUM"="MOYENNE";
+"MEDIUM HIGH"="ASSEZ FORTE";
+"HIGH"="FORTE";
+"VERY HIGH"="TRES FORTE";
+"VERY VERY HIGH"="TRES TRES FORTE";
+"EXTREME"="EXTREME";
+"ALMOST MAXIMAL"="QUASI MAXIMALE";
+"MAXIMAL"="MAXIMALE";
+"HERE_INEQUALITY"="ICI L'INEGALITE DE %@ EST";
+"YOU_INEQUALITY"="L'INEGALITE EST";
+"RESET"="ANNULER";
+"REVEAL_BUTTON"="DEVOILER";
+"HIDE"="CACHER";
