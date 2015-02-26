@@ -10,7 +10,7 @@
 
 @implementation BillManager
 
-@synthesize totalAmount,totalIncome, friends, delegate,isRevealed, avatarImages, avatarImagesLeft, gini;
+@synthesize totalAmount,totalIncome, friends, delegate,isRevealed, avatarImages, avatarImagesLeft, gini,buttonTextColor,totalAmountString,largeFont, mediumFont, smallFont, maincolor, secondarycolor, buttoncolor, fontName,fontNameBold;
 
 static BillManager   *sharedBillManager = nil;
 
@@ -22,6 +22,22 @@ static BillManager   *sharedBillManager = nil;
             sharedBillManager.avatarImages = [[NSArray alloc] initWithObjects:[UIImage imageNamed:@"guest0.png"],[UIImage imageNamed:@"guest1.png"],[UIImage imageNamed:@"guest2.png"],[UIImage imageNamed:@"guest3.png"],[UIImage imageNamed:@"guest4.png"],[UIImage imageNamed:@"guest5.png"],[UIImage imageNamed:@"guest6.png"],nil];
             sharedBillManager.avatarImagesLeft=[sharedBillManager.avatarImages mutableCopy];
             sharedBillManager.gini=nil;
+            sharedBillManager.largeFont=22;
+            sharedBillManager.mediumFont=18;
+            sharedBillManager.smallFont=14;
+            sharedBillManager.fontNameBold=@"AvenirNext-Bold";
+            sharedBillManager.fontName=@"AvenirNext";
+            
+            sharedBillManager.maincolor=[UIColor colorWithRed:241.0/255.0 green:0.0/255.0 blue:35.0/255.0 alpha:1.0];
+            sharedBillManager.secondarycolor=[UIColor colorWithRed:220.0/255.0 green:210.0/255.0 blue:178.0/255.0 alpha:1.0];
+            sharedBillManager.buttonTextColor=sharedBillManager.secondarycolor;
+            sharedBillManager.buttoncolor=[UIColor blackColor];
+            
+            //sharedBillManager.maincolor=[UIColor colorWithRed:230.0/255.0 green:230.0/255.0 blue:230.0/255.0 alpha:1.0];
+            //sharedBillManager.buttonTextColor=sharedBillManager.maincolor;
+            //sharedBillManager.secondarycolor=[UIColor blackColor];
+            //sharedBillManager.buttoncolor=[UIColor colorWithRed:11.0/255.0 green:11.0/255.0 blue:150.0/255.0 alpha:1.0];
+            
         }
         //  [sharedBillManager setFriends:[NSMutableArray array]];
     }
@@ -50,10 +66,10 @@ static BillManager   *sharedBillManager = nil;
 
 
 -(int) removeFriend: (Friend *) friend{
-    int index = [friends indexOfObject:friend];
+    long index = [friends indexOfObject:friend];
     [friends removeObject:friend];
     [delegate updatedBillManager];
-    return index;
+    return (int)index;
 }
 
 
@@ -144,12 +160,12 @@ static BillManager   *sharedBillManager = nil;
     NSMutableArray* sortedFriends = [self sortFriendsByIncome: [friends mutableCopy]];
     for(int i = 1; i <= n ; i++){
         Friend * friend = sortedFriends[i-1];
-        int income= [friend.income integerValue];
+        int income= [friend.income intValue];
         sum += income;
     }
     
     int numberOfbuckets=1;
-    int n_per_q=0;
+    long n_per_q=0;
     if (n%5==0) {
         numberOfbuckets=5;
         n_per_q=n/numberOfbuckets;
@@ -178,12 +194,12 @@ static BillManager   *sharedBillManager = nil;
     
     for(int i = 0; i < numberOfbuckets ; i++){
         double sum_per_q= 0;
-        int startIndex=i*n_per_q;
-        int stopIndex=startIndex+n_per_q;
-        for(int j = startIndex; j <stopIndex ; j++){
+        long startIndex=i*n_per_q;
+        long stopIndex=startIndex+n_per_q;
+        for(long j = startIndex; j <stopIndex ; j++){
             if ([sortedFriends count]>j) {
                 Friend * friend = sortedFriends[j];
-                int income= [friend.income integerValue];
+                long income= [friend.income integerValue];
                 sum_per_q += income;
             }
         }

@@ -7,28 +7,21 @@
 //
 
 #import "FriendCollectionViewCell.h"
+#import "BillManager.h"
 
 @implementation FriendCollectionViewCell
 
-@synthesize imageView,amountDuelabel,incomelabel, friend,blackBannerLabel,plusLabel,blurImageView, resetButton,addComradeBottom, addComradeTop;
+@synthesize imageView,amountDuelabel,incomelabel,plusLabel, friend,blackBannerLabel,blurImageView, resetButton,addComradeBottom, addComradeTop;
 
 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
     }
     return self;
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
+
 
 @end

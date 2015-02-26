@@ -37,16 +37,13 @@
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.separatorColor = [UIColor whiteColor];
     
-    UIColor *beige = [UIColor colorWithRed:220.0/255.0 green:210.0/255.0 blue:178.0/255.0 alpha:1.0];
-    UIColor *dinerRougeRed = [UIColor colorWithRed:241.0/255.0 green:0.0/255.0 blue:35.0/255.0 alpha:1.0];
-    
     //setup nav bar title
     UINavigationItem *navigationItem = [super navigationItem];
     UILabel *customLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 120.0f, 44.0f)];
     customLabel.backgroundColor= [UIColor clearColor];
     customLabel.textAlignment = NSTextAlignmentCenter;
-    [customLabel setFont:[UIFont fontWithName:@"AvenirNext-Bold" size:22]];
-    customLabel.textColor =  [UIColor colorWithRed:220.0/255.0 green:210.0/255.0 blue:178.0/255.0 alpha:1.0];
+    [customLabel setFont:[UIFont fontWithName:[[BillManager sharedBillManager] fontNameBold] size:[[BillManager sharedBillManager] largeFont]]];
+    customLabel.textColor =  [[BillManager sharedBillManager] secondarycolor];
     navigationItem.titleView = customLabel;
     customLabel.text=NSLocalizedString(@"INEQUALITY", nil);
     
@@ -57,13 +54,13 @@
     [self.segmentedControl setSelectedSegmentIndex:INCOME];
     NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:
                                 [UIFont fontWithName:FontName size:MediumFontSize], NSFontAttributeName,
-                                beige, NSForegroundColorAttributeName, nil  ];
+                                [[BillManager sharedBillManager] secondarycolor], NSForegroundColorAttributeName, nil  ];
     [self.segmentedControl setTitleTextAttributes:attributes forState:UIControlStateNormal];
     NSDictionary *highlightedAttributes = [NSDictionary dictionaryWithObjectsAndKeys:
                                            [UIColor whiteColor], NSForegroundColorAttributeName, nil  ];
     [self.segmentedControl setTitleTextAttributes:highlightedAttributes forState:UIControlStateHighlighted];
     NSDictionary *selectedAttributes = [NSDictionary dictionaryWithObjectsAndKeys:
-                                        beige, NSForegroundColorAttributeName,
+                                        [[BillManager sharedBillManager] secondarycolor], NSForegroundColorAttributeName,
                                         [NSNumber numberWithInt:NSUnderlineStyleSingle],NSUnderlineStyleAttributeName, nil  ];
     [self.segmentedControl setTitleTextAttributes:selectedAttributes forState:UIControlStateSelected];
     
@@ -94,13 +91,13 @@
     self.sortSegmentedControl.contentHorizontalAlignment=UIControlContentHorizontalAlignmentRight;
     NSDictionary *attributes2 = [NSDictionary dictionaryWithObjectsAndKeys:
                                 [UIFont fontWithName:FontName size:SmallFontSize], NSFontAttributeName,
-                                beige, NSForegroundColorAttributeName, nil  ];
+                                [[BillManager sharedBillManager] secondarycolor], NSForegroundColorAttributeName, nil  ];
     [self.sortSegmentedControl setTitleTextAttributes:attributes2 forState:UIControlStateNormal];
     NSDictionary *highlightedAttributes2 = [NSDictionary dictionaryWithObjectsAndKeys:
                                            [UIColor whiteColor], NSForegroundColorAttributeName, nil  ];
     [self.sortSegmentedControl setTitleTextAttributes:highlightedAttributes2 forState:UIControlStateHighlighted];
     NSDictionary *selectedAttributes2 = [NSDictionary dictionaryWithObjectsAndKeys:
-                                        beige, NSForegroundColorAttributeName,
+                                        [[BillManager sharedBillManager] secondarycolor], NSForegroundColorAttributeName,
                                         [NSNumber numberWithInt:NSUnderlineStyleSingle],NSUnderlineStyleAttributeName, nil  ];
     [self.sortSegmentedControl setTitleTextAttributes:selectedAttributes2 forState:UIControlStateSelected];
     [self sort];
@@ -114,7 +111,7 @@
     
     /// FixedHeaderView
     self.fixedHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0,0,self.view.frame.size.width,65)];
-    self.fixedHeaderView.backgroundColor = dinerRougeRed;
+    self.fixedHeaderView.backgroundColor = [[BillManager sharedBillManager] maincolor];
     [self.view addSubview:fixedHeaderView];
     [self.fixedHeaderView addSubview:self.blackBottomView];
     //[self.fixedHeaderView addSubview:self.sortSegmentedControl];
@@ -180,7 +177,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     UILabel *numberLabel = (UILabel *)[cell viewWithTag:1];
-    numberLabel.text=[NSString stringWithFormat:@"%d", indexPath.row+1];
+    numberLabel.text=[NSString stringWithFormat:@"%ld", indexPath.row+1];
     UILabel *nameLabel = (UILabel *)[cell viewWithTag:2];
     nameLabel.text=country.name;
     UILabel *giniLabel = (UILabel *)[cell viewWithTag:3];
@@ -262,8 +259,6 @@
     NSArray *sortedArray = [currentCountryArray sortedArrayUsingDescriptors:sortDescriptors];
     currentCountryArray=[sortedArray mutableCopy];
     [self.tableView reloadData];
-    NSIndexPath *myIndexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-   // [self.tableView selectRowAtIndexPath:myIndexPath animated:YES scrollPosition:UITableViewScrollPositionBottom];
 }
 
 

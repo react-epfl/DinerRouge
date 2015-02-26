@@ -11,6 +11,7 @@
 @interface ReusableHeaderView : UICollectionReusableView<UITextFieldDelegate>
 
 @property(strong, nonatomic) IBOutlet UITextField * totalAmountTextField;
+@property(strong, nonatomic) IBOutlet UILabel * totalAmountLabel;
 @property(strong, nonatomic) IBOutlet UIButton * checkoutButton;
 @property (strong, nonatomic) NSMutableString *storedValue;
 

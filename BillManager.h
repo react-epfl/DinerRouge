@@ -10,6 +10,8 @@
 #import "Friend.h"
 #import "BillManagerDelegate.h"
 
+
+
 @interface BillManager : NSObject
 
 +(id) sharedBillManager;
@@ -29,6 +31,7 @@
 
 @property (nonatomic,strong)  NSMutableArray *friends;
 @property (nonatomic, strong) NSNumber* totalAmount;
+@property (nonatomic, strong) NSString* totalAmountString;
 @property (nonatomic, strong) NSNumber* totalIncome;
 @property (nonatomic) BOOL isRevealed;
 @property (strong, nonatomic) NSNumber* gini;
@@ -39,6 +42,15 @@
 @property (strong, nonatomic) NSNumber* q5;
 @property(strong, nonatomic)  NSArray * avatarImages;
 @property(strong, nonatomic)  NSMutableArray * avatarImagesLeft;
+@property (strong, nonatomic) UIColor* maincolor;
+@property (strong, nonatomic) UIColor* secondarycolor;
+@property (strong, nonatomic) UIColor* buttoncolor;
+@property (strong, nonatomic) UIColor* buttonTextColor;
+@property (strong, nonatomic) NSString* fontName;
+@property (strong, nonatomic) NSString* fontNameBold;
+@property (nonatomic) int largeFont;
+@property (nonatomic) int mediumFont;
+@property (nonatomic) int smallFont;
 
 
 

@@ -36,6 +36,9 @@
 
 - (void)viewDidLoad
 {
+    
+    self.view.backgroundColor=[[BillManager sharedBillManager] maincolor];
+    self.swipeView.backgroundColor=[[BillManager sharedBillManager] buttoncolor];
     firstTimeLoading=YES;
     
     if([[[BillManager sharedBillManager] avatarImagesLeft] count]==0){
@@ -56,15 +59,18 @@
     
     //[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed: @"background_nav.png"] forBarMetrics:UIBarMetricsDefault];
     
+    
+    
     //setup nav bar title
     UINavigationItem *navigationItem = [super navigationItem];
     UILabel *customLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 120.0f, 44.0f)];
     customLabel.backgroundColor= [UIColor clearColor];
     customLabel.textAlignment = NSTextAlignmentCenter;
-    [customLabel setFont:[UIFont fontWithName:@"AvenirNext-Bold" size:22]];
+    [customLabel setFont:[UIFont fontWithName:[[BillManager sharedBillManager] fontNameBold] size:[[BillManager sharedBillManager] largeFont]]];
     customLabel.text = NSLocalizedString(@"PICKER_TITLE", nil);
-    customLabel.textColor =  [UIColor colorWithRed:220.0/255.0 green:210.0/255.0 blue:178.0/255.0 alpha:1.0];
+    customLabel.textColor =  [[BillManager sharedBillManager] secondarycolor];
     navigationItem.titleView = customLabel;
+    
     
     [incomeTextField setPlaceholder:NSLocalizedString(@"INCOME_FIELD_PLACEHOLDER", nil)];
 
@@ -82,9 +88,13 @@
     }
     [incomeTextField setText:[nf stringFromNumber:friend.income]];
     saveButton.titleLabel.numberOfLines = 1;
+    saveButton.backgroundColor=[[BillManager sharedBillManager] buttoncolor] ;
+    saveButton.titleLabel.textColor=[[BillManager sharedBillManager] buttonTextColor];
+    [saveButton setTitleColor:[[BillManager sharedBillManager] buttonTextColor] forState:UIControlStateNormal];
     saveButton.titleLabel.adjustsFontSizeToFitWidth = YES;
     [saveButton setTitle:NSLocalizedString(@"SAVE_BUTTON", nil) forState:UIControlStateNormal];
     deleteButton.titleLabel.numberOfLines = 1;
+    deleteButton.backgroundColor=[[BillManager sharedBillManager] buttoncolor] ;
     [deleteButton setTitle:NSLocalizedString(@"DELETE_BUTTON", nil) forState:UIControlStateNormal];
     
     // Back Button

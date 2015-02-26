@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch.iPad" variant="6xAndEarlier" propertyAccessControl="none" promptedForUpgradeToXcode5="NO" initialViewController="emr-bj-0oU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch.iPad" variant="6xAndEarlier" propertyAccessControl="none" promptedForUpgradeToXcode5="NO" initialViewController="emr-bj-0oU">
     <dependencies>
         <deployment identifier="iOS"/>
         <development version="4600" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
         <!--Info View Controller-->
@@ -259,7 +259,7 @@ Quand tous ont effectué les étapes 1 à 3:
                             </connections>
                         </collectionReusableView>
                         <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="MyFooter" reuseIdentifier="MyFooter" id="7Ba-2h-1mm" customClass="ReusableFooterView">
-                            <rect key="frame" x="0.0" y="471" width="768" height="58"/>
+                            <rect key="frame" x="0.0" y="471" width="768" height="90"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="br3-Je-glr">
@@ -479,7 +479,7 @@ Quand tous ont effectué les étapes 1 à 3:
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pnq-fL-6fH" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="U3o-TD-U9L"/>
             </objects>
-            <point key="canvasLocation" x="-517" y="-16"/>
+            <point key="canvasLocation" x="-148" y="-58"/>
         </scene>
         <!--INEQUALITY-->
         <scene sceneID="l2v-wj-Pjc">

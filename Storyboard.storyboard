@@ -99,7 +99,7 @@ Quand tous ont effectué les étapes 1 à 3:
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.94509803920000002" green="0.0" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.91764705882352937" green="0.0" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="peC-pg-zKw"/>
                     <connections>
@@ -126,19 +126,19 @@ Quand tous ont effectué les étapes 1 à 3:
                         <color key="backgroundColor" red="0.94509803921568625" green="0.0" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="15K-Hs-V9l">
                             <size key="itemSize" width="148" height="220"/>
-                            <size key="headerReferenceSize" width="50" height="40"/>
-                            <size key="footerReferenceSize" width="50" height="55"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="f2i-Yr-BwL" customClass="FriendCollectionViewCell">
-                                <rect key="frame" x="0.0" y="109" width="145" height="215"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CellStep3" id="YYU-ln-qmr" customClass="FriendCollectionViewCell">
+                                <rect key="frame" x="0.0" y="0.0" width="145" height="220"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="145" height="220"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="83p-B5-TPK">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XYg-la-r69">
                                             <rect key="frame" x="15" y="0.0" width="120" height="160"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -146,192 +146,95 @@ Quand tous ont effectué les étapes 1 à 3:
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="921-tb-gtd">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="XYX-rl-puL">
                                             <rect key="frame" x="25" y="10" width="100" height="140"/>
                                             <color key="backgroundColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
                                         </imageView>
-                                        <imageView userInteractionEnabled="NO" alpha="0.40000000000000013" contentMode="scaleToFill" image="filter.png" id="wch-2g-RBt">
-                                            <rect key="frame" x="25" y="10" width="100" height="140"/>
-                                            <color key="backgroundColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AJOUTER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cfl-Qk-rcA">
-                                            <rect key="frame" x="15" y="57" width="119" height="28"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
-                                            <color key="textColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CAMARADE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6jh-WB-cgE">
-                                            <rect key="frame" x="14" y="82" width="120" height="28"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
-                                            <color key="textColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZwH-gk-v28">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="h7V-zk-wk2">
                                             <rect key="frame" x="15" y="170" width="120" height="40"/>
                                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="PAYS 20000.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RJ7-cc-SN5">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="PAYS 20000.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cJo-tF-CJ0">
                                             <rect key="frame" x="17" y="187" width="117" height="24"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="15"/>
                                             <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="GAGNE 10000000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="37W-lI-1Ub">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="GAGNE 10000000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MMq-jQ-SYx">
                                             <rect key="frame" x="17" y="171" width="117" height="22"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="13"/>
                                             <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="AIi-Uo-923">
-                                            <rect key="frame" x="14" y="170" width="120" height="40"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
-                                            <state key="normal" title="RESET">
-                                                <color key="titleColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="resetDinerRouge:" destination="2uH-g0-lxm" eventType="touchUpInside" id="5bZ-M2-mrY"/>
-                                            </connections>
-                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <size key="customSize" width="145" height="220"/>
                                 <connections>
-                                    <outlet property="addComradeBottom" destination="6jh-WB-cgE" id="ufX-Ap-v2o"/>
-                                    <outlet property="addComradeTop" destination="cfl-Qk-rcA" id="Sst-oR-Baz"/>
-                                    <outlet property="amountDuelabel" destination="RJ7-cc-SN5" id="ha8-GD-xcz"/>
-                                    <outlet property="blackBannerLabel" destination="ZwH-gk-v28" id="5rc-0m-UGs"/>
-                                    <outlet property="blurImageView" destination="wch-2g-RBt" id="WHe-ti-KN0"/>
-                                    <outlet property="imageView" destination="921-tb-gtd" id="zd2-qV-8JG"/>
-                                    <outlet property="incomelabel" destination="37W-lI-1Ub" id="rit-6H-xSa"/>
-                                    <outlet property="resetButton" destination="AIi-Uo-923" id="7wK-kL-bY9"/>
-                                    <segue destination="kNe-Zz-4sj" kind="push" identifier="EDIT_SEGUE" id="A1p-tt-rmo"/>
+                                    <outlet property="amountDuelabel" destination="cJo-tF-CJ0" id="ACS-Q1-yzd"/>
+                                    <outlet property="blackBannerLabel" destination="h7V-zk-wk2" id="DFj-iC-oMC"/>
+                                    <outlet property="imageView" destination="XYX-rl-puL" id="FuW-SI-6Ui"/>
+                                    <outlet property="incomelabel" destination="MMq-jQ-SYx" id="cSf-Hw-l4v"/>
+                                    <outlet property="plusLabel" destination="XYg-la-r69" id="fFs-R2-31P"/>
+                                    <segue destination="kNe-Zz-4sj" kind="push" identifier="EDIT_SEGUE" id="fTs-Oe-7kM"/>
+                                </connections>
+                            </collectionViewCell>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CellStep012" id="V4U-Md-0Uk" customClass="FriendCollectionViewCell">
+                                <rect key="frame" x="0.0" y="0.0" width="145" height="170"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="145" height="170"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="raE-Cm-6LM">
+                                            <rect key="frame" x="15" y="0.0" width="120" height="160"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="ca7-h9-Whe">
+                                            <rect key="frame" x="25" y="10" width="100" height="140"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" image="filter.png" id="0Ns-C4-5vF">
+                                            <rect key="frame" x="25" y="10" width="100" height="140"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AJOUTER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LHN-fL-Xg4">
+                                            <rect key="frame" x="16" y="58" width="119" height="28"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
+                                            <color key="textColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AMI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Wd8-Pw-l4Q">
+                                            <rect key="frame" x="15" y="83" width="120" height="28"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
+                                            <color key="textColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <size key="customSize" width="145" height="170"/>
+                                <connections>
+                                    <outlet property="addComradeBottom" destination="Wd8-Pw-l4Q" id="vqQ-73-5NZ"/>
+                                    <outlet property="addComradeTop" destination="LHN-fL-Xg4" id="ofD-b4-I6M"/>
+                                    <outlet property="blurImageView" destination="0Ns-C4-5vF" id="nk2-9C-imb"/>
+                                    <outlet property="imageView" destination="ca7-h9-Whe" id="GmM-Bx-rOr"/>
+                                    <outlet property="plusLabel" destination="raE-Cm-6LM" id="x0G-JF-ORu"/>
+                                    <segue destination="kNe-Zz-4sj" kind="push" identifier="EDIT_SEGUE" id="u5X-Bd-aMg"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
-                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="MyHeader" reuseIdentifier="MyHeader" id="8AF-ld-h80" customClass="ReusableHeaderView">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            <subviews>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ENTER AMOUNT" textAlignment="right" minimumFontSize="15" clearButtonMode="always" id="Wso-eE-59q">
-                                    <rect key="frame" x="15" y="0.0" width="200" height="30"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
-                                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
-                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                                    <connections>
-                                        <outlet property="delegate" destination="8AF-ld-h80" id="wDm-zd-PZu"/>
-                                    </connections>
-                                </textField>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hqM-7k-72f">
-                                    <rect key="frame" x="230" y="0.0" width="75" height="30"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
-                                    <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
-                                    <state key="normal" title="OK">
-                                        <color key="titleColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
-                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                    </state>
-                                    <state key="highlighted">
-                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="okPressed:" destination="8AF-ld-h80" eventType="touchUpInside" id="uoA-sR-Waj"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                            <connections>
-                                <outlet property="checkoutButton" destination="hqM-7k-72f" id="khc-Xh-ouD"/>
-                                <outlet property="totalAmountTextField" destination="Wso-eE-59q" id="5eh-e3-h9x"/>
-                            </connections>
-                        </collectionReusableView>
-                        <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="MyFooter" reuseIdentifier="MyFooter" id="tmt-5v-tEr" customClass="ReusableFooterView">
-                            <rect key="frame" x="0.0" y="260" width="320" height="55"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dp4-Eo-8lr">
-                                    <rect key="frame" x="14" y="18" width="293" height="30"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
-                                    <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
-                                    <state key="normal" title="REVEAL">
-                                        <color key="titleColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
-                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                    </state>
-                                    <state key="highlighted">
-                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="revealPressed:" destination="tmt-5v-tEr" eventType="touchUpInside" id="mZU-4y-juq"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="8ka-Vf-JIb">
-                                    <rect key="frame" x="14" y="18" width="121" height="30"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
-                                    <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
-                                    <state key="normal" title="HIDE">
-                                        <color key="titleColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
-                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                    </state>
-                                    <state key="highlighted">
-                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="hidePressed:" destination="tmt-5v-tEr" eventType="touchUpInside" id="FNx-ae-tOT"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="sEI-Ww-B2x">
-                                    <rect key="frame" x="-5" y="-7" width="335" height="30"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="14"/>
-                                    <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
-                                    <state key="normal" title="L'INEGALITE EST QUASI INEXISTANTE">
-                                        <color key="titleColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
-                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                    </state>
-                                    <state key="highlighted">
-                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </state>
-                                    <connections>
-                                        <segue destination="53v-69-hSP" kind="push" id="LqA-3q-AmB"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6rQ-Ei-xsA">
-                                    <rect key="frame" x="186" y="18" width="121" height="30"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
-                                    <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
-                                    <state key="normal" title="STAT">
-                                        <color key="titleColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
-                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                    </state>
-                                    <state key="highlighted">
-                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </state>
-                                    <connections>
-                                        <segue destination="53v-69-hSP" kind="push" id="wMd-aA-vqf"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                            <connections>
-                                <outlet property="hideButton" destination="8ka-Vf-JIb" id="wqn-5f-TtF"/>
-                                <outlet property="revealButton" destination="dp4-Eo-8lr" id="Ds9-SI-lTH"/>
-                                <outlet property="statButton" destination="6rQ-Ei-xsA" id="w7W-m6-8Ji"/>
-                                <outlet property="youButton" destination="sEI-Ww-B2x" id="rgr-Xa-f6n"/>
-                            </connections>
-                        </collectionReusableView>
                         <connections>
                             <outlet property="dataSource" destination="2uH-g0-lxm" id="ytO-gX-euQ"/>
                             <outlet property="delegate" destination="2uH-g0-lxm" id="m2K-Mi-CRG"/>
@@ -339,20 +242,17 @@ Quand tous ont effectué les étapes 1 à 3:
                     </collectionView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="GNc-Js-ZNz">
-                        <barButtonItem key="leftBarButtonItem" image="a_bouton_info.png" id="yx9-6D-itc">
+                        <barButtonItem key="rightBarButtonItem" image="a_bouton_info.png" id="yx9-6D-itc">
                             <color key="tintColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="pkT-g8-OYl" kind="modal" id="U8f-Tl-RLC"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="an_unequal.png" id="wQ4-0d-Vbz">
-                            <color key="tintColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <connections>
-                                <segue destination="53v-69-hSP" kind="push" id="P03-UD-Wr7"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="53v-69-hSP" kind="push" identifier="InequalitySegue" id="Ho7-6a-7eM"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h6S-kU-2GC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -365,7 +265,6 @@ Quand tous ont effectué les étapes 1 à 3:
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="P8R-MT-tGk">
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.94509803920000002" green="0.0" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="2uH-g0-lxm" kind="relationship" relationship="rootViewController" id="vSe-pa-7EC"/>
@@ -1281,7 +1180,6 @@ Quand tous ont effectué les étapes 1 à 3:
     <resources>
         <image name="a_bouton_info.png" width="30" height="30"/>
         <image name="a_triangle.png" width="10" height="10"/>
-        <image name="an_unequal.png" width="30" height="30"/>
         <image name="cameraButton.png" width="50" height="30"/>
         <image name="filter.png" width="100" height="140"/>
         <image name="logo50.png" width="80" height="80"/>
@@ -1292,7 +1190,7 @@ Quand tous ont effectué les étapes 1 à 3:
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="LqA-3q-AmB"/>
+        <segue reference="u5X-Bd-aMg"/>
         <segue reference="vI8-3H-JXL"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -11,7 +11,7 @@
 
 // IMAGE PICKER SCREEN
 
-"PICKER_TITLE" = "COMRADE";
+"PICKER_TITLE" = "FRIEND";
 
 "NEW_BUTTON" = "RESTART";
 
@@ -22,7 +22,7 @@
 "HIDE_BUTTON"="HIDE";
 
 "ADD_COMRADE_LABEL_TOP" = "ADD";
-"ADD_COMRADE_LABEL_BOTTOM" = "COMRADE";
+"ADD_COMRADE_LABEL_BOTTOM" = "FRIEND";
 
 // EDIT COMRADE SCREEN
 "ADD_BUTTON" = "ADD";
@@ -68,7 +68,7 @@
 
 "INFO_WHAT" = "SPLIT THE BILL ACCORDING TO INCOME";
 
-"INFO_HOW" = " 1 - Press 'ADD COMRADE' \n 2 - Add picture and income \n 3 - Press 'ADD' \n After everyone has completed steps 1 to 3 \n 4 - Enter the amount of the bill \n 6 - Press 'REVEAL' \n 7 - View how much each person has to pay";
+"INFO_HOW" = " 1 - Press 'ADD FRIEND' \n 2 - Add picture and income \n 3 - Press 'ADD' \n After everyone has completed steps 1 to 3 \n 4 - Enter the amount of the bill \n 6 - Press 'REVEAL' \n 7 - View how much each person has to pay";
 
 
 //"INFO_HOW" = "1 - Add your picture (optional) \n 2 - Enter your annual income \n 3 - Press 'ADD GUEST' \n After everyone has completed steps 1 to 3 \n 4 - Press 'CHECKOUT' \n 5 - Enter the amount of the bill \n 6 - Press 'CHECKOUT' \n 7 - View how much each guest has to pay";

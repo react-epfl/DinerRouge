@@ -13,7 +13,7 @@
 
 @implementation ReusableHeaderView
 
-@synthesize totalAmountTextField,storedValue;
+@synthesize totalAmountTextField,storedValue,totalAmountLabel;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -28,7 +28,6 @@
 
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
-    
     NSNumberFormatter *nf = [[NSNumberFormatter alloc] init];
     //[nf setFormatterBehavior:NSNumberFormatterBehavior10_4];
     [nf setNumberStyle:NSNumberFormatterCurrencyStyle];
@@ -52,14 +51,6 @@
         [[BillManager sharedBillManager] setTotalAmount: number];
         return NO;
     }
-    // the appropriate decimalSeperator and currencySymbol for the current locale
-    // can be found with help of the
-    // NSNumberFormatter and NSLocale classes.
-    
-   
-    // whenever a decimalSeperator or currencySymobol is entered, we'll just update the textField.
-    // whenever other chars are entered, we'll calculate the new number and update the textField accordingly.
-    // If the number can't be computed, we ignore the new input.
     if ([string isEqualToString:decimalSeperator] && [text rangeOfString:decimalSeperator].length == 0) {
         [textField setText:newReplacement];
     }
