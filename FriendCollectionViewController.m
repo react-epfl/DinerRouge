@@ -19,7 +19,7 @@
 
 #define DONE_BUTTON_WIDTH 80
 #define SEND_BUTTON_PADDING 5
-#define INPUTVIEW_HEIGHT 45
+#define INPUTVIEW_HEIGHT 50
 #define INPUT_LEFT_PADDING 10
 #define INPUT_TOP_PADDING 5
 #define INPUT_HEIGHT 30
@@ -86,6 +86,9 @@
     
     self.keyboardIsVisible=NO;
     self.keyboardHeight=0;
+    
+    
+    // INPUT VIEW
     self.inputView = [[UIView alloc] initWithFrame:CGRectMake(0,self.collectionView.contentOffset.y+(self.collectionView.frame.size.height-INPUTVIEW_HEIGHT),self.view.frame.size.width,INPUTVIEW_HEIGHT)];
     self.inputView.backgroundColor = [[BillManager sharedBillManager] maincolor];
     [self.view addSubview:inputView];

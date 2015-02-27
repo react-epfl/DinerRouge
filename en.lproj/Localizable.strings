@@ -68,14 +68,17 @@
 
 "INFO_WHAT" = "SPLIT THE BILL ACCORDING TO INCOME";
 
-"INFO_HOW" = " 1 - Press 'ADD FRIEND' \n 2 - Add picture and income \n 3 - Press 'ADD' \n After everyone has completed steps 1 to 3 \n 4 - Enter the amount of the bill \n 6 - Press 'REVEAL' \n 7 - View how much each person has to pay";
+
+"INFO_HOW" = "DINER ROUGE brings income inequality to the table by providing a provocative way to split the bill at the restaurant, namely according the income of each person. Furthermore, DINER ROUGE provides information about the distribution of income around the table and allows to compare it to different countries around the world. Enjoy!";
+
+//"INFO_HOW" = " 1 - Press 'ADD FRIEND' \n 2 - Add picture and income \n 3 - Press 'ADD' \n After everyone has completed steps 1 to 3 \n 4 - Enter the amount of the bill \n 6 - Press 'REVEAL' \n 7 - View how much each person has to pay";
 
 
 //"INFO_HOW" = "1 - Add your picture (optional) \n 2 - Enter your annual income \n 3 - Press 'ADD GUEST' \n After everyone has completed steps 1 to 3 \n 4 - Press 'CHECKOUT' \n 5 - Enter the amount of the bill \n 6 - Press 'CHECKOUT' \n 7 - View how much each guest has to pay";
 
-"INFO_WHO" = "CONCEPT S. Bendahan - CODE A. Holzer DESIGN A76 - ART G. Vulliens, B. Syfert \nNAME J. Salom  - ANDROID U. Rosselet \nWEB B. Fritscher - THANKS A. Métrailler,\nT. Boillat, F. Vessaz, F. Andreae";
+"INFO_WHO" = "CONCEPT: S. Bendahan \nUX DESIGN & CODE: A. Holzer \nDESIGN: A76, G. Vulliens, B. Syfert \nNAME: J. Salom \nCODE: B. Fritscher, U. Rosselet \nTHANKS: A. Métrailler,\nT. Boillat, F. Vessaz, F. Andreae";
 
-"INFO_GINI" = "The GINI coefficient is a measure of inequality ranging from 0 (equality) to 100 (maximal inequality). ";
+"INFO_GINI" = "The GINI coefficient is a measure of inequality from 0 (no inequality) to 100 (maximal inequality). A score of 35 means LOW INCOME INEQUALITY.";
 
 "COUNTRY" = "COUNTRY";
 
@@ -87,7 +90,7 @@
 
 "WEALTH_INFO"="The distribution of wealth graph shows how much of the total wealth the top possesses.";
 
-"INCOME_INFO"="The distribution of income graph shows how much of the total income each quintile possesses. ";
+"INCOME_INFO"="The distribution graph above show how much of all the income that each fifth of the population possess. Here the richest 20% earn 34%, whereas the poorest 20% earn 5% of the total income.";
 
 "Your table" = "Your table";
 

@@ -1135,7 +1135,7 @@ Quand tous ont effectué les étapes 1 à 3:
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S4T-Ea-ppc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="484" y="16"/>
+            <point key="canvasLocation" x="767" y="106"/>
         </scene>
         <!--Country View Controller-->
         <scene sceneID="dA2-Xt-IZD">

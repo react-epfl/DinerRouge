@@ -31,7 +31,7 @@
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
-	<string>Storyboard</string>
+	<string>UniversalStoryboard</string>
 	<key>UIMainStoryboardFile~ipad</key>
 	<string>iPadStoryboard</string>
 	<key>UIPrerenderedIcon</key>

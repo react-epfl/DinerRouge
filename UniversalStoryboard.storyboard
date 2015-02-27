@@ -1,0 +1,1102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AMk-rf-AaV">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--INFORMATION-->
+        <scene sceneID="KnJ-MH-AHJ">
+            <objects>
+                <viewController id="5BD-Ph-gDW" customClass="InfoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bax-RC-p7m"/>
+                        <viewControllerLayoutGuide type="bottom" id="O1I-mU-3cs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pYh-77-Ipu">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="MY FRIENDS " translatesAutoresizingMaskIntoConstraints="NO" id="YPh-dl-h7U">
+                                <rect key="frame" x="10" y="268" width="300" height="170"/>
+                                <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l1a-P6-CiG">
+                                <rect key="frame" x="12" y="447" width="30" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button" image="logo50.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToWebSite" destination="5BD-Ph-gDW" eventType="touchUpInside" id="Qyy-OW-vUE"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e9f-ul-Sbb">
+                                <rect key="frame" x="10" y="0.0" width="300" height="240"/>
+                                <string key="text">1 - Ajoutez votre photo (facultatif)
+2 - Entrez votre revenu annuel
+3 - Appuyez sur 'SUIVANT' 
+Quand tous ont effectué les étapes 1 à 3:
+4 - Appuyez sur 'PAYER'
+5 - Entrer le montant de l'addition
+7 - Vous voir ce que chacun doit payer</string>
+                                <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9dv-1e-srn">
+                                <rect key="frame" x="224" y="447" width="80" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
+                                <state key="normal" title="STATS">
+                                    <color key="titleColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="done:" destination="5BD-Ph-gDW" eventType="touchUpInside" id="XIg-6J-umZ"/>
+                                    <segue destination="dSd-lt-Rdj" kind="push" id="rOM-7s-Vwn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.91764705879999997" green="0.0" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="INFORMATION" id="lbF-8W-RJV"/>
+                    <connections>
+                        <outlet property="creditView" destination="YPh-dl-h7U" id="KVZ-GV-YFm"/>
+                        <outlet property="instructionView" destination="e9f-ul-Sbb" id="rxK-vT-sT7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mZV-hd-A8S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="446" y="-400"/>
+        </scene>
+        <!--Friend Collection View Controller-->
+        <scene sceneID="KW2-ai-cs7">
+            <objects>
+                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="Ild-zo-Imt" customClass="FriendCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="Am2-iU-pu2">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.94509803920000002" green="0.0" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CFR-Fl-sMS">
+                            <size key="itemSize" width="148" height="220"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CellStep3" id="4Ci-8h-OJG" customClass="FriendCollectionViewCell">
+                                <rect key="frame" x="0.0" y="0.0" width="145" height="220"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="145" height="220"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQ2-Yk-yFH">
+                                            <rect key="frame" x="15" y="0.0" width="120" height="160"/>
+                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2em-7Y-waq">
+                                            <rect key="frame" x="25" y="10" width="100" height="140"/>
+                                            <color key="backgroundColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTu-mf-RqW">
+                                            <rect key="frame" x="15" y="170" width="120" height="40"/>
+                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="PAYS 20000.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blz-zh-Mb8">
+                                            <rect key="frame" x="17" y="187" width="117" height="24"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="15"/>
+                                            <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="GAGNE 10000000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R2W-C4-Rc7">
+                                            <rect key="frame" x="17" y="171" width="117" height="22"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="13"/>
+                                            <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <size key="customSize" width="145" height="220"/>
+                                <connections>
+                                    <outlet property="amountDuelabel" destination="blz-zh-Mb8" id="6Mu-j3-qOr"/>
+                                    <outlet property="blackBannerLabel" destination="vTu-mf-RqW" id="YQQ-Te-4GO"/>
+                                    <outlet property="imageView" destination="2em-7Y-waq" id="7kD-2v-o0R"/>
+                                    <outlet property="incomelabel" destination="R2W-C4-Rc7" id="Jic-fp-vPg"/>
+                                    <outlet property="plusLabel" destination="VQ2-Yk-yFH" id="bVw-6J-puk"/>
+                                    <segue destination="74x-Zy-sPq" kind="push" identifier="EDIT_SEGUE" id="lkt-uo-YY7"/>
+                                </connections>
+                            </collectionViewCell>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CellStep012" id="4xz-lX-TfH" customClass="FriendCollectionViewCell">
+                                <rect key="frame" x="0.0" y="0.0" width="145" height="170"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="145" height="170"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n2Q-Qt-pBV">
+                                            <rect key="frame" x="15" y="0.0" width="120" height="160"/>
+                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lYF-Bd-jMN">
+                                            <rect key="frame" x="25" y="10" width="100" height="140"/>
+                                            <color key="backgroundColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" fixedFrame="YES" image="filter.png" translatesAutoresizingMaskIntoConstraints="NO" id="SR6-hM-u5g">
+                                            <rect key="frame" x="25" y="10" width="100" height="140"/>
+                                            <color key="backgroundColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AJOUTER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpG-0z-PcK">
+                                            <rect key="frame" x="16" y="58" width="119" height="28"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
+                                            <color key="textColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AMI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1kK-CZ-4r3">
+                                            <rect key="frame" x="15" y="83" width="120" height="28"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
+                                            <color key="textColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <size key="customSize" width="145" height="170"/>
+                                <connections>
+                                    <outlet property="addComradeBottom" destination="1kK-CZ-4r3" id="Hth-mc-Kw3"/>
+                                    <outlet property="addComradeTop" destination="fpG-0z-PcK" id="u2I-ex-5YG"/>
+                                    <outlet property="blurImageView" destination="SR6-hM-u5g" id="kGs-kB-1ob"/>
+                                    <outlet property="imageView" destination="lYF-Bd-jMN" id="usg-Dq-Bei"/>
+                                    <outlet property="plusLabel" destination="n2Q-Qt-pBV" id="USR-rX-wG8"/>
+                                    <segue destination="74x-Zy-sPq" kind="push" identifier="EDIT_SEGUE" id="BZm-Y2-Cq5"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="Ild-zo-Imt" id="n4a-au-oPC"/>
+                            <outlet property="delegate" destination="Ild-zo-Imt" id="S8Z-Ch-beO"/>
+                        </connections>
+                    </collectionView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="mMy-FR-1gP">
+                        <barButtonItem key="rightBarButtonItem" image="a_bouton_info.png" id="bqe-Kx-F1B">
+                            <color key="tintColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="5BD-Ph-gDW" kind="push" id="uhN-Sx-N16"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="vBx-cP-d0w" kind="show" identifier="InequalitySegue" id="54t-Tf-EqI"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PxA-nl-IGn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="297" y="408"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="daG-rh-56P">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="AMk-rf-AaV" sceneMemberID="viewController">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="lCk-3D-gTb">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="rRV-tc-hge">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="Ild-zo-Imt" kind="relationship" relationship="rootViewController" id="OEM-Mh-2IP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vHO-4m-Lha" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-368" y="408"/>
+        </scene>
+        <!--GUESTS-->
+        <scene sceneID="h7Z-b5-ZYw">
+            <objects>
+                <viewController autoresizesArchivedViewToFullSize="NO" id="74x-Zy-sPq" customClass="EditFriendViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cc3-sG-yr5"/>
+                        <viewControllerLayoutGuide type="bottom" id="54I-VR-B53"/>
+                    </layoutGuides>
+                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="Mco-sn-Ph3">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="VrH-yE-XAf">
+                                <rect key="frame" x="150" y="63" width="170" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="64" maxX="0.0" maxY="-64"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
+                                <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
+                                <state key="normal" title="SAVE">
+                                    <color key="titleColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveButtonTouched:" destination="74x-Zy-sPq" eventType="touchUpInside" id="pcq-8g-QDG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="jsq-fN-tPV">
+                                <rect key="frame" x="150" y="150" width="170" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="64" maxX="0.0" maxY="-64"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
+                                <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
+                                <state key="normal" title="DELETE">
+                                    <color key="titleColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteButtonTouched:" destination="74x-Zy-sPq" eventType="touchUpInside" id="VB5-Rf-u3l"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="INCOME" textAlignment="right" minimumFontSize="15" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Igo-Vv-dTd">
+                                <rect key="frame" x="150" y="20" width="170" height="30"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="64" maxX="0.0" maxY="-64"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <outlet property="delegate" destination="74x-Zy-sPq" id="eqO-na-hHm"/>
+                                </connections>
+                            </textField>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7wf-yp-Jyf">
+                                <rect key="frame" x="15" y="20" width="122" height="160"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Yb-EQ-tv4">
+                                        <rect key="frame" x="11" y="10" width="100" height="140"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0b-Ss-UK3">
+                                                <rect key="frame" x="0.0" y="48" width="87" height="24"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="12"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </scrollView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="64" maxX="0.0" maxY="-64"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xJJ-Fs-oEb">
+                                <rect key="frame" x="150" y="103" width="50" height="30"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="64" maxX="0.0" maxY="-64"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <state key="normal" image="cameraButton.png">
+                                    <color key="titleColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="takePicture:" destination="74x-Zy-sPq" eventType="touchUpInside" id="78j-5M-a0W"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94509803920000002" green="0.0" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <inset key="insetFor6xAndEarlier" minX="0.0" minY="64" maxX="0.0" maxY="-64"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="GUESTS" id="Zbh-l1-KKP">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="Xgl-rS-uOw">
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="deleteButton" destination="jsq-fN-tPV" id="jhd-PS-cRk"/>
+                        <outlet property="imageButton" destination="b0b-Ss-UK3" id="dNu-eu-izK"/>
+                        <outlet property="imageScrollView" destination="4Yb-EQ-tv4" id="sli-zl-1Om"/>
+                        <outlet property="incomeTextField" destination="Igo-Vv-dTd" id="S6F-JA-yPE"/>
+                        <outlet property="saveButton" destination="VrH-yE-XAf" id="7VZ-nZ-u86"/>
+                        <outlet property="swipeView" destination="7wf-yp-Jyf" id="Hfq-hy-lqw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZdB-gr-Tad" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="EbC-SF-ufb"/>
+            </objects>
+            <point key="canvasLocation" x="297" y="1125"/>
+        </scene>
+        <!--Inequality Table View Controller-->
+        <scene sceneID="4G2-m3-vXa">
+            <objects>
+                <tableViewController id="dSd-lt-Rdj" customClass="InequalityTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="20" sectionFooterHeight="22" id="UzB-bi-Psa">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.94509803920000002" green="0.0" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <inset key="insetFor6xAndEarlier" minX="0.0" minY="64" maxX="0.0" maxY="-64"/>
+                        <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" red="0.94509803920000002" green="0.0" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="jw0-9y-iuV">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="65"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Countries from most to least equal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="vwo-Gd-heu">
+                                    <rect key="frame" x="14" y="8" width="292" height="25"/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="16"/>
+                                    <color key="textColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="KZQ-nP-MYg">
+                                    <rect key="frame" x="47" y="33" width="226" height="29"/>
+                                    <segments>
+                                        <segment title="YOU"/>
+                                        <segment title="INCOME"/>
+                                    </segments>
+                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <connections>
+                                        <action selector="changeType:" destination="dSd-lt-Rdj" eventType="valueChanged" id="QXy-sN-zZK"/>
+                                    </connections>
+                                </segmentedControl>
+                            </subviews>
+                        </view>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="yRG-5Q-q7v">
+                            <rect key="frame" x="0.0" y="235" width="600" height="22"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </view>
+                        <prototypes>
+                            <tableViewCell contentMode="TopLeft" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MyTableCell" rowHeight="50" id="0LD-tO-AmJ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="25"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0LD-tO-AmJ" id="ASY-sZ-zNn">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="131"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7T-Nt-JcW">
+                                            <rect key="frame" x="25" y="-1" width="51" height="25"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="16"/>
+                                            <color key="textColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Country" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FUt-CS-cig">
+                                            <rect key="frame" x="50" y="-1" width="214" height="25"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="16"/>
+                                            <color key="textColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="highlightedColor" red="0.79215686269999996" green="0.74509803919999995" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="83,2" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QzN-C2-uav">
+                                            <rect key="frame" x="245" y="-1" width="51" height="25"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="16"/>
+                                            <color key="textColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view tag="9" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="63m-ld-tOd">
+                                            <rect key="frame" x="25" y="23" width="271" height="20"/>
+                                            <color key="backgroundColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </view>
+                                        <view tag="8" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p7x-c9-1px">
+                                            <rect key="frame" x="25" y="23" width="133" height="20"/>
+                                            <color key="backgroundColor" red="0.70342677040000001" green="0.66612905300000003" blue="0.5359649568" alpha="1" colorSpace="calibratedRGB"/>
+                                        </view>
+                                        <view tag="7" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="azt-YE-NtR">
+                                            <rect key="frame" x="25" y="23" width="90" height="20"/>
+                                            <color key="backgroundColor" red="0.4926904506" green="0.46656658109999999" blue="0.37539773459999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </view>
+                                        <view tag="6" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ii9-mK-ccn">
+                                            <rect key="frame" x="25" y="23" width="34" height="20"/>
+                                            <color key="backgroundColor" red="0.29523202790000003" green="0.27957797379999999" blue="0.2249473971" alpha="1" colorSpace="calibratedRGB"/>
+                                        </view>
+                                        <view tag="5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OfK-g4-MDG">
+                                            <rect key="frame" x="25" y="23" width="22" height="20"/>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.47362967909999998" green="0.0" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="64" maxX="0.0" maxY="-64"/>
+                                <connections>
+                                    <segue destination="VUD-h4-Y5I" kind="push" identifier="IncomeToCountrySegue" id="bH5-9d-Pg3"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="TopLeft" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DistributionCell" rowHeight="50" id="26Q-Qm-qfJ">
+                                <rect key="frame" x="0.0" y="96" width="320" height="132"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="26Q-Qm-qfJ" id="O7T-g0-Bud">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="131"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s8P-I8-cp3">
+                                            <rect key="frame" x="25" y="-1" width="51" height="25"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="16"/>
+                                            <color key="textColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Country" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVl-eT-AYP">
+                                            <rect key="frame" x="50" y="-1" width="213" height="25"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="16"/>
+                                            <color key="textColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="83,2" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lbd-Zb-MeE">
+                                            <rect key="frame" x="245" y="-1" width="51" height="25"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="16"/>
+                                            <color key="textColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view tag="9" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3uF-fy-4fZ">
+                                            <rect key="frame" x="25" y="23" width="271" height="20"/>
+                                            <color key="backgroundColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </view>
+                                        <view tag="8" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x4e-q0-QmQ">
+                                            <rect key="frame" x="25" y="23" width="133" height="20"/>
+                                            <color key="backgroundColor" red="0.70342677040000001" green="0.66612905300000003" blue="0.5359649568" alpha="1" colorSpace="calibratedRGB"/>
+                                        </view>
+                                        <view tag="7" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wDH-tD-VMI">
+                                            <rect key="frame" x="25" y="23" width="90" height="20"/>
+                                            <color key="backgroundColor" red="0.4926904506" green="0.46656658109999999" blue="0.37539773459999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </view>
+                                        <view tag="6" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IFl-vL-udl">
+                                            <rect key="frame" x="25" y="23" width="34" height="20"/>
+                                            <color key="backgroundColor" red="0.29523202790000003" green="0.27957797379999999" blue="0.2249473971" alpha="1" colorSpace="calibratedRGB"/>
+                                        </view>
+                                        <view tag="5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jrm-hL-bUK">
+                                            <rect key="frame" x="25" y="23" width="22" height="20"/>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.94509803920000002" green="0.0" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="64" maxX="0.0" maxY="-64"/>
+                                <connections>
+                                    <segue destination="VUD-h4-Y5I" kind="push" identifier="IncomeToCountrySegue" id="Icg-me-FXe"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="TopLeft" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DistributionWealthCell" rowHeight="50" id="S4I-Rj-vLr">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="S4I-Rj-vLr" id="ekl-z2-BVn">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="131"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sYh-Rn-7oY">
+                                            <rect key="frame" x="25" y="-1" width="51" height="25"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="16"/>
+                                            <color key="textColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Country" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NyV-Y9-oas">
+                                            <rect key="frame" x="50" y="-1" width="213" height="25"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="16"/>
+                                            <color key="textColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="83,2" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X7H-Ie-JVF">
+                                            <rect key="frame" x="245" y="-1" width="51" height="25"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="16"/>
+                                            <color key="textColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view tag="5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n3a-U9-sxk">
+                                            <rect key="frame" x="25" y="23" width="271" height="20"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="0.83468415780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </view>
+                                        <view tag="6" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0GK-Sq-xag">
+                                            <rect key="frame" x="67" y="23" width="229" height="20"/>
+                                            <color key="backgroundColor" red="1" green="0.97538732579999998" blue="0.2889465832" alpha="1" colorSpace="calibratedRGB"/>
+                                        </view>
+                                        <view tag="7" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SVx-uz-ncx">
+                                            <rect key="frame" x="179" y="23" width="117" height="20"/>
+                                            <color key="backgroundColor" red="1" green="0.73381896800000002" blue="0.018280560580000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </view>
+                                        <view tag="8" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d6n-jB-ATi">
+                                            <rect key="frame" x="218" y="23" width="78" height="20"/>
+                                            <color key="backgroundColor" red="1" green="0.40214004879999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </view>
+                                        <view tag="9" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="exd-Xs-6Jf">
+                                            <rect key="frame" x="245" y="23" width="51" height="20"/>
+                                            <color key="backgroundColor" red="1" green="0.027737531079999999" blue="0.18717762730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </view>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="64" maxX="0.0" maxY="-64"/>
+                                <connections>
+                                    <segue destination="Z1y-dn-RRc" kind="show" identifier="WealthToCountrySegue" id="7IE-20-5TA"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="dSd-lt-Rdj" id="JFA-j5-KLH"/>
+                            <outlet property="delegate" destination="dSd-lt-Rdj" id="9Ft-yH-6d3"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="a8O-P4-kDA">
+                        <nil key="title"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="explanationLine" destination="vwo-Gd-heu" id="2YU-3l-q8l"/>
+                        <outlet property="fixedHeaderView" destination="jw0-9y-iuV" id="Jw4-oa-ppN"/>
+                        <outlet property="segmentedControl" destination="KZQ-nP-MYg" id="StM-nn-CzL"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n9l-Pr-FQ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1682" y="408"/>
+        </scene>
+        <!--Country View Controller-->
+        <scene sceneID="q9j-Eu-QEb">
+            <objects>
+                <viewController id="VUD-h4-Y5I" customClass="CountryViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Tp3-vQ-h9W"/>
+                        <viewControllerLayoutGuide type="bottom" id="cpI-Wq-Xcn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NIU-Zz-TUQ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Npz-ej-cLV">
+                                <rect key="frame" x="10" y="30" width="300" height="155"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
+                                <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sny-Vi-uWw">
+                                <rect key="frame" x="10" y="200" width="300" height="230"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
+                                <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIz-jj-tyd">
+                                <rect key="frame" x="146" y="-6" width="159" height="169"/>
+                                <string key="text">The GINI coefficient is a measure of inequality from 0 (no inequality) to 100 (maximal inequality). A score of 35 means LOW INCOME INEQUALITY</string>
+                                <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view tag="5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HfV-EG-FkF">
+                                <rect key="frame" x="15" y="5" width="120" height="160"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="GINI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXE-BY-Rka">
+                                        <rect key="frame" x="0.0" y="5" width="120" height="40"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
+                                        <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Klr-2d-Cr5">
+                                        <rect key="frame" x="0.0" y="16" width="120" height="144"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="70"/>
+                                        <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="DISTRIBUTION" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DfK-jN-adq">
+                                <rect key="frame" x="10" y="203" width="300" height="26"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
+                                <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view tag="5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xhL-J0-xpK">
+                                <rect key="frame" x="15" y="185" width="290" height="200"/>
+                                <subviews>
+                                    <view tag="9" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FoU-L6-7Je">
+                                        <rect key="frame" x="15" y="60" width="260" height="40"/>
+                                        <color key="backgroundColor" red="0.95686274509803926" green="0.9137254901960784" blue="0.74901960784313726" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view tag="9" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Feu-7r-Mza">
+                                        <rect key="frame" x="15" y="30" width="260" height="1"/>
+                                        <color key="backgroundColor" red="0.95686274510000002" green="0.91372549020000005" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view tag="9" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w2I-1E-RIo">
+                                        <rect key="frame" x="15" y="30" width="1" height="10"/>
+                                        <color key="backgroundColor" red="0.95686274510000002" green="0.91372549020000005" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view tag="9" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0nR-wd-FSU">
+                                        <rect key="frame" x="275" y="30" width="1" height="10"/>
+                                        <color key="backgroundColor" red="0.95686274510000002" green="0.91372549020000005" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view tag="8" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cmp-pm-4bJ">
+                                        <rect key="frame" x="96" y="60" width="151" height="40"/>
+                                        <color key="backgroundColor" red="0.72941176470588232" green="0.69803921568627447" blue="0.5725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view tag="7" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nMr-CD-1BN">
+                                        <rect key="frame" x="70" y="60" width="118" height="40"/>
+                                        <color key="backgroundColor" red="0.57647058823529407" green="0.54509803921568623" blue="0.45490196078431372" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view tag="6" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T1x-e9-Daa">
+                                        <rect key="frame" x="48" y="60" width="52" height="40"/>
+                                        <color key="backgroundColor" red="0.40784313725490196" green="0.3843137254901961" blue="0.31764705882352939" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view tag="5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P1g-Ef-uJa">
+                                        <rect key="frame" x="15" y="60" width="52" height="40"/>
+                                        <color key="backgroundColor" red="0.28235294117647058" green="0.27450980392156865" blue="0.22352941176470589" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view tag="6" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PM8-m5-NOs">
+                                        <rect key="frame" x="25" y="115" width="20" height="20"/>
+                                        <color key="backgroundColor" red="0.2196078431372549" green="0.21176470588235294" blue="0.16862745098039217" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TOTAL INCOME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HYH-oQ-kxT">
+                                        <rect key="frame" x="5" y="2" width="280" height="25"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="16"/>
+                                        <color key="textColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view tag="7" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IeJ-JN-Xuj">
+                                        <rect key="frame" x="80" y="115" width="20" height="20"/>
+                                        <color key="backgroundColor" red="0.33333333333333331" green="0.31372549019607843" blue="0.25098039215686274" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view tag="8" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Odg-3O-ih9">
+                                        <rect key="frame" x="134" y="115" width="20" height="20"/>
+                                        <color key="backgroundColor" red="0.50588235294117645" green="0.47450980392156861" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view tag="9" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dkd-iJ-Swo">
+                                        <rect key="frame" x="190" y="115" width="20" height="20"/>
+                                        <color key="backgroundColor" red="0.67450980392156867" green="0.63921568627450975" blue="0.49803921568627452" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view tag="5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SdO-0S-jp8">
+                                        <rect key="frame" x="245" y="115" width="20" height="20"/>
+                                        <color key="backgroundColor" red="1" green="0.94697711409999996" blue="0.76193426149999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="The richest 20%" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="L9V-3n-v53">
+                                        <rect key="frame" x="5" y="130" width="60" height="60"/>
+                                        <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="11"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="2nd richest 20%" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zcp-FA-yUg">
+                                        <rect key="frame" x="60" y="130" width="60" height="61.5"/>
+                                        <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="11"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="3rd richest 20%" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7bC-t2-cFk">
+                                        <rect key="frame" x="115" y="130" width="60" height="61.5"/>
+                                        <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="11"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="The poorest 20%" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3aV-Dl-Rjg">
+                                        <rect key="frame" x="228" y="130" width="54" height="61.5"/>
+                                        <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="11"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="4th richest 20%" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tUQ-6v-w4m">
+                                        <rect key="frame" x="170" y="130" width="60" height="61.5"/>
+                                        <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="11"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29H-EI-hrw">
+                                <rect key="frame" x="10" y="385" width="295" height="100"/>
+                                <string key="text">The distribution graph above show how much of all the income that each fifth of the population possess. Here the richest 20% earn 34%, whereas the poorest 20% earn 5% of the total income.</string>
+                                <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94509803920000002" green="0.0" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="nId-MI-G2G"/>
+                    <connections>
+                        <outlet property="giniInfo" destination="dIz-jj-tyd" id="4y1-MS-Lse"/>
+                        <outlet property="giniLabel" destination="Klr-2d-Cr5" id="t4T-SG-TAb"/>
+                        <outlet property="incomeInfo" destination="29H-EI-hrw" id="WUw-eJ-e3u"/>
+                        <outlet property="q1View" destination="P1g-Ef-uJa" id="PDs-nv-6UU"/>
+                        <outlet property="q2View" destination="T1x-e9-Daa" id="ECM-1K-fqY"/>
+                        <outlet property="q3View" destination="nMr-CD-1BN" id="Z4I-xl-VjR"/>
+                        <outlet property="q4View" destination="cmp-pm-4bJ" id="ljv-KX-WhX"/>
+                        <outlet property="q5View" destination="FoU-L6-7Je" id="gzZ-6x-Xha"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eAM-K1-hXf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2397" y="408"/>
+        </scene>
+        <!--Country View Controller-->
+        <scene sceneID="eP7-uk-Wzi">
+            <objects>
+                <viewController id="Z1y-dn-RRc" customClass="CountryViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2nI-xx-lNJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="ho5-S8-KEJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8K7-BK-Nnv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W5l-24-bKb">
+                                <rect key="frame" x="10" y="30" width="300" height="155"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
+                                <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vL6-oT-55f">
+                                <rect key="frame" x="10" y="200" width="300" height="230"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
+                                <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ck-gQ-7cr">
+                                <rect key="frame" x="146" y="-6" width="159" height="169"/>
+                                <string key="text">The GINI coefficient is a measure of inequality from 0 (no inequality) to 100 (maximal inequality). A score of 35 means LOW INCOME INEQUALITY</string>
+                                <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view tag="5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6sV-4W-qgn">
+                                <rect key="frame" x="15" y="5" width="120" height="160"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="GINI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K8g-y2-hr7">
+                                        <rect key="frame" x="0.0" y="5" width="120" height="40"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
+                                        <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pQZ-gR-qBu">
+                                        <rect key="frame" x="0.0" y="16" width="120" height="144"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="70"/>
+                                        <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="DISTRIBUTION" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7A-hJ-YdJ">
+                                <rect key="frame" x="10" y="203" width="300" height="26"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
+                                <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view tag="5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yf7-7X-mq0">
+                                <rect key="frame" x="15" y="185" width="290" height="200"/>
+                                <subviews>
+                                    <view tag="9" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="keT-nw-HqI">
+                                        <rect key="frame" x="15" y="60" width="260" height="40"/>
+                                        <color key="backgroundColor" red="1" green="0.97774485733529604" blue="0.92223607746795788" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view tag="9" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YUC-iE-v39">
+                                        <rect key="frame" x="15" y="30" width="260" height="1"/>
+                                        <color key="backgroundColor" red="0.95686274510000002" green="0.91372549020000005" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view tag="9" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dvu-cR-HNf">
+                                        <rect key="frame" x="15" y="30" width="1" height="10"/>
+                                        <color key="backgroundColor" red="0.95686274510000002" green="0.91372549020000005" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view tag="9" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eJe-oO-fWz">
+                                        <rect key="frame" x="275" y="30" width="1" height="10"/>
+                                        <color key="backgroundColor" red="0.95686274510000002" green="0.91372549020000005" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view tag="8" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fJa-T2-c2K">
+                                        <rect key="frame" x="96" y="60" width="123" height="40"/>
+                                        <color key="backgroundColor" red="0.91764705882352937" green="0.82561121324418152" blue="0.44460567035846177" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view tag="7" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4uA-Q4-BQX">
+                                        <rect key="frame" x="70" y="60" width="97" height="40"/>
+                                        <color key="backgroundColor" red="0.87058823529411766" green="0.63529411764705879" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view tag="6" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="19L-sy-Q7S">
+                                        <rect key="frame" x="36" y="60" width="64" height="40"/>
+                                        <color key="backgroundColor" red="0.71372549019607845" green="0.47058823529411764" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view tag="5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mie-Yb-DZG">
+                                        <rect key="frame" x="15" y="60" width="47" height="40"/>
+                                        <color key="backgroundColor" red="0.94509803920000002" green="0.0" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                    <view tag="6" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eR8-o9-bFy">
+                                        <rect key="frame" x="61" y="100" width="1" height="20"/>
+                                        <color key="backgroundColor" red="0.94509803920000002" green="0.0" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TOTAL WEALTH OF AUSTRALIA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NOz-aH-xRj">
+                                        <rect key="frame" x="5" y="2" width="280" height="25"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="16"/>
+                                        <color key="textColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The 1%" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Vp-g8-NGy">
+                                        <rect key="frame" x="0.0" y="100" width="55" height="25"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="12"/>
+                                        <color key="textColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The richest 5%" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EoX-7o-sgo">
+                                        <rect key="frame" x="8" y="120" width="87" height="25"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="12"/>
+                                        <color key="textColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view tag="7" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ay1-HE-b6e">
+                                        <rect key="frame" x="99" y="100" width="1" height="35"/>
+                                        <color key="backgroundColor" red="0.71372549019607845" green="0.47058823529411764" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view tag="8" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m2M-Oh-XQ2">
+                                        <rect key="frame" x="166" y="100" width="1" height="55"/>
+                                        <color key="backgroundColor" red="0.87058823529411766" green="0.63529411764705879" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view tag="9" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="flZ-5X-ZqR">
+                                        <rect key="frame" x="218" y="100" width="1" height="78"/>
+                                        <color key="backgroundColor" red="0.91764705882352937" green="0.82561121324418152" blue="0.44460567035846177" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The richest 10%" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EvG-sN-0RJ">
+                                        <rect key="frame" x="75" y="140" width="90" height="25"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="12"/>
+                                        <color key="textColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The richest 20%" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xVO-wA-gW2">
+                                        <rect key="frame" x="124" y="160" width="90" height="25"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="12"/>
+                                        <color key="textColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOu-Jq-3IY">
+                                <rect key="frame" x="10" y="385" width="295" height="100"/>
+                                <string key="text">The distribution graph above show how much of all the income that each fifth of the population possess. Here the richest 20% earn 34%, whereas the poorest 20% earn 5% of the total income.</string>
+                                <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94509803920000002" green="0.0" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="k2g-cT-d2e"/>
+                    <connections>
+                        <outlet property="giniInfo" destination="5Ck-gQ-7cr" id="fJL-j6-yd1"/>
+                        <outlet property="giniLabel" destination="pQZ-gR-qBu" id="e8X-mM-2SZ"/>
+                        <outlet property="incomeInfo" destination="zOu-Jq-3IY" id="Zrw-jh-9N2"/>
+                        <outlet property="q1View" destination="Mie-Yb-DZG" id="zaJ-yF-qGj"/>
+                        <outlet property="q2View" destination="19L-sy-Q7S" id="nr1-gt-WDM"/>
+                        <outlet property="q3View" destination="4uA-Q4-BQX" id="B0o-PF-gcx"/>
+                        <outlet property="q4View" destination="fJa-T2-c2K" id="0lf-sm-4OZ"/>
+                        <outlet property="q5View" destination="keT-nw-HqI" id="scf-zp-Aol"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Bv-LS-jq0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2321" y="1138"/>
+        </scene>
+        <!--Country View Controller-->
+        <scene sceneID="VYW-GJ-dqs">
+            <objects>
+                <viewController id="vBx-cP-d0w" customClass="CountryViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SFE-tz-0kl"/>
+                        <viewControllerLayoutGuide type="bottom" id="Y4r-fH-wli"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="p82-DJ-1ff">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spf-bP-sUL">
+                                <rect key="frame" x="10" y="30" width="300" height="155"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
+                                <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wOo-8N-26Y">
+                                <rect key="frame" x="10" y="200" width="300" height="230"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
+                                <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cMp-dR-GEZ">
+                                <rect key="frame" x="146" y="-6" width="159" height="169"/>
+                                <string key="text">The GINI coefficient is a measure of inequality from 0 (no inequality) to 100 (maximal inequality). A score of 35 means LOW INCOME INEQUALITY</string>
+                                <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view tag="5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yfG-Zy-TlD">
+                                <rect key="frame" x="15" y="5" width="120" height="160"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="GINI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F5i-FP-6pN">
+                                        <rect key="frame" x="0.0" y="5" width="120" height="40"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
+                                        <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WbV-ON-8Rg">
+                                        <rect key="frame" x="0.0" y="16" width="120" height="144"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="70"/>
+                                        <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="DISTRIBUTION" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9gk-aK-ANO">
+                                <rect key="frame" x="10" y="203" width="300" height="26"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
+                                <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view tag="5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AIj-7m-DIZ">
+                                <rect key="frame" x="15" y="185" width="290" height="200"/>
+                                <subviews>
+                                    <view tag="9" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0X2-Eq-esR">
+                                        <rect key="frame" x="15" y="60" width="260" height="40"/>
+                                        <color key="backgroundColor" red="0.95686274510000002" green="0.91372549020000005" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view tag="9" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QGE-4f-776">
+                                        <rect key="frame" x="15" y="30" width="260" height="1"/>
+                                        <color key="backgroundColor" red="0.95686274510000002" green="0.91372549020000005" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view tag="9" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5zr-Xt-yys">
+                                        <rect key="frame" x="15" y="30" width="1" height="10"/>
+                                        <color key="backgroundColor" red="0.95686274510000002" green="0.91372549020000005" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view tag="9" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WEO-jV-D4K">
+                                        <rect key="frame" x="275" y="30" width="1" height="10"/>
+                                        <color key="backgroundColor" red="0.95686274510000002" green="0.91372549020000005" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view tag="8" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PrE-Du-cIr">
+                                        <rect key="frame" x="96" y="60" width="151" height="40"/>
+                                        <color key="backgroundColor" red="0.72941176470000002" green="0.69803921570000005" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view tag="7" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EGr-4f-U9Z">
+                                        <rect key="frame" x="70" y="60" width="118" height="40"/>
+                                        <color key="backgroundColor" red="0.57647058819999997" green="0.5450980392" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view tag="6" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eEK-rO-Ure">
+                                        <rect key="frame" x="48" y="60" width="52" height="40"/>
+                                        <color key="backgroundColor" red="0.40784313729999999" green="0.38431372549999998" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view tag="5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gpf-sC-I12">
+                                        <rect key="frame" x="15" y="60" width="52" height="40"/>
+                                        <color key="backgroundColor" red="0.28235294119999998" green="0.27450980390000002" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view tag="6" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KZl-GS-Fqh">
+                                        <rect key="frame" x="25" y="115" width="20" height="20"/>
+                                        <color key="backgroundColor" red="0.21960784310000001" green="0.21176470589999999" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TOTAL INCOME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pqf-LK-iLY">
+                                        <rect key="frame" x="5" y="2" width="280" height="25"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="16"/>
+                                        <color key="textColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view tag="7" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7VK-eA-gVx">
+                                        <rect key="frame" x="80" y="115" width="20" height="20"/>
+                                        <color key="backgroundColor" red="0.33333333329999998" green="0.31372549020000001" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view tag="8" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cb4-lT-6i9">
+                                        <rect key="frame" x="134" y="115" width="20" height="20"/>
+                                        <color key="backgroundColor" red="0.50588235290000005" green="0.47450980390000003" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view tag="9" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VQ0-3S-4RJ">
+                                        <rect key="frame" x="190" y="115" width="20" height="20"/>
+                                        <color key="backgroundColor" red="0.67450980390000004" green="0.63921568630000003" blue="0.49803921569999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view tag="5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dUS-fm-LkC">
+                                        <rect key="frame" x="245" y="115" width="20" height="20"/>
+                                        <color key="backgroundColor" red="1" green="0.94697711409999996" blue="0.76193426149999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="The richest 20%" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="r7s-gT-QfJ">
+                                        <rect key="frame" x="5" y="130" width="60" height="60"/>
+                                        <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="11"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="2nd richest 20%" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7Bp-sS-mcN">
+                                        <rect key="frame" x="60" y="130" width="60" height="61.5"/>
+                                        <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="11"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="3rd richest 20%" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gyO-at-rf8">
+                                        <rect key="frame" x="115" y="130" width="60" height="61.5"/>
+                                        <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="11"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="The poorest 20%" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4xa-Rz-88C">
+                                        <rect key="frame" x="228" y="130" width="54" height="61.5"/>
+                                        <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="11"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="4th richest 20%" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="THs-gk-nql">
+                                        <rect key="frame" x="170" y="130" width="60" height="61.5"/>
+                                        <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="11"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tKh-kC-XMK">
+                                <rect key="frame" x="10" y="385" width="295" height="100"/>
+                                <string key="text">The distribution graph above show how much of all the income that each fifth of the population possess. Here the richest 20% earn 34%, whereas the poorest 20% earn 5% of the total income.</string>
+                                <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94509803920000002" green="0.0" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="XPr-xi-Cu4"/>
+                    <connections>
+                        <outlet property="giniInfo" destination="cMp-dR-GEZ" id="mT6-AW-L7E"/>
+                        <outlet property="giniLabel" destination="WbV-ON-8Rg" id="X4c-Ed-xuA"/>
+                        <outlet property="incomeInfo" destination="tKh-kC-XMK" id="O7q-ow-F8W"/>
+                        <outlet property="q1View" destination="gpf-sC-I12" id="5yE-N8-EwZ"/>
+                        <outlet property="q2View" destination="eEK-rO-Ure" id="Wnr-1R-Uag"/>
+                        <outlet property="q3View" destination="EGr-4f-U9Z" id="ka2-tV-RVe"/>
+                        <outlet property="q4View" destination="PrE-Du-cIr" id="bQE-bv-9ap"/>
+                        <outlet property="q5View" destination="0X2-Eq-esR" id="O9X-lR-ha9"/>
+                        <segue destination="dSd-lt-Rdj" kind="show" identifier="CountrySegue" id="l48-Dv-XKs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1fx-QD-Iv4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="988" y="408"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="a_bouton_info.png" width="30" height="30"/>
+        <image name="cameraButton.png" width="50" height="30"/>
+        <image name="filter.png" width="100" height="140"/>
+        <image name="logo50.png" width="80" height="80"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="lkt-uo-YY7"/>
+        <segue reference="l48-Dv-XKs"/>
+        <segue reference="bH5-9d-Pg3"/>
+    </inferredMetricsTieBreakers>
+</document>

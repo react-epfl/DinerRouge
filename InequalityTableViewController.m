@@ -37,15 +37,23 @@
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.separatorColor = [UIColor whiteColor];
     
-    //setup nav bar title
-    UINavigationItem *navigationItem = [super navigationItem];
-    UILabel *customLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 120.0f, 44.0f)];
-    customLabel.backgroundColor= [UIColor clearColor];
-    customLabel.textAlignment = NSTextAlignmentCenter;
-    [customLabel setFont:[UIFont fontWithName:[[BillManager sharedBillManager] fontNameBold] size:[[BillManager sharedBillManager] largeFont]]];
-    customLabel.textColor =  [[BillManager sharedBillManager] secondarycolor];
-    navigationItem.titleView = customLabel;
-    customLabel.text=NSLocalizedString(@"INEQUALITY", nil);
+//    //setup nav bar title
+//    UINavigationItem *navigationItem = [super navigationItem];
+//    UILabel *customLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 120.0f, 44.0f)];
+//    customLabel.backgroundColor= [UIColor clearColor];
+//    customLabel.textAlignment = NSTextAlignmentCenter;
+//    [customLabel setFont:[UIFont fontWithName:[[BillManager sharedBillManager] fontNameBold] size:[[BillManager sharedBillManager] largeFont]]];
+//    customLabel.textColor =  [[BillManager sharedBillManager] secondarycolor];
+//    navigationItem.titleView = customLabel;
+//    customLabel.text=NSLocalizedString(@"INEQUALITY", nil);
+    
+    // BACK BUTTON START
+    UIButton *newBackButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [newBackButton setImage:[UIImage imageNamed: @"a_bouton_back.png"] forState:UIControlStateNormal];
+    [newBackButton addTarget:self.navigationController action:@selector(popViewControllerAnimated:) forControlEvents:UIControlEventTouchUpInside];
+    newBackButton.frame = CGRectMake(5, 5, 30, 30);
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:newBackButton];
+    
     
     // SEGMENTED CONTROL
     [self.segmentedControl setTitle:NSLocalizedString(@"WEALTH", nil) forSegmentAtIndex:WEALTH];
@@ -53,7 +61,7 @@
     [self.segmentedControl setSelectedSegmentIndex:WEALTH];// a small routine to avoid a weird color bug
     [self.segmentedControl setSelectedSegmentIndex:INCOME];
     NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:
-                                [UIFont fontWithName:FontName size:MediumFontSize], NSFontAttributeName,
+                                [UIFont fontWithName:[[BillManager sharedBillManager] fontNameBold] size:15], NSFontAttributeName,
                                 [[BillManager sharedBillManager] secondarycolor], NSForegroundColorAttributeName, nil  ];
     [self.segmentedControl setTitleTextAttributes:attributes forState:UIControlStateNormal];
     NSDictionary *highlightedAttributes = [NSDictionary dictionaryWithObjectsAndKeys:
@@ -63,6 +71,10 @@
                                         [[BillManager sharedBillManager] secondarycolor], NSForegroundColorAttributeName,
                                         [NSNumber numberWithInt:NSUnderlineStyleSingle],NSUnderlineStyleAttributeName, nil  ];
     [self.segmentedControl setTitleTextAttributes:selectedAttributes forState:UIControlStateSelected];
+    
+    self.navigationItem.titleView = segmentedControl;
+
+    
     
     if (!wealthCountryArray) {
         wealthCountryArray = [self setupDataArrayWithName:@"oecd_wealth"];
@@ -88,7 +100,7 @@
     // SORT SEGMENTED CONTROL
     [self.sortSegmentedControl setTitle:NSLocalizedString(@"COUNTRY", nil) forSegmentAtIndex:COUNTRY];
     [self.sortSegmentedControl setTitle:NSLocalizedString(@"GINI", nil) forSegmentAtIndex:GINI];
-    self.sortSegmentedControl.contentHorizontalAlignment=UIControlContentHorizontalAlignmentRight;
+    //self.sortSegmentedControl.contentHorizontalAlignment=UIControlContentHorizontalAlignmentRight;
     NSDictionary *attributes2 = [NSDictionary dictionaryWithObjectsAndKeys:
                                 [UIFont fontWithName:FontName size:SmallFontSize], NSFontAttributeName,
                                 [[BillManager sharedBillManager] secondarycolor], NSForegroundColorAttributeName, nil  ];
@@ -102,12 +114,7 @@
     [self.sortSegmentedControl setTitleTextAttributes:selectedAttributes2 forState:UIControlStateSelected];
     [self sort];
     
-    // BACK BUTTON START
-    UIButton *newBackButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [newBackButton setImage:[UIImage imageNamed: @"a_bouton_back.png"] forState:UIControlStateNormal];
-    [newBackButton addTarget:self.navigationController action:@selector(popViewControllerAnimated:) forControlEvents:UIControlEventTouchUpInside];
-    newBackButton.frame = CGRectMake(5, 5, 30, 30);
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:newBackButton];
+
     
     /// FixedHeaderView
     self.fixedHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0,0,self.view.frame.size.width,65)];
@@ -115,7 +122,7 @@
     [self.view addSubview:fixedHeaderView];
     [self.fixedHeaderView addSubview:self.blackBottomView];
     //[self.fixedHeaderView addSubview:self.sortSegmentedControl];
-    [self.fixedHeaderView addSubview:self.segmentedControl];
+    //[self.fixedHeaderView addSubview:self.segmentedControl];
     [self.fixedHeaderView addSubview:self.countryTriangleView];
     [self.fixedHeaderView addSubview:self.giniTriangleView];
     [self.fixedHeaderView addSubview:self.leftRedLineView];

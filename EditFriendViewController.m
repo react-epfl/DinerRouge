@@ -151,8 +151,8 @@
         //NSLog(@"INDEX %d with image %@",avatarIndex, avatarImageView.image.description);
         
         if(friend){
-            int index = [[[BillManager sharedBillManager] friends] indexOfObject:friend];
-            [[BillManager sharedBillManager] replaceFriendwithImage:avatarImageView.image income:friendIncome atIndex: index];
+            long index = [[[BillManager sharedBillManager] friends] indexOfObject:friend];
+            [[BillManager sharedBillManager] replaceFriendwithImage:avatarImageView.image income:friendIncome atIndex: (int)index];
         }else{
             [[BillManager sharedBillManager] addFriendwithImage: avatarImageView.image income:friendIncome];
         }

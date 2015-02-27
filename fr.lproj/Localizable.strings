@@ -80,11 +80,11 @@
 "INFO_WHAT" = "PARTAGER L'ADDITION SELON LE REVENU";
 
 
-"INFO_HOW" = " 1 - Appuyer sur 'AJOUTER CAMARADE' \n 2 - Ajouter sa photo et son revenu \n 3 - Appuyer sur 'AJOUTER' \n Quand tous ont effectué les étapes 1 à 3 \n 4 - Entrer le montant de l'addition \n 5 - Appuyer sur 'REVELER' \n 6 - Voir ce que chacun doit payer";
+//"INFO_HOW" = " 1 - Appuyer sur 'AJOUTER CAMARADE' \n 2 - Ajouter sa photo et son revenu \n 3 - Appuyer sur 'AJOUTER' \n Quand tous ont effectué les étapes 1 à 3 \n 4 - Entrer le montant de l'addition \n 5 - Appuyer sur 'REVELER' \n 6 - Voir ce que chacun doit payer";
 
-//"INFO_HOW" = "1 - Ajouter sa photo (facultatif) \n 2 - Entrer son revenu annuel \n 3 - Appuyer sur 'AJOUTER' \n Quand tous ont effectué les étapes 1 à 3 \n 4 - Appuyer sur 'PAYER' \n 5 - Entrer le montant de l'addition \n 6 - Appuyer sur 'PAYER' \n 7 - Vous pouvez voir ce que chacun doit payer";
+"INFO_HOW" = "DINER ROUGE brings income inequality to the table by providing a provocative way to split the bill at the restaurant, namely according the income of each person. Furthermore, DINER ROUGE provides information about the distribution of income around the table and allows to compare it to different countries around the world. Enjoy!";
 
-"INFO_WHO" = "CONCEPT S. Bendahan - CODE A. Holzer DESIGN A76 - ART G. Vulliens, B. Syfert \nNOM J. Salom  -  ANDROID U. Rosselet \nWEB B. Fritscher - MERCI A. Métrailler, \nT. Boillat, F. Vessaz, F. Andreae";
+"INFO_WHO" = "CONCEPTE: S. Bendahan \nUX DESIGN & CODE: A. Holzer \nDESIGN: A76, G. Vulliens, B. Syfert \nNOM: J. Salom \nCODE: B. Fritscher, U. Rosselet \nMERCI: A. Métrailler,\nT. Boillat, F. Vessaz, F. Andreae";
 
 "INFO_GINI" = "Le coefficient de GINI est une mesure d'inégalité variant entre 0 (égalité) et 100 (inégalité maximale).";
 

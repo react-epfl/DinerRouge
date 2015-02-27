@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		8001B9851A9F237300EB6AEE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8001B9841A9F237300EB6AEE /* LaunchScreen.xib */; };
+		8001B9881A9F90D600EB6AEE /* YouViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8001B9871A9F90D600EB6AEE /* YouViewController.m */; };
 		8036E70A163FDA5300242464 /* cameraButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8036E709163FDA5300242464 /* cameraButton.png */; };
+		8041811B1AA0F80600AFB988 /* UniversalStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8041811A1AA0F80600AFB988 /* UniversalStoryboard.storyboard */; };
 		80521BA11635761900AE8842 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80521BA01635761900AE8842 /* InfoViewController.m */; };
 		806ED90E1641304400313768 /* ReusableFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 806ED90D1641304400313768 /* ReusableFooterView.m */; };
 		808D5F1C16356320003D0765 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 808D5F1B16356320003D0765 /* UIKit.framework */; };
@@ -82,7 +84,10 @@
 
 /* Begin PBXFileReference section */
 		8001B9841A9F237300EB6AEE /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		8001B9861A9F90D600EB6AEE /* YouViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouViewController.h; sourceTree = "<group>"; };
+		8001B9871A9F90D600EB6AEE /* YouViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YouViewController.m; sourceTree = "<group>"; };
 		8036E709163FDA5300242464 /* cameraButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cameraButton.png; sourceTree = "<group>"; };
+		8041811A1AA0F80600AFB988 /* UniversalStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UniversalStoryboard.storyboard; sourceTree = "<group>"; };
 		80521B9F1635761900AE8842 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
 		80521BA01635761900AE8842 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
 		806ED90C1641304400313768 /* ReusableFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReusableFooterView.h; sourceTree = "<group>"; };
@@ -330,6 +335,8 @@
 			isa = PBXGroup;
 			children = (
 				80BD08D01A18C062007F62A8 /* income */,
+				8001B9861A9F90D600EB6AEE /* YouViewController.h */,
+				8001B9871A9F90D600EB6AEE /* YouViewController.m */,
 				80BD08CE1A18BF83007F62A8 /* wealth */,
 				80BD08C11A17B142007F62A8 /* InequalityTableViewController.h */,
 				80BD08C21A17B142007F62A8 /* InequalityTableViewController.m */,
@@ -369,6 +376,7 @@
 				8092621516369080002F98F4 /* Images */,
 				80C7BC051650FE9C001E13C2 /* iPadStoryboard.storyboard */,
 				808D5F5016356363003D0765 /* Storyboard.storyboard */,
+				8041811A1AA0F80600AFB988 /* UniversalStoryboard.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -457,6 +465,7 @@
 				808D5F5816356363003D0765 /* DR-57.png in Resources */,
 				808D5F5916356363003D0765 /* DR-114.png in Resources */,
 				808D5F5F16356363003D0765 /* Storyboard.storyboard in Resources */,
+				8041811B1AA0F80600AFB988 /* UniversalStoryboard.storyboard in Resources */,
 				80BD08D11A18C062007F62A8 /* income in Resources */,
 				80BD08D71A18F4FC007F62A8 /* a_bouton_back@2x.png in Resources */,
 				8092621B1636B6C9002F98F4 /* guest1old.png in Resources */,
@@ -518,6 +527,7 @@
 				808D5F5B16356363003D0765 /* FriendCollectionViewCell.m in Sources */,
 				808D5F5C16356363003D0765 /* FriendCollectionViewController.m in Sources */,
 				80521BA11635761900AE8842 /* InfoViewController.m in Sources */,
+				8001B9881A9F90D600EB6AEE /* YouViewController.m in Sources */,
 				80FA2E93163A9079007CA8CC /* EditFriendViewController.m in Sources */,
 				80EF037D1640430F0032CD9A /* ReusableHeaderView.m in Sources */,
 				806ED90E1641304400313768 /* ReusableFooterView.m in Sources */,
@@ -604,6 +614,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -625,6 +636,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

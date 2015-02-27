@@ -35,6 +35,7 @@
     giniInfo.text=NSLocalizedString(@"INFO_GINI", nil) ;
     incomeInfo.text=NSLocalizedString(@"INCOME_INFO", nil) ;
     wealthInfo.text=NSLocalizedString(@"WEALTH_INFO", nil) ;
+    
     [doneButton setTitle:NSLocalizedString(@"DONE_BUTTON", nil) forState:UIControlStateNormal];
     //[doneButton setImage:[UIImage imageNamed:@"bouton_done_2.png" ] forState:UIControlStateHighlighted];
 }
