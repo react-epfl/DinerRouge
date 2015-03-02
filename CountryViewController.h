@@ -21,6 +21,20 @@
 @property(strong, nonatomic) IBOutlet UIView * q4View;
 @property(strong, nonatomic) IBOutlet UIView * q5View;
 
+@property(strong, nonatomic) IBOutlet UIView * q2ViewIndicator;
+@property(strong, nonatomic) IBOutlet UIView * q3ViewIndicator;
+@property(strong, nonatomic) IBOutlet UIView * q4ViewIndicator;
+@property(strong, nonatomic) IBOutlet UIView * q5ViewIndicator;
+@property(strong, nonatomic) IBOutlet UILabel * q2ViewIndicatorLabel;
+@property(strong, nonatomic) IBOutlet UILabel * q3ViewIndicatorLabel;
+@property(strong, nonatomic) IBOutlet UILabel * q4ViewIndicatorLabel;
+@property(strong, nonatomic) IBOutlet UILabel * q5ViewIndicatorLabel;
+
+@property(strong, nonatomic) IBOutlet UIView * distributionView;
+
+@property(strong, nonatomic) IBOutlet UILabel * distributionLabel;
+
+
 @property(strong, nonatomic) IBOutlet UILabel * titleView;
 @property(strong, nonatomic) IBOutlet UITextView * giniInfo;
 @property(strong, nonatomic) IBOutlet UITextView * incomeInfo;

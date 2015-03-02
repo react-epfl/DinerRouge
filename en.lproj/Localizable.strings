@@ -78,7 +78,7 @@
 
 "INFO_WHO" = "CONCEPT: S. Bendahan \nUX DESIGN & CODE: A. Holzer \nDESIGN: A76, G. Vulliens, B. Syfert \nNAME: J. Salom \nCODE: B. Fritscher, U. Rosselet \nTHANKS: A. Métrailler,\nT. Boillat, F. Vessaz, F. Andreae";
 
-"INFO_GINI" = "The GINI coefficient is a measure of inequality from 0 (no inequality) to 100 (maximal inequality). A score of 35 means LOW INCOME INEQUALITY.";
+"INFO_GINI" = "The GINI coefficient is a measure of inequality from 0 (no inequality) to 100 (maximal inequality). A score of %@ means %@.";
 
 "COUNTRY" = "COUNTRY";
 
@@ -88,13 +88,13 @@
 
 "INEQUALITY" = "INEQUALITY";
 
-"WEALTH_INFO"="The distribution of wealth graph shows how much of the total wealth the top possesses.";
+"WEALTH_INFO"="The distribution of wealth graph shows how much of the total wealth the top possesses. Here the richest %@%% possess %@%% of the total wealth.";
 
-"INCOME_INFO"="The distribution graph above show how much of all the income that each fifth of the population possess. Here the richest 20% earn 34%, whereas the poorest 20% earn 5% of the total income.";
+"INCOME_INFO"="The distribution graph above show how much of all the income that each fifth of the population possess. Here the richest 20%% earn %@%%, whereas the poorest 20%% earn %@%% of the total income.";
 
 "Your table" = "Your table";
-
-"EXPLANATION" = "Countries from least to most unequal";
+"COUNTRIES_INEQUALITY"="Countries with %@ inequality";
+"EXPLANATION" = "Countries ranked by GINI from 0 (no inequality) to 100 (maximal inequality)";
 "Equal Country" = "Equalistan";
 "INEXISTANT"="NONEXISTENT";
 "ALMOST INEXISTANT"="ALMOST NONEXISTENT";
@@ -108,9 +108,12 @@
 "EXTREME"="EXTREME";
 "MAXIMAL"="MAXIMAL";
 "ALMOST MAXIMAL"="ALMOST MAXIMAL";
-"HERE_INEQUALITY"="HERE THE %@ INEQUALITY IS";
+"HERE_INEQUALITY"="THE %@ INEQUALITY IS";
 "YOU_INEQUALITY"="YOUR INEQUALITY IS";
 "RESET"="RESET";
 "REVEAL_BUTTON"="REVEAL";
 "HIDE"="HIDE";
+
+"DISTRIBUTION_LABEL" = "TOTAL %@ IN %@";
+
 

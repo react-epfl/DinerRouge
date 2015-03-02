@@ -13,6 +13,7 @@
 		8041811B1AA0F80600AFB988 /* UniversalStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8041811A1AA0F80600AFB988 /* UniversalStoryboard.storyboard */; };
 		80521BA11635761900AE8842 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80521BA01635761900AE8842 /* InfoViewController.m */; };
 		806ED90E1641304400313768 /* ReusableFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 806ED90D1641304400313768 /* ReusableFooterView.m */; };
+		807EF5161AA459D1006A88A8 /* iPhoneStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 807EF5151AA459D1006A88A8 /* iPhoneStoryboard.storyboard */; };
 		808D5F1C16356320003D0765 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 808D5F1B16356320003D0765 /* UIKit.framework */; };
 		808D5F1E16356320003D0765 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 808D5F1D16356320003D0765 /* Foundation.framework */; };
 		808D5F2016356320003D0765 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 808D5F1F16356320003D0765 /* CoreGraphics.framework */; };
@@ -92,6 +93,7 @@
 		80521BA01635761900AE8842 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
 		806ED90C1641304400313768 /* ReusableFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReusableFooterView.h; sourceTree = "<group>"; };
 		806ED90D1641304400313768 /* ReusableFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReusableFooterView.m; sourceTree = "<group>"; };
+		807EF5151AA459D1006A88A8 /* iPhoneStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhoneStoryboard.storyboard; sourceTree = "<group>"; };
 		808D5F1716356320003D0765 /* DinerRouge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DinerRouge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		808D5F1B16356320003D0765 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		808D5F1D16356320003D0765 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -377,6 +379,7 @@
 				80C7BC051650FE9C001E13C2 /* iPadStoryboard.storyboard */,
 				808D5F5016356363003D0765 /* Storyboard.storyboard */,
 				8041811A1AA0F80600AFB988 /* UniversalStoryboard.storyboard */,
+				807EF5151AA459D1006A88A8 /* iPhoneStoryboard.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -488,6 +491,7 @@
 				809752B0164827D200489ECA /* guest2.png in Resources */,
 				809752B1164827D200489ECA /* guest3.png in Resources */,
 				809752B2164827D200489ECA /* guest6.png in Resources */,
+				807EF5161AA459D1006A88A8 /* iPhoneStoryboard.storyboard in Resources */,
 				809752B416482D6D00489ECA /* filter@2x.png in Resources */,
 				809752BE1648390500489ECA /* plot.png in Resources */,
 				80C1A0491A1A7B0500277C0B /* an_unequal@2x.png in Resources */,
@@ -627,7 +631,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -649,7 +653,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

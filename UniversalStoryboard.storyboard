@@ -248,7 +248,7 @@ Quand tous ont effectué les étapes 1 à 3:
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="VrH-yE-XAf">
-                                <rect key="frame" x="150" y="63" width="170" height="30"/>
+                                <rect key="frame" x="150" y="63" width="155" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="insetFor6xAndEarlier" minX="0.0" minY="64" maxX="0.0" maxY="-64"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
@@ -265,7 +265,7 @@ Quand tous ont effectué les étapes 1 à 3:
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="jsq-fN-tPV">
-                                <rect key="frame" x="150" y="150" width="170" height="30"/>
+                                <rect key="frame" x="150" y="150" width="155" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="insetFor6xAndEarlier" minX="0.0" minY="64" maxX="0.0" maxY="-64"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
@@ -282,7 +282,7 @@ Quand tous ont effectué les étapes 1 à 3:
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="INCOME" textAlignment="right" minimumFontSize="15" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Igo-Vv-dTd">
-                                <rect key="frame" x="150" y="20" width="170" height="30"/>
+                                <rect key="frame" x="150" y="20" width="155" height="30"/>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="insetFor6xAndEarlier" minX="0.0" minY="64" maxX="0.0" maxY="-64"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="19"/>
@@ -374,17 +374,6 @@ Quand tous ont effectué les étapes 1 à 3:
                                     <color key="textColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="KZQ-nP-MYg">
-                                    <rect key="frame" x="47" y="33" width="226" height="29"/>
-                                    <segments>
-                                        <segment title="YOU"/>
-                                        <segment title="INCOME"/>
-                                    </segments>
-                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <connections>
-                                        <action selector="changeType:" destination="dSd-lt-Rdj" eventType="valueChanged" id="QXy-sN-zZK"/>
-                                    </connections>
-                                </segmentedControl>
                             </subviews>
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="yRG-5Q-q7v">
@@ -392,7 +381,7 @@ Quand tous ont effectué les étapes 1 à 3:
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </view>
                         <prototypes>
-                            <tableViewCell contentMode="TopLeft" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MyTableCell" rowHeight="50" id="0LD-tO-AmJ">
+                            <tableViewCell contentMode="TopLeft" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MyTableCell" rowHeight="50" id="0LD-tO-AmJ">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="25"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0LD-tO-AmJ" id="ASY-sZ-zNn">
@@ -445,7 +434,7 @@ Quand tous ont effectué les étapes 1 à 3:
                                     <segue destination="VUD-h4-Y5I" kind="push" identifier="IncomeToCountrySegue" id="bH5-9d-Pg3"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="TopLeft" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DistributionCell" rowHeight="50" id="26Q-Qm-qfJ">
+                            <tableViewCell contentMode="TopLeft" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DistributionCell" rowHeight="50" id="26Q-Qm-qfJ">
                                 <rect key="frame" x="0.0" y="96" width="320" height="132"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="26Q-Qm-qfJ" id="O7T-g0-Bud">
@@ -486,9 +475,12 @@ Quand tous ont effectué les étapes 1 à 3:
                                             <rect key="frame" x="25" y="23" width="34" height="20"/>
                                             <color key="backgroundColor" red="0.29523202790000003" green="0.27957797379999999" blue="0.2249473971" alpha="1" colorSpace="calibratedRGB"/>
                                         </view>
-                                        <view tag="5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jrm-hL-bUK">
+                                        <view tag="5" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="infinite" translatesAutoresizingMaskIntoConstraints="NO" id="jrm-hL-bUK">
                                             <rect key="frame" x="25" y="23" width="22" height="20"/>
                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <accessibility key="accessibilityConfiguration">
+                                                <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
+                                            </accessibility>
                                         </view>
                                     </subviews>
                                 </tableViewCellContentView>
@@ -498,7 +490,7 @@ Quand tous ont effectué les étapes 1 à 3:
                                     <segue destination="VUD-h4-Y5I" kind="push" identifier="IncomeToCountrySegue" id="Icg-me-FXe"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="TopLeft" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DistributionWealthCell" rowHeight="50" id="S4I-Rj-vLr">
+                            <tableViewCell contentMode="TopLeft" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DistributionWealthCell" rowHeight="50" id="S4I-Rj-vLr">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="S4I-Rj-vLr" id="ekl-z2-BVn">
@@ -527,20 +519,20 @@ Quand tous ont effectué les étapes 1 à 3:
                                             <rect key="frame" x="25" y="23" width="271" height="20"/>
                                             <color key="backgroundColor" red="1" green="1" blue="0.83468415780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </view>
-                                        <view tag="6" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0GK-Sq-xag">
-                                            <rect key="frame" x="67" y="23" width="229" height="20"/>
+                                        <view tag="9" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0GK-Sq-xag">
+                                            <rect key="frame" x="25" y="23" width="189" height="20"/>
                                             <color key="backgroundColor" red="1" green="0.97538732579999998" blue="0.2889465832" alpha="1" colorSpace="calibratedRGB"/>
                                         </view>
-                                        <view tag="7" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SVx-uz-ncx">
-                                            <rect key="frame" x="179" y="23" width="117" height="20"/>
+                                        <view tag="8" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SVx-uz-ncx">
+                                            <rect key="frame" x="25" y="23" width="96" height="20"/>
                                             <color key="backgroundColor" red="1" green="0.73381896800000002" blue="0.018280560580000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </view>
-                                        <view tag="8" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d6n-jB-ATi">
-                                            <rect key="frame" x="218" y="23" width="78" height="20"/>
+                                        <view tag="7" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d6n-jB-ATi">
+                                            <rect key="frame" x="25" y="23" width="69" height="20"/>
                                             <color key="backgroundColor" red="1" green="0.40214004879999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </view>
-                                        <view tag="9" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="exd-Xs-6Jf">
-                                            <rect key="frame" x="245" y="23" width="51" height="20"/>
+                                        <view tag="6" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="exd-Xs-6Jf">
+                                            <rect key="frame" x="25" y="23" width="51" height="20"/>
                                             <color key="backgroundColor" red="1" green="0.027737531079999999" blue="0.18717762730000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </view>
                                     </subviews>
@@ -560,6 +552,18 @@ Quand tous ont effectué les étapes 1 à 3:
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="a8O-P4-kDA">
                         <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="KZQ-nP-MYg">
+                            <rect key="frame" x="187" y="7.5" width="226" height="29"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="YOU"/>
+                                <segment title="INCOME"/>
+                            </segments>
+                            <color key="tintColor" red="0.94509803920000002" green="0.0" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="changeType:" destination="dSd-lt-Rdj" eventType="valueChanged" id="QXy-sN-zZK"/>
+                            </connections>
+                        </segmentedControl>
                     </navigationItem>
                     <connections>
                         <outlet property="explanationLine" destination="vwo-Gd-heu" id="2YU-3l-q8l"/>
@@ -694,25 +698,25 @@ Quand tous ont effectué les étapes 1 à 3:
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="2nd richest 20%" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zcp-FA-yUg">
-                                        <rect key="frame" x="60" y="130" width="60" height="61.5"/>
+                                        <rect key="frame" x="60" y="130" width="60" height="62"/>
                                         <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="11"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="3rd richest 20%" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7bC-t2-cFk">
-                                        <rect key="frame" x="115" y="130" width="60" height="61.5"/>
+                                        <rect key="frame" x="115" y="130" width="60" height="62"/>
                                         <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="11"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="The poorest 20%" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3aV-Dl-Rjg">
-                                        <rect key="frame" x="228" y="130" width="54" height="61.5"/>
+                                        <rect key="frame" x="228" y="130" width="54" height="62"/>
                                         <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="11"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="4th richest 20%" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tUQ-6v-w4m">
-                                        <rect key="frame" x="170" y="130" width="60" height="61.5"/>
+                                        <rect key="frame" x="170" y="130" width="60" height="62"/>
                                         <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="11"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1005,7 +1009,7 @@ Quand tous ont effectué les étapes 1 à 3:
                                         <rect key="frame" x="25" y="115" width="20" height="20"/>
                                         <color key="backgroundColor" red="0.21960784310000001" green="0.21176470589999999" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TOTAL INCOME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pqf-LK-iLY">
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TOTAL INCOME OF THE TABLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pqf-LK-iLY">
                                         <rect key="frame" x="5" y="2" width="280" height="25"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="16"/>
                                         <color key="textColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1034,25 +1038,25 @@ Quand tous ont effectué les étapes 1 à 3:
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="2nd richest 20%" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7Bp-sS-mcN">
-                                        <rect key="frame" x="60" y="130" width="60" height="61.5"/>
+                                        <rect key="frame" x="60" y="130" width="60" height="62"/>
                                         <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="11"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="3rd richest 20%" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gyO-at-rf8">
-                                        <rect key="frame" x="115" y="130" width="60" height="61.5"/>
+                                        <rect key="frame" x="115" y="130" width="60" height="62"/>
                                         <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="11"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="The poorest 20%" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4xa-Rz-88C">
-                                        <rect key="frame" x="228" y="130" width="54" height="61.5"/>
+                                        <rect key="frame" x="228" y="130" width="54" height="62"/>
                                         <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="11"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="4th richest 20%" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="THs-gk-nql">
-                                        <rect key="frame" x="170" y="130" width="60" height="61.5"/>
+                                        <rect key="frame" x="170" y="130" width="60" height="62"/>
                                         <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="11"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1072,6 +1076,7 @@ Quand tous ont effectué les étapes 1 à 3:
                     </view>
                     <navigationItem key="navigationItem" id="XPr-xi-Cu4"/>
                     <connections>
+                        <outlet property="distributionView" destination="AIj-7m-DIZ" id="AP2-fe-CAm"/>
                         <outlet property="giniInfo" destination="cMp-dR-GEZ" id="mT6-AW-L7E"/>
                         <outlet property="giniLabel" destination="WbV-ON-8Rg" id="X4c-Ed-xuA"/>
                         <outlet property="incomeInfo" destination="tKh-kC-XMK" id="O7q-ow-F8W"/>
@@ -1096,7 +1101,7 @@ Quand tous ont effectué les étapes 1 à 3:
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="lkt-uo-YY7"/>
-        <segue reference="l48-Dv-XKs"/>
+        <segue reference="rOM-7s-Vwn"/>
         <segue reference="bH5-9d-Pg3"/>
     </inferredMetricsTieBreakers>
 </document>

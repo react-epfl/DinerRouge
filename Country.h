@@ -14,6 +14,7 @@
 - (id)initWithName:(NSString*) aName gini:(NSNumber *)aGini q1:(NSNumber *)aQ1 q2:(NSNumber *)aQ2 q3:(NSNumber *)aQ3 q4:(NSNumber *)aQ4 q5:(NSNumber *)aQ5;
 
 -(NSString*)inequality:(NSString*) type;
+-(NSString*)inequalityTitle;
 
 @property (nonatomic,strong)  NSString *name;
 @property (nonatomic, strong) NSNumber *gini;

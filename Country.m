@@ -80,4 +80,47 @@
     return [NSString stringWithFormat:@"%@ %@", prePhrase, adjective];
 }
 
+
+-(NSString*)inequalityTitle{
+    NSString* adjective;
+    if ([gini intValue]==0 ) {
+        adjective= NSLocalizedString(@"INEXISTANT", nil);
+    }else if ([gini intValue]<=10 ) {
+        adjective=  NSLocalizedString(@"ALMOST INEXISTANT", nil);
+    }else
+        if ([gini intValue]<=20 ) {
+            adjective=  NSLocalizedString(@"VERY LOW", nil);
+        }else
+            if ([gini intValue]<=30 ) {
+                adjective=  NSLocalizedString(@"LOW", nil);
+            }else
+                if ([gini intValue]<=40 ) {
+                    adjective=  NSLocalizedString(@"MEDIUM", nil);
+                }else
+                    if ([gini intValue]<=50 ) {
+                        adjective=  NSLocalizedString(@"MEDIUM HIGH", nil);
+                    }else
+                        if ([gini intValue]<=60 ) {
+                            adjective=  NSLocalizedString(@"HIGH", nil);
+                        }else
+                            if ([gini intValue]<=70 ) {
+                                adjective=  NSLocalizedString(@"VERY HIGH", nil);
+                            }else
+                                if ([gini intValue]<=80 ) {
+                                    adjective=  NSLocalizedString(@"VERY VERY HIGH", nil);
+                                }else
+                                    if ([gini intValue]<=90 ) {
+                                        adjective=  NSLocalizedString(@"EXTREME", nil);
+                                    }else
+                                        if ([gini intValue]<100 ) {
+                                            adjective=  NSLocalizedString(@"ALMOST MAXIMAL", nil);
+                                        }else{
+                                            adjective=  NSLocalizedString(@"MAXIMAL", nil);
+                                        }
+    
+    
+    return [NSString stringWithFormat:  NSLocalizedString(@"COUNTRIES_INEQUALITY", nil),[adjective lowercaseString]];
+}
+
+
 @end

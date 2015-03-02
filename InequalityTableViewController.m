@@ -25,7 +25,7 @@
 
 @implementation InequalityTableViewController
 
-@synthesize wealthCountryArray, incomeCountryArray,currentCountryArray, segmentedControl, sortSegmentedControl,countryTriangleView,giniTriangleView,fixedHeaderView,explanationLine;
+@synthesize wealthCountryArray, incomeCountryArray,currentCountryArray, segmentedControl, countryBySectionArray, sortSegmentedControl,countryTriangleView,giniTriangleView,fixedHeaderView,explanationLine;
 
 #pragma mark - View lifecycle
 //=========================
@@ -61,7 +61,7 @@
     [self.segmentedControl setSelectedSegmentIndex:WEALTH];// a small routine to avoid a weird color bug
     [self.segmentedControl setSelectedSegmentIndex:INCOME];
     NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:
-                                [UIFont fontWithName:[[BillManager sharedBillManager] fontNameBold] size:15], NSFontAttributeName,
+                                [UIFont fontWithName:[[BillManager sharedBillManager] fontNameBold] size:[[BillManager sharedBillManager] largeFont]], NSFontAttributeName,
                                 [[BillManager sharedBillManager] secondarycolor], NSForegroundColorAttributeName, nil  ];
     [self.segmentedControl setTitleTextAttributes:attributes forState:UIControlStateNormal];
     NSDictionary *highlightedAttributes = [NSDictionary dictionaryWithObjectsAndKeys:
@@ -117,19 +117,21 @@
 
     
     /// FixedHeaderView
-    self.fixedHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0,0,self.view.frame.size.width,65)];
-    self.fixedHeaderView.backgroundColor = [[BillManager sharedBillManager] maincolor];
-    [self.view addSubview:fixedHeaderView];
-    [self.fixedHeaderView addSubview:self.blackBottomView];
+   // self.fixedHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0,0,self.view.frame.size.width,65)];
+   // self.fixedHeaderView.backgroundColor = [[BillManager sharedBillManager] maincolor];
+  //  [self.view addSubview:fixedHeaderView];
+   // [self.fixedHeaderView addSubview:self.blackBottomView];
     //[self.fixedHeaderView addSubview:self.sortSegmentedControl];
     //[self.fixedHeaderView addSubview:self.segmentedControl];
-    [self.fixedHeaderView addSubview:self.countryTriangleView];
-    [self.fixedHeaderView addSubview:self.giniTriangleView];
-    [self.fixedHeaderView addSubview:self.leftRedLineView];
-    [self.fixedHeaderView addSubview:self.topRedLineView];
-    [self.fixedHeaderView addSubview:self.rightRedLine];
+//    [self.fixedHeaderView addSubview:self.countryTriangleView];
+ //   [self.fixedHeaderView addSubview:self.giniTriangleView];
+  //  [self.fixedHeaderView addSubview:self.leftRedLineView];
+  //  [self.fixedHeaderView addSubview:self.topRedLineView];
+  //  [self.fixedHeaderView addSubview:self.rightRedLine];
+     self.explanationLine.font = [UIFont fontWithName:[[BillManager sharedBillManager] fontNameBold] size:[[BillManager sharedBillManager] smallFont]];
+    self.explanationLine.textColor = [[BillManager sharedBillManager] secondarycolor];
     self.explanationLine.text=NSLocalizedString(@"EXPLANATION", nil);
-    [self.fixedHeaderView addSubview:self.explanationLine];
+  //  [self.fixedHeaderView addSubview:self.explanationLine];
 }
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
@@ -143,6 +145,14 @@
     fixedHeaderView.frame = newFrame;
 }
 
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self sort];
+    [self placeInputView];
+    
+}
+
 - (void)viewDidAppear:(BOOL)animated
 {
     [self sort];
@@ -154,22 +164,60 @@
 #pragma mark - Table view data source
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+   // [self sort];
+    int numberOfSections=0;
+    int j=-1;
+    for (int i= 0; i<=100 ; i=i+10) {
+         int numberOfCountriesInSection=0;
+        for (Country* country in currentCountryArray) {
+            if ([country.gini intValue]<=i && [country.gini intValue]>j) {
+                numberOfCountriesInSection++;
+            }
+        }
+        if (numberOfCountriesInSection>0) {
+            numberOfSections++;
+        }
+        j=i;
+    }
+    NSLog(@"NumberOfSections %d", numberOfSections);
+    return numberOfSections;
 }
 
 // HANDLES SECTIONS AND ROWS
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if (self.currentCountryArray==nil){
-        return 0;
+    
+    //[self sort];
+    int sectionNumber=-1;
+    int j=-1;
+    for (int i= 0; i<=100 ; i=i+10) {
+        int numberOfCountriesInSection=0;
+        for (Country* country in currentCountryArray) {
+            if ([country.gini intValue]<=i && [country.gini intValue]>j) {
+                numberOfCountriesInSection++;
+            }
+        }
+        if (numberOfCountriesInSection>0) {
+            sectionNumber++;
+            if (sectionNumber==section ) {
+                return numberOfCountriesInSection;
+            }
+        }
+        j=i;
     }
-    return [self.currentCountryArray count];
+    return nil;
 }
+
+
 
 // LOADS DATA
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    Country* country = [self getCountryForIndex:[indexPath row]];
+    
+    Country* country = [self countryForIndexPath:indexPath];
+    
+    
+    //Country* country = [self getCountryForIndex:[indexPath row]];
     
     
     NSString *CellIdentifier = @"DistributionCell";
@@ -184,25 +232,26 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     UILabel *numberLabel = (UILabel *)[cell viewWithTag:1];
-    numberLabel.text=[NSString stringWithFormat:@"%ld", indexPath.row+1];
+    numberLabel.text=[NSString stringWithFormat:@"%d", [self countryRankingForIndexPath:indexPath ]];
     UILabel *nameLabel = (UILabel *)[cell viewWithTag:2];
     nameLabel.text=country.name;
     UILabel *giniLabel = (UILabel *)[cell viewWithTag:3];
-    giniLabel.text= [NSString stringWithFormat:@"%.f%%", [country.gini floatValue] ] ;
+    giniLabel.text= [NSString stringWithFormat:@"%.f", [country.gini floatValue] ] ;
     
-    UIView *q1View = (UILabel *)[cell viewWithTag:5];
-    UIView *q2View = (UILabel *)[cell viewWithTag:6];
-    UIView *q3View = (UILabel *)[cell viewWithTag:7];
-    UIView *q4View = (UILabel *)[cell viewWithTag:8];
-    UIView *q5View = (UILabel *)[cell viewWithTag:9];
+    UIView *q1View = (UIView *)[cell viewWithTag:5];
+    UIView *q2View = (UIView *)[cell viewWithTag:6];
+    UIView *q3View = (UIView *)[cell viewWithTag:7];
+    UIView *q4View = (UIView *)[cell viewWithTag:8];
+    UIView *q5View = (UIView *)[cell viewWithTag:9];
     
     
     if(self.segmentedControl.selectedSegmentIndex==INCOME){
         CGRect frm = q1View.frame;
-        frm.size.width = q5View.frame.size.width*[country.q1 floatValue]/100;
+        float width = q5View.frame.size.width*[country.q5 floatValue]/100;
+        frm.size.width = width;
         q1View.frame = frm;
         frm = q2View.frame;
-        frm.size.width = q5View.frame.size.width*[country.q2 floatValue]/100;
+        frm.size.width = q5View.frame.size.width*[country.q4 floatValue]/100;
         frm.origin.x=q1View.frame.origin.x+q1View.frame.size.width;
         q2View.frame = frm;
         frm = q3View.frame;
@@ -210,29 +259,25 @@
         frm.origin.x=q2View.frame.origin.x+q2View.frame.size.width;
         q3View.frame = frm;
         frm = q4View.frame;
-        frm.size.width = q5View.frame.size.width*[country.q4 floatValue]/100;
+        frm.size.width = q5View.frame.size.width*[country.q2 floatValue]/100;
         frm.origin.x=q3View.frame.origin.x+q3View.frame.size.width;
         q4View.frame = frm;
+        NSLog(@"%@ %.f %.f",country.name, [country.q1 floatValue], q1View.frame.size.width);
+        
     }else{
         CGRect frm = q2View.frame;
-        frm.size.width = q1View.frame.size.width*[country.q2 floatValue]/100;
-        frm.origin.x=q1View.frame.origin.x+q1View.frame.size.width-frm.size.width;
+        frm.size.width = q1View.frame.size.width*[country.q5 floatValue]/100;
         q2View.frame = frm;
         frm = q3View.frame;
-        frm.size.width = q1View.frame.size.width*[country.q3 floatValue]/100;
-        frm.origin.x=q1View.frame.origin.x+q1View.frame.size.width-frm.size.width;
+        frm.size.width = q1View.frame.size.width*[country.q4 floatValue]/100;
         q3View.frame = frm;
         frm = q4View.frame;
-        frm.size.width = q1View.frame.size.width*[country.q4 floatValue]/100;
-        frm.origin.x=q1View.frame.origin.x+q1View.frame.size.width-frm.size.width;
+        frm.size.width = q1View.frame.size.width*[country.q3 floatValue]/100;
         q4View.frame = frm;
         frm = q5View.frame;
-        frm.size.width = q1View.frame.size.width*[country.q5 floatValue]/100;
-        frm.origin.x=q1View.frame.origin.x+q1View.frame.size.width-frm.size.width;
+        frm.size.width = q1View.frame.size.width*[country.q2 floatValue]/100;
         q5View.frame = frm;
     }
-
-    
     return cell;
 }
 
@@ -253,15 +298,15 @@
 -(void)sort{
     NSInteger selectedSegment = self.sortSegmentedControl.selectedSegmentIndex;
     NSSortDescriptor *sortDescriptor;
-    if (selectedSegment == COUNTRY) {
-            self.countryTriangleView.hidden=YES;//NO
-            self.giniTriangleView.hidden=YES;
-        sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
-    }else if(selectedSegment == GINI){
+   // if (selectedSegment == COUNTRY) {
+     //       self.countryTriangleView.hidden=YES;//NO
+       //     self.giniTriangleView.hidden=YES;
+       // sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+    //}else if(selectedSegment == GINI){
         self.countryTriangleView.hidden=YES;
         self.giniTriangleView.hidden=YES;//NO
         sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"gini" ascending:YES];
-    }
+    //}
     NSMutableArray *sortDescriptors = [NSMutableArray arrayWithObject:sortDescriptor];
     NSArray *sortedArray = [currentCountryArray sortedArrayUsingDescriptors:sortDescriptors];
     currentCountryArray=[sortedArray mutableCopy];
@@ -323,19 +368,105 @@
     if ([[segue identifier] isEqualToString:@"IncomeToCountrySegue"]) {
         UITableViewCell *cell = (UITableViewCell *)sender;
         NSIndexPath *indexPath = [[self tableView] indexPathForCell:cell];
-        NSUInteger row = [indexPath row];
+        //NSUInteger row = [indexPath row];
         CountryViewController *mvc = (CountryViewController *)[segue destinationViewController];
-        [mvc setCountry:[self.currentCountryArray objectAtIndex:row]];
+        [mvc setCountry:[self countryForIndexPath:indexPath]];
         [mvc setIsIncome:YES];
     }
     if ([[segue identifier] isEqualToString:@"WealthToCountrySegue"]) {
         UITableViewCell *cell = (UITableViewCell *)sender;
         NSIndexPath *indexPath = [[self tableView] indexPathForCell:cell];
-        NSUInteger row = [indexPath row];
+        //NSUInteger row = [indexPath row];
         CountryViewController *mvc = (CountryViewController *)[segue destinationViewController];
-        [mvc setCountry:[self.currentCountryArray objectAtIndex:row]];
+        //[mvc setCountry:[self.currentCountryArray objectAtIndex:row]];
+        [mvc setCountry:[self countryForIndexPath:indexPath]];
         [mvc setIsIncome:NO];
     }
+}
+
+
+// CUSTOM SECTION HEADER
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+
+    NSString*sectionHeaderName;
+    NSString* type=@"WEALTH";
+    if(self.segmentedControl.selectedSegmentIndex==INCOME){
+        type= @"INCOME";
+        
+    }
+    int sectionNumber=-1;
+    int j=-1;
+    for (int i= 0; i<=100 ; i=i+10) {
+        int countryNumberInSection=-1;
+        for (Country* c in currentCountryArray) {
+            if ([c.gini intValue]<=i && [c.gini intValue]>j) {
+                countryNumberInSection++;
+                if ((sectionNumber+1)==section){
+                     sectionHeaderName=[c inequalityTitle];
+                }
+            }
+        }
+        if (countryNumberInSection>=0) {
+            sectionNumber++;
+        }
+        j=i;
+    }
+    
+    
+    UIView *sectionHeaderView = [[UIView alloc] init];
+    UILabel *sectionHeader = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, 400, 30)];
+    sectionHeader.backgroundColor =  [[BillManager sharedBillManager] maincolor];
+    sectionHeaderView.backgroundColor =  [[BillManager sharedBillManager] maincolor];
+    sectionHeader.textColor = [[BillManager sharedBillManager] secondarycolor];
+    sectionHeader.font = [UIFont fontWithName:[[BillManager sharedBillManager] fontNameBold] size:[[BillManager sharedBillManager] smallFont]];
+    sectionHeader.text = sectionHeaderName;
+    [sectionHeaderView addSubview:sectionHeader];
+    return sectionHeaderView;
+}
+
+-(Country*)countryForIndexPath:(NSIndexPath *)indexPath{
+    int sectionNumber=-1;
+    int j=-1;
+    for (int i= 0; i<=100 ; i=i+10) {
+        int countryNumberInSection=-1;
+        for (Country* c in currentCountryArray) {
+            if ([c.gini intValue]<=i && [c.gini intValue]>j) {
+                countryNumberInSection++;
+                if ((sectionNumber+1)==indexPath.section&&countryNumberInSection==indexPath.row){
+                    return c;
+                }
+            }
+        }
+        if (countryNumberInSection>=0) {
+            sectionNumber++;
+        }
+        j=i;
+    }
+    return nil;
+}
+
+
+-(int)countryRankingForIndexPath:(NSIndexPath *)indexPath{
+    int ranking=0;
+    int sectionNumber=-1;
+    int j=-1;
+    for (int i= 0; i<=100 ; i=i+10) {
+        int countryNumberInSection=-1;
+        for (Country* c in currentCountryArray) {
+            if ([c.gini intValue]<=i && [c.gini intValue]>j) {
+                countryNumberInSection++;
+                ranking++;
+                if ((sectionNumber+1)==indexPath.section&&countryNumberInSection==indexPath.row){
+                    return ranking;
+                }
+            }
+        }
+        if (countryNumberInSection>=0) {
+            sectionNumber++;
+        }
+        j=i;
+    }
+    return 0;
 }
 
 

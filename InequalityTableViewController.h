@@ -20,10 +20,11 @@
 @property(strong, nonatomic) IBOutlet UIView* blackBottomView ;
 @property(strong, nonatomic) IBOutlet UIView* fixedHeaderView ;
 @property(strong, nonatomic) IBOutlet UIView* rightRedLine ;
-@property(strong, nonatomic) IBOutlet UILabel* explanationLine ;
+@property(strong, nonatomic) IBOutlet UITextView* explanationLine ;
 @property(strong, nonatomic)  NSMutableArray * wealthCountryArray;
 @property(strong, nonatomic)  NSMutableArray * incomeCountryArray;
 @property(strong, nonatomic)  NSMutableArray * currentCountryArray;
+@property(strong, nonatomic)  NSMutableDictionary* countryBySectionArray;
 
 
 @end
