@@ -95,13 +95,18 @@
 "INCOME" = "REVENU";
 "INEQUALITY" = "INEGALITE";
 
-"WEALTH_INFO"="La barre de distribution de la fortune montre combien de la fortune totale est possedée par les plus riches.";
 
-"INCOME_INFO"="La barre de distribution du revenu montre combien du revenu total possède chaque tranche de 20% de la population des plus pauvres au plus riches.";
+
+
+
+
+"WEALTH_INFO"="La barre de distribution de la fortune montre combien de la fortune totale est possedée par les plus riches. Ici les %@%% les plus riches possèdent %@%% de la fortune totale du pays.";
+
+"INCOME_INFO"="La barre de distribution du revenu montre combien du revenu total chaque tranche de 20%% possède. Ici les 20%% les plus riches possèdent %@%% du revenu total du pays.";
 
 "Your table" = "Votre tablée";
 
-"EXPLANATION" = "Pays du moins au plus inégalitaire";
+"EXPLANATION" = "Pays classés par index GINI de 0 (pas d'inégalité) à 100 (inégalité maximale)";
 
 "Equal Country" = "Egalistan";
 "INEXISTANT"="INEXISTANTE";
@@ -121,3 +126,11 @@
 "RESET"="ANNULER";
 "REVEAL_BUTTON"="DEVOILER";
 "HIDE"="CACHER";
+
+
+"COUNTRIES_INEQUALITY"="Pays où l'inégalité est %@";
+
+"TABLE_INFO"="La barre de distribution du revenu montre combien du revenu total chaque personne autour de la table possède (une couleur par personne). La personne la plus riche possède %@%% du revenu total de la table.";
+"TABLE_ONE_PERSON_ONLY_INFO"="La barre de distribution du revenu montre combien du revenu total chaque personne autour de la table possède (une couleur par personne). C'est évidemment plus intéressant avec plus d'une personne :)";
+
+

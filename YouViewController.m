@@ -27,7 +27,7 @@
 
 @implementation YouViewController
 
-@synthesize q1View, q2View, q3View, q4View, q5View, country, inputView, statButton;
+@synthesize q1View, q2View, q3View, q4View, q5View,q2ViewIndicator, q3ViewIndicator, q4ViewIndicator, q5ViewIndicator, country,distributionView,distributionLabel,q2ViewIndicatorLabel, q3ViewIndicatorLabel, q4ViewIndicatorLabel, q5ViewIndicatorLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -43,29 +43,6 @@
     [super viewDidLoad];
     // instructionView.text=NSLocalizedString(@"INFO_HOW", nil) ;
     //setup nav bar title
-    
-    
-    // INPUT VIEW
-    self.inputView = [[UIView alloc] initWithFrame:CGRectMake(0,self.view.frame.size.height-INPUTVIEW_HEIGHT,self.view.frame.size.width,INPUTVIEW_HEIGHT)];
-    self.inputView.backgroundColor = [[BillManager sharedBillManager] maincolor];
-    [self.view addSubview:inputView];
-    
-    
-    // STATISTICS BUTTON
-    self.statButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    self.statButton.backgroundColor=[[BillManager sharedBillManager] buttoncolor] ;
-    [self.statButton setTitleColor:[[BillManager sharedBillManager] buttonTextColor] forState:UIControlStateNormal];
-    [self.statButton setTitleColor: [UIColor whiteColor] forState:UIControlStateHighlighted];
-    [self.statButton.titleLabel setFont:[UIFont fontWithName:[[BillManager sharedBillManager] fontNameBold] size:[[BillManager sharedBillManager] mediumFont]]];
-    [self.statButton addTarget:self action:@selector(seeStatistics:) forControlEvents:UIControlEventTouchUpInside];
-    [self.statButton setTitle:NSLocalizedString(@"SEE INEQUALITY", nil) forState:UIControlStateNormal];
-    self.statButton.frame = CGRectMake(SIDE_PADDING, INPUT_TOP_PADDING , self.view.frame.size.width-(2*SIDE_PADDING) , INPUT_HEIGHT);
-    self.statButton.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
-    [self.inputView addSubview:statButton];
-    
-    [self.statButton setHidden:NO];
-
-    
     UINavigationItem *navigationItem = [super navigationItem];
     UILabel *customLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 120.0f, 44.0f)];
     customLabel.backgroundColor= [UIColor clearColor];
@@ -74,59 +51,80 @@
     customLabel.textColor =  [UIColor colorWithRed:220.0/255.0 green:210.0/255.0 blue:178.0/255.0 alpha:1.0];
     navigationItem.titleView = customLabel;
     customLabel.text=[self.country.name uppercaseString];
-    self.giniLabel.text=[NSString stringWithFormat:@"%.f%%", [self.country.gini floatValue] ];
+    self.giniLabel.text=[NSString stringWithFormat:@"%.f", [[[BillManager sharedBillManager] gini] floatValue] ];
     
-    // BACK BUTTON START
+    // BACK BUTTON
     UIButton *newBackButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [newBackButton setImage:[UIImage imageNamed: @"a_bouton_back.png"] forState:UIControlStateNormal];
     [newBackButton addTarget:self.navigationController action:@selector(popViewControllerAnimated:) forControlEvents:UIControlEventTouchUpInside];
     newBackButton.frame = CGRectMake(5, 5, 30, 30);
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:newBackButton];
     
+
+    // Go To Button
+    UIButton * goToInequalityButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    goToInequalityButton.backgroundColor=[[BillManager sharedBillManager] buttoncolor] ;
+    [goToInequalityButton setTitleColor:[[BillManager sharedBillManager] buttonTextColor] forState:UIControlStateNormal];
+    [goToInequalityButton setTitleColor: [UIColor whiteColor] forState:UIControlStateHighlighted];
+    [goToInequalityButton.titleLabel setFont:[UIFont fontWithName:[[BillManager sharedBillManager] fontNameBold] size:[[BillManager sharedBillManager] mediumFont]]];
+    [goToInequalityButton addTarget:self action:@selector(goToCountries:) forControlEvents:UIControlEventTouchUpInside];
+    [goToInequalityButton setTitle:NSLocalizedString(@"SEE COUNTRIES", nil) forState:UIControlStateNormal];
+    goToInequalityButton.frame = CGRectMake(SIDE_PADDING, self.view.frame.size.height-(INPUT_HEIGHT+SIDE_PADDING) , self.view.frame.size.width-(2*SIDE_PADDING) , INPUT_HEIGHT);
+    goToInequalityButton.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
+    [self.view addSubview:goToInequalityButton];
+    
+    
+    NSString* type = NSLocalizedString(@"INCOME", nil);
+    
     self.whatLabel.text=NSLocalizedString(@"GINI", nil) ;
-    self.giniInfo.text=NSLocalizedString(@"INFO_GINI", nil) ;
-    self.incomeInfo.text=NSLocalizedString(@"INCOME_INFO", nil) ;
-    self.wealthInfo.text=NSLocalizedString(@"WEALTH_INFO", nil) ;
+    self.giniInfo.text=[NSString stringWithFormat: NSLocalizedString(@"INFO_GINI", nil),[NSString stringWithFormat:@"%.f", [[[BillManager sharedBillManager] gini] floatValue]], [[Country inequalityWithGini:[[BillManager sharedBillManager] gini]] lowercaseString]];
+   
     
+    self.distributionLabel.text= [[NSString stringWithFormat:  NSLocalizedString(@"DISTRIBUTION_LABEL", nil),  NSLocalizedString(type, nil),  NSLocalizedString(self.country.name, nil)]  uppercaseString];
+
     
-    if(self.isIncome){
-        self.inequalityLabel.text=[country inequality:NSLocalizedString(@"INCOME", nil)];
-        CGRect frm = q1View.frame;
-        frm.size.width = q5View.frame.size.width*[country.q1 floatValue]/100;
-        q1View.frame = frm;
-        frm = q2View.frame;
-        frm.size.width = q5View.frame.size.width*[country.q2 floatValue]/100;
-        frm.origin.x=q1View.frame.origin.x+q1View.frame.size.width;
-        q2View.frame = frm;
-        frm = q3View.frame;
-        frm.size.width = q5View.frame.size.width*[country.q3 floatValue]/100;
-        frm.origin.x=q2View.frame.origin.x+q2View.frame.size.width;
-        q3View.frame = frm;
-        frm = q4View.frame;
-        frm.size.width = q5View.frame.size.width*[country.q4 floatValue]/100;
-        frm.origin.x=q3View.frame.origin.x+q3View.frame.size.width;
-        q4View.frame = frm;
-    }else{
-        self.inequalityLabel.text=[country inequality:NSLocalizedString(@"WEALTH", nil)];
-        CGRect frm = q2View.frame;
-        frm.size.width = q1View.frame.size.width*[country.q2 floatValue]/100;
-        frm.origin.x=q1View.frame.origin.x+q1View.frame.size.width-frm.size.width;
-        q2View.frame = frm;
-        frm = q3View.frame;
-        frm.size.width = q1View.frame.size.width*[country.q3 floatValue]/100;
-        frm.origin.x=q1View.frame.origin.x+q1View.frame.size.width-frm.size.width;
-        q3View.frame = frm;
-        frm = q4View.frame;
-        frm.size.width = q1View.frame.size.width*[country.q4 floatValue]/100;
-        frm.origin.x=q1View.frame.origin.x+q1View.frame.size.width-frm.size.width;
-        q4View.frame = frm;
-        frm = q5View.frame;
-        frm.size.width = q1View.frame.size.width*[country.q5 floatValue]/100;
-        frm.origin.x=q1View.frame.origin.x+q1View.frame.size.width-frm.size.width;
-        q5View.frame = frm;
+    //Get the number of friends
+    //for each friend give a size of a new component,
+    //for each firend ga
+    
+    self.inequalityLabel.text=[country inequality:NSLocalizedString(@"INCOME", nil)];
+    
+    long numberOfFriends=[[[BillManager sharedBillManager] friends] count];
+    float friendNumber=1;
+    float x=0;
+    float totalIncome = [[[BillManager sharedBillManager] totalIncome] floatValue];
+    self.incomeInfo.text=NSLocalizedString(@"TABLE_ONE_PERSON_ONLY_INFO", nil);
+    for (Friend* friend in [self sortedFriends]){
+        UIView* friendView =  [[UIView alloc] initWithFrame:q5View.frame];
+        CGRect frm = friendView.frame;
+        frm.size.width= ([friend.income floatValue]/totalIncome)*q5View.frame.size.width;
+        frm.origin.x=frm.origin.x+x;
+        x+=frm.size.width;
+        friendView.frame = frm;
+        float alpha=0.8*(1-(friendNumber/numberOfFriends));
+        [friendView setBackgroundColor:[UIColor colorWithRed:70.0/255.0 green:70.0/255.0 blue:70.0/255.0 alpha:alpha]];
+        [self.distributionView addSubview:friendView];
+
+        if (friendNumber==0) {
+            
+             self.incomeInfo.text=[NSString stringWithFormat:  NSLocalizedString(@"TABLE_INFO", nil), [NSString stringWithFormat:@"%.f", ([friend.income floatValue]/totalIncome)*100]];
+        }
+        friendNumber++;
     }
     
     
+
+}
+
+- (void)goToCountries:(NSNotification*) notification{
+    [self performSegueWithIdentifier:@"CountrySegue" sender:self];
+}
+
+-(NSArray*)sortedFriends{
+    NSSortDescriptor *sortDescriptor;
+    sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"income" ascending:NO];
+    NSMutableArray *sortDescriptors = [NSMutableArray arrayWithObject:sortDescriptor];
+    return [[[[BillManager sharedBillManager] friends] mutableCopy] sortedArrayUsingDescriptors:sortDescriptors];
 }
 
 - (void)didReceiveMemoryWarning
@@ -139,6 +137,5 @@
     [[[GAI sharedInstance] defaultTracker] set:kGAIScreenName value:@"Info Screen"];
     [[[GAI sharedInstance] defaultTracker] send:[[GAIDictionaryBuilder createAppView] build]];
 }
-
 
 @end

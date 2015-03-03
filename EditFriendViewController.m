@@ -13,6 +13,7 @@
 #import "GAIFields.h"
 #import <QuartzCore/QuartzCore.h>
 
+#define SIDE_PADDING 15
 @interface EditFriendViewController (){
     BOOL firstTimeLoading;
     
@@ -96,6 +97,18 @@
     deleteButton.titleLabel.numberOfLines = 1;
     deleteButton.backgroundColor=[[BillManager sharedBillManager] buttoncolor] ;
     [deleteButton setTitle:NSLocalizedString(@"DELETE_BUTTON", nil) forState:UIControlStateNormal];
+    
+    CGRect frm=incomeTextField.frame;
+    frm.size.width=  self.view.frame.size.width-(frm.origin.x+SIDE_PADDING);
+    incomeTextField.frame=frm;
+
+     frm=saveButton.frame;
+    frm.size.width=  self.view.frame.size.width-(frm.origin.x+SIDE_PADDING);
+    saveButton.frame=frm;
+    
+    frm=deleteButton.frame;
+    frm.size.width=  self.view.frame.size.width-(frm.origin.x+SIDE_PADDING);
+    deleteButton.frame=frm;
     
     // Back Button
     // BACK BUTTON START

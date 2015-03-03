@@ -24,7 +24,7 @@ static BillManager   *sharedBillManager = nil;
             sharedBillManager.gini=nil;
             sharedBillManager.largeFont=22;
             sharedBillManager.mediumFont=18;
-            sharedBillManager.smallFont=16;
+            sharedBillManager.smallFont=14;
             sharedBillManager.fontNameBold=@"AvenirNext-Bold";
             sharedBillManager.fontName=@"AvenirNext";
             

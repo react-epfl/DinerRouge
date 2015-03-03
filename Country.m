@@ -123,4 +123,42 @@
 }
 
 
++(NSString*)inequalityWithGini:(NSNumber*)aGini{
+    if ([aGini intValue]==0 ) {
+        return NSLocalizedString(@"INEXISTANT", nil);
+    }else if ([aGini intValue]<10 ) {
+        return  NSLocalizedString(@"ALMOST INEXISTANT", nil);
+    }else
+        if ([aGini intValue]<20 ) {
+           return NSLocalizedString(@"VERY LOW", nil);
+        }else
+            if ([aGini intValue]<30 ) {
+                return  NSLocalizedString(@"LOW", nil);
+            }else
+                if ([aGini intValue]<40 ) {
+                    return NSLocalizedString(@"MEDIUM", nil);
+                }else
+                    if ([aGini intValue]<50 ) {
+                        return NSLocalizedString(@"MEDIUM HIGH", nil);
+                    }else
+                        if ([aGini intValue]<60 ) {
+                            return NSLocalizedString(@"HIGH", nil);
+                        }else
+                            if ([aGini intValue]<70 ) {
+                                return NSLocalizedString(@"VERY HIGH", nil);
+                            }else
+                                if ([aGini intValue]<80 ) {
+                                    return  NSLocalizedString(@"VERY VERY HIGH", nil);
+                                }else
+                                    if ([aGini intValue]<90 ) {
+                                        return  NSLocalizedString(@"EXTREME", nil);
+                                    }else
+                                        if ([aGini intValue]<100 ) {
+                                           return  NSLocalizedString(@"ALMOST MAXIMAL", nil);
+                                        }else{
+                                           return  NSLocalizedString(@"MAXIMAL", nil);
+                                        }
+    
+}
+
 @end

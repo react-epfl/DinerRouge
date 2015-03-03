@@ -37,15 +37,6 @@
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.separatorColor = [UIColor whiteColor];
     
-//    //setup nav bar title
-//    UINavigationItem *navigationItem = [super navigationItem];
-//    UILabel *customLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 120.0f, 44.0f)];
-//    customLabel.backgroundColor= [UIColor clearColor];
-//    customLabel.textAlignment = NSTextAlignmentCenter;
-//    [customLabel setFont:[UIFont fontWithName:[[BillManager sharedBillManager] fontNameBold] size:[[BillManager sharedBillManager] largeFont]]];
-//    customLabel.textColor =  [[BillManager sharedBillManager] secondarycolor];
-//    navigationItem.titleView = customLabel;
-//    customLabel.text=NSLocalizedString(@"INEQUALITY", nil);
     
     // BACK BUTTON START
     UIButton *newBackButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -113,25 +104,9 @@
                                         [NSNumber numberWithInt:NSUnderlineStyleSingle],NSUnderlineStyleAttributeName, nil  ];
     [self.sortSegmentedControl setTitleTextAttributes:selectedAttributes2 forState:UIControlStateSelected];
     [self sort];
-    
-
-    
-    /// FixedHeaderView
-   // self.fixedHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0,0,self.view.frame.size.width,65)];
-   // self.fixedHeaderView.backgroundColor = [[BillManager sharedBillManager] maincolor];
-  //  [self.view addSubview:fixedHeaderView];
-   // [self.fixedHeaderView addSubview:self.blackBottomView];
-    //[self.fixedHeaderView addSubview:self.sortSegmentedControl];
-    //[self.fixedHeaderView addSubview:self.segmentedControl];
-//    [self.fixedHeaderView addSubview:self.countryTriangleView];
- //   [self.fixedHeaderView addSubview:self.giniTriangleView];
-  //  [self.fixedHeaderView addSubview:self.leftRedLineView];
-  //  [self.fixedHeaderView addSubview:self.topRedLineView];
-  //  [self.fixedHeaderView addSubview:self.rightRedLine];
-     self.explanationLine.font = [UIFont fontWithName:[[BillManager sharedBillManager] fontNameBold] size:[[BillManager sharedBillManager] smallFont]];
+     self.explanationLine.font = [UIFont fontWithName:[[BillManager sharedBillManager] fontNameBold] size:14];
     self.explanationLine.textColor = [[BillManager sharedBillManager] secondarycolor];
     self.explanationLine.text=NSLocalizedString(@"EXPLANATION", nil);
-  //  [self.fixedHeaderView addSubview:self.explanationLine];
 }
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
@@ -164,7 +139,6 @@
 #pragma mark - Table view data source
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-   // [self sort];
     int numberOfSections=0;
     int j=-1;
     for (int i= 0; i<=100 ; i=i+10) {
@@ -296,7 +270,6 @@
 
 
 -(void)sort{
-    NSInteger selectedSegment = self.sortSegmentedControl.selectedSegmentIndex;
     NSSortDescriptor *sortDescriptor;
    // if (selectedSegment == COUNTRY) {
      //       self.countryTriangleView.hidden=YES;//NO
@@ -384,7 +357,6 @@
     }
 }
 
-
 // CUSTOM SECTION HEADER
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
 
@@ -411,7 +383,6 @@
         }
         j=i;
     }
-    
     
     UIView *sectionHeaderView = [[UIView alloc] init];
     UILabel *sectionHeader = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, 400, 30)];
@@ -444,7 +415,6 @@
     }
     return nil;
 }
-
 
 -(int)countryRankingForIndexPath:(NSIndexPath *)indexPath{
     int ranking=0;

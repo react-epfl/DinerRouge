@@ -65,15 +65,10 @@
     if(self.isIncome){
         type = NSLocalizedString(@"INCOME", nil);
     }
-    
     self.whatLabel.text=NSLocalizedString(@"GINI", nil) ;
     self.giniInfo.text=[NSString stringWithFormat: NSLocalizedString(@"INFO_GINI", nil),[NSString stringWithFormat:@"%.f", [self.country.gini floatValue]], [[country inequality:NSLocalizedString(type , nil)] lowercaseString]];
     self.incomeInfo.text=[NSString stringWithFormat:  NSLocalizedString(@"INCOME_INFO", nil), [NSString stringWithFormat:@"%.f", [country.q5 floatValue]],[NSString stringWithFormat:@"%.f", [country.q1 floatValue]]]   ;
-    
-    
-
     self.distributionLabel.text= [[NSString stringWithFormat:  NSLocalizedString(@"DISTRIBUTION_LABEL", nil),  NSLocalizedString(type, nil),  NSLocalizedString(self.country.name, nil)]  uppercaseString];
-    
 
     if(self.isIncome){
          self.inequalityLabel.text=[country inequality:NSLocalizedString(@"INCOME", nil)];
@@ -121,31 +116,10 @@
         frm.origin.x=q5View.frame.origin.x+q5View.frame.size.width-1;
         q5ViewIndicator.frame=frm;
 
-       
-        
         q2ViewIndicatorLabel.text=NSLocalizedString(@"The richest 20%", nil);
         q3ViewIndicatorLabel.text=NSLocalizedString(@"The richest 10%", nil);
         q4ViewIndicatorLabel.text=NSLocalizedString(@"The richest 5%", nil);
         q5ViewIndicatorLabel.text=NSLocalizedString(@"The 1%", nil);
-        
-        
-        
-//        frm = q2ViewIndicatorLabel.frame;
-//        frm.origin.x=q2View.frame.origin.x+q2View.frame.size.width-58;
-//        q2ViewIndicatorLabel.frame=frm;
-//        //[q2ViewIndicatorLabel setTransform:CGAffineTransformMakeRotation(M_PI/2)];
-//        frm = q3ViewIndicatorLabel.frame;
-//        frm.origin.x=q3View.frame.origin.x+q3View.frame.size.width-58;
-//        q3ViewIndicatorLabel.frame=frm;
-//        //[q3ViewIndicatorLabel setTransform:CGAffineTransformMakeRotation(M_PI/2)];
-//        frm = q4ViewIndicatorLabel.frame;
-//        frm.origin.x=q4View.frame.origin.x+q4View.frame.size.width-58;
-//        q4ViewIndicatorLabel.frame=frm;
-//        //[q4ViewIndicatorLabel setTransform:CGAffineTransformMakeRotation(M_PI/2)];
-//        frm = q5ViewIndicatorLabel.frame;
-//        frm.origin.x=q5View.frame.origin.x+q5View.frame.size.width-58;
-//        q5ViewIndicatorLabel.frame=frm;
-//       // [q5ViewIndicatorLabel setTransform:CGAffineTransformMakeRotation(M_PI/2)];
         
         if ([country.q2 intValue] == 0) {
             [q2ViewIndicator setHidden:YES];
@@ -164,8 +138,6 @@
             [q5ViewIndicatorLabel setHidden:YES];
         }
     }
-    
-    
 }
 
 - (void)didReceiveMemoryWarning

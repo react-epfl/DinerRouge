@@ -16,6 +16,7 @@
 #import "ReusableHeaderView.h"
 #import "ReusableFooterView.h"
 #import <QuartzCore/QuartzCore.h>
+#import "CountryViewController.h"
 
 #define DONE_BUTTON_WIDTH 80
 #define SEND_BUTTON_PADDING 5
@@ -362,7 +363,6 @@
         EditFriendViewController *editViewController  = (EditFriendViewController *)[segue destinationViewController];
         FriendCollectionViewCell *cell = (FriendCollectionViewCell *)sender;
         [editViewController setFriend:[cell friend]];
-        
     }
 }
 

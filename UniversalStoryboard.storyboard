@@ -698,25 +698,25 @@ Quand tous ont effectué les étapes 1 à 3:
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="2nd richest 20%" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zcp-FA-yUg">
-                                        <rect key="frame" x="60" y="130" width="60" height="62"/>
+                                        <rect key="frame" x="60" y="130" width="60" height="61.5"/>
                                         <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="11"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="3rd richest 20%" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7bC-t2-cFk">
-                                        <rect key="frame" x="115" y="130" width="60" height="62"/>
+                                        <rect key="frame" x="115" y="130" width="60" height="61.5"/>
                                         <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="11"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="The poorest 20%" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3aV-Dl-Rjg">
-                                        <rect key="frame" x="228" y="130" width="54" height="62"/>
+                                        <rect key="frame" x="228" y="130" width="54" height="61.5"/>
                                         <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="11"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="4th richest 20%" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tUQ-6v-w4m">
-                                        <rect key="frame" x="170" y="130" width="60" height="62"/>
+                                        <rect key="frame" x="170" y="130" width="60" height="61.5"/>
                                         <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="11"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1038,25 +1038,25 @@ Quand tous ont effectué les étapes 1 à 3:
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="2nd richest 20%" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7Bp-sS-mcN">
-                                        <rect key="frame" x="60" y="130" width="60" height="62"/>
+                                        <rect key="frame" x="60" y="130" width="60" height="61.5"/>
                                         <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="11"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="3rd richest 20%" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gyO-at-rf8">
-                                        <rect key="frame" x="115" y="130" width="60" height="62"/>
+                                        <rect key="frame" x="115" y="130" width="60" height="61.5"/>
                                         <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="11"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="The poorest 20%" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4xa-Rz-88C">
-                                        <rect key="frame" x="228" y="130" width="54" height="62"/>
+                                        <rect key="frame" x="228" y="130" width="54" height="61.5"/>
                                         <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="11"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="4th richest 20%" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="THs-gk-nql">
-                                        <rect key="frame" x="170" y="130" width="60" height="62"/>
+                                        <rect key="frame" x="170" y="130" width="60" height="61.5"/>
                                         <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="11"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>

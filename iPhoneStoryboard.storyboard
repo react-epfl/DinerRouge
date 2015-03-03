@@ -83,7 +83,7 @@ Quand tous ont effectué les étapes 1 à 3:
         <!--Friend Collection View Controller-->
         <scene sceneID="q5o-UP-cco">
             <objects>
-                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="vKe-sf-UX7" customClass="FriendCollectionViewController" sceneMemberID="viewController">
+                <collectionViewController id="vKe-sf-UX7" customClass="FriendCollectionViewController" sceneMemberID="viewController">
                     <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="MVN-yD-DNI">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -104,7 +104,7 @@ Quand tous ont effectué les étapes 1 à 3:
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="F4V-uj-TqH">
                                             <rect key="frame" x="15" y="0.0" width="120" height="160"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -248,7 +248,7 @@ Quand tous ont effectué les étapes 1 à 3:
         <!--GUESTS-->
         <scene sceneID="Ira-yS-8Ft">
             <objects>
-                <viewController autoresizesArchivedViewToFullSize="NO" id="kSG-g8-vYw" customClass="EditFriendViewController" sceneMemberID="viewController">
+                <viewController id="kSG-g8-vYw" customClass="EditFriendViewController" sceneMemberID="viewController">
                     <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="E9p-Ph-BRQ">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -273,7 +273,7 @@ Quand tous ont effectué les étapes 1 à 3:
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" id="oAV-AO-KTt">
                                 <rect key="frame" x="150" y="150" width="155" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="insetFor6xAndEarlier" minX="0.0" minY="64" maxX="0.0" maxY="-64"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
@@ -291,7 +291,7 @@ Quand tous ont effectué les étapes 1 à 3:
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="INCOME" textAlignment="right" minimumFontSize="15" clearButtonMode="always" id="RiY-kv-ViL">
                                 <rect key="frame" x="150" y="20" width="155" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="insetFor6xAndEarlier" minX="0.0" minY="64" maxX="0.0" maxY="-64"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="19"/>
@@ -382,7 +382,7 @@ Quand tous ont effectué les étapes 1 à 3:
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Countries ranked by GINI from 0 (no inequality) to 100 (maximal inequality)" id="U0s-Y4-ucZ">
-                                    <rect key="frame" x="12" y="-5" width="290" height="55"/>
+                                    <rect key="frame" x="11" y="-5" width="290" height="55"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
                                     <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="14"/>
@@ -688,7 +688,7 @@ Quand tous ont effectué les étapes 1 à 3:
                                         <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nFC-2k-umA">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="nFC-2k-umA">
                                         <rect key="frame" x="0.0" y="16" width="120" height="144"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="70"/>
@@ -1047,10 +1047,10 @@ Quand tous ont effectué les étapes 1 à 3:
             </objects>
             <point key="canvasLocation" x="1278" y="1065"/>
         </scene>
-        <!--Country View Controller-->
+        <!--You View Controller-->
         <scene sceneID="eY7-Xj-muJ">
             <objects>
-                <viewController id="q2t-Kb-OwZ" customClass="CountryViewController" sceneMemberID="viewController">
+                <viewController id="q2t-Kb-OwZ" customClass="YouViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QOY-Ai-NR8">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1071,7 +1071,7 @@ Quand tous ont effectué les étapes 1 à 3:
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="t4c-I8-UiM">
                                 <rect key="frame" x="146" y="-6" width="159" height="169"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <string key="text">The GINI coefficient is a measure of inequality from 0 (no inequality) to 100 (maximal inequality). A score of 35 means LOW INCOME INEQUALITY</string>
                                 <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="14"/>
@@ -1088,7 +1088,7 @@ Quand tous ont effectué les étapes 1 à 3:
                                         <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5tI-Y7-yMZ">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="5tI-Y7-yMZ">
                                         <rect key="frame" x="0.0" y="16" width="120" height="144"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="70"/>
@@ -1106,17 +1106,17 @@ Quand tous ont effectué les étapes 1 à 3:
                                 <nil key="highlightedColor"/>
                             </label>
                             <view tag="5" contentMode="scaleToFill" id="Gz3-ca-J3a">
-                                <rect key="frame" x="15" y="185" width="290" height="200"/>
+                                <rect key="frame" x="15" y="185" width="290" height="122"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <view tag="9" contentMode="scaleToFill" id="bbh-R9-XWc">
-                                        <rect key="frame" x="15" y="60" width="260" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <rect key="frame" x="15" y="48" width="260" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.95686274510000002" green="0.91372549020000005" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                     <view tag="9" contentMode="scaleToFill" id="WCj-1t-Pgm">
                                         <rect key="frame" x="15" y="30" width="260" height="1"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.95686274510000002" green="0.91372549020000005" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                     <view tag="9" contentMode="scaleToFill" id="OoC-Aq-6Gf">
@@ -1126,102 +1126,22 @@ Quand tous ont effectué les étapes 1 à 3:
                                     </view>
                                     <view tag="9" contentMode="scaleToFill" id="Yqr-9i-lrp">
                                         <rect key="frame" x="275" y="30" width="1" height="10"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.95686274510000002" green="0.91372549020000005" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
-                                    </view>
-                                    <view tag="8" contentMode="scaleToFill" id="v1q-ta-6iS">
-                                        <rect key="frame" x="96" y="60" width="151" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.72941176470000002" green="0.69803921570000005" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
-                                    </view>
-                                    <view tag="7" contentMode="scaleToFill" id="CZI-Ed-9SV">
-                                        <rect key="frame" x="70" y="60" width="118" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.57647058819999997" green="0.5450980392" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
-                                    </view>
-                                    <view tag="6" contentMode="scaleToFill" id="rh2-0e-xcB">
-                                        <rect key="frame" x="48" y="60" width="52" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.40784313729999999" green="0.38431372549999998" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
-                                    </view>
-                                    <view tag="5" contentMode="scaleToFill" id="oft-Fz-Mwm">
-                                        <rect key="frame" x="15" y="60" width="52" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.28235294119999998" green="0.27450980390000002" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
-                                    </view>
-                                    <view tag="6" contentMode="scaleToFill" id="HpJ-jA-Q6p">
-                                        <rect key="frame" x="25" y="115" width="20" height="20"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.21960784310000001" green="0.21176470589999999" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL INCOME OF THE TABLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gcU-gh-EsF">
                                         <rect key="frame" x="5" y="2" width="280" height="25"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="16"/>
                                         <color key="textColor" red="0.86274509799999999" green="0.82352941180000006" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view tag="7" contentMode="scaleToFill" id="pXO-rQ-fVK">
-                                        <rect key="frame" x="80" y="115" width="20" height="20"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.33333333329999998" green="0.31372549020000001" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
-                                    </view>
-                                    <view tag="8" contentMode="scaleToFill" id="fkq-qV-u3n">
-                                        <rect key="frame" x="134" y="115" width="20" height="20"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.50588235290000005" green="0.47450980390000003" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
-                                    </view>
-                                    <view tag="9" contentMode="scaleToFill" id="Xbj-LJ-k7T">
-                                        <rect key="frame" x="190" y="115" width="20" height="20"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.67450980390000004" green="0.63921568630000003" blue="0.49803921569999998" alpha="1" colorSpace="calibratedRGB"/>
-                                    </view>
-                                    <view tag="5" contentMode="scaleToFill" id="opv-ke-g1I">
-                                        <rect key="frame" x="245" y="115" width="20" height="20"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="1" green="0.94697711409999996" blue="0.76193426149999999" alpha="1" colorSpace="calibratedRGB"/>
-                                    </view>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="The richest 20%" textAlignment="center" id="sr2-po-I5B">
-                                        <rect key="frame" x="5" y="130" width="60" height="60"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="11"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="2nd richest 20%" textAlignment="center" id="GiI-Sz-JRA">
-                                        <rect key="frame" x="60" y="130" width="60" height="62"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="11"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="3rd richest 20%" textAlignment="center" id="Igq-sE-dBd">
-                                        <rect key="frame" x="115" y="130" width="60" height="62"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="11"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="The poorest 20%" textAlignment="center" id="ifD-fI-N6K">
-                                        <rect key="frame" x="228" y="130" width="54" height="62"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="11"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="4th richest 20%" textAlignment="center" id="M3A-As-5mx">
-                                        <rect key="frame" x="170" y="130" width="60" height="62"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="11"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="tDN-qp-Xo1">
-                                <rect key="frame" x="10" y="385" width="295" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="9" y="306" width="295" height="100"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <string key="text">The distribution graph above show how much of all the income that each fifth of the population possess. Here the richest 20% earn 34%, whereas the poorest 20% earn 5% of the total income.</string>
                                 <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="14"/>
@@ -1236,17 +1156,13 @@ Quand tous ont effectué les étapes 1 à 3:
                         <outlet property="giniInfo" destination="t4c-I8-UiM" id="AeC-LN-AW5"/>
                         <outlet property="giniLabel" destination="5tI-Y7-yMZ" id="HkH-BT-ZhA"/>
                         <outlet property="incomeInfo" destination="tDN-qp-Xo1" id="4gt-WS-uYe"/>
-                        <outlet property="q1View" destination="oft-Fz-Mwm" id="Pdh-7n-awe"/>
-                        <outlet property="q2View" destination="rh2-0e-xcB" id="JZj-bh-8t0"/>
-                        <outlet property="q3View" destination="CZI-Ed-9SV" id="axt-xs-MDY"/>
-                        <outlet property="q4View" destination="v1q-ta-6iS" id="aN9-Vz-a4X"/>
                         <outlet property="q5View" destination="bbh-R9-XWc" id="1Fd-xQ-SJE"/>
                         <segue destination="nqc-8v-JzC" kind="push" identifier="CountrySegue" id="ln8-jU-tpa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hoZ-b8-yyD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="526.93333333333328" y="386.24000000000001"/>
+            <point key="canvasLocation" x="526" y="386"/>
         </scene>
     </scenes>
     <resources>
@@ -1261,7 +1177,7 @@ Quand tous ont effectué les étapes 1 à 3:
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="vtn-ik-YBz"/>
+        <segue reference="ln8-jU-tpa"/>
         <segue reference="wWr-I6-Hjg"/>
         <segue reference="c1M-5X-nt5"/>
     </inferredMetricsTieBreakers>

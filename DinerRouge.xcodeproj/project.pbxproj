@@ -337,8 +337,6 @@
 			isa = PBXGroup;
 			children = (
 				80BD08D01A18C062007F62A8 /* income */,
-				8001B9861A9F90D600EB6AEE /* YouViewController.h */,
-				8001B9871A9F90D600EB6AEE /* YouViewController.m */,
 				80BD08CE1A18BF83007F62A8 /* wealth */,
 				80BD08C11A17B142007F62A8 /* InequalityTableViewController.h */,
 				80BD08C21A17B142007F62A8 /* InequalityTableViewController.m */,
@@ -348,6 +346,8 @@
 				80C6CA021A1CF11100726663 /* oecd_wealth */,
 				80C78C331A233136002D3D56 /* CountryViewController.h */,
 				80C78C341A233136002D3D56 /* CountryViewController.m */,
+				8001B9861A9F90D600EB6AEE /* YouViewController.h */,
+				8001B9871A9F90D600EB6AEE /* YouViewController.m */,
 			);
 			name = Inequality;
 			sourceTree = "<group>";

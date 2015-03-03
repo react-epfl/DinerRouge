@@ -15,6 +15,7 @@
 
 -(NSString*)inequality:(NSString*) type;
 -(NSString*)inequalityTitle;
++(NSString*)inequalityWithGini:(NSNumber*)aGini;
 
 @property (nonatomic,strong)  NSString *name;
 @property (nonatomic, strong) NSNumber *gini;
