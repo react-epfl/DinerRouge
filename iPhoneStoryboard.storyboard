@@ -73,6 +73,7 @@ Quand tous ont effectué les étapes 1 à 3:
                     <navigationItem key="navigationItem" title="INFORMATION" id="1e6-3w-wR0"/>
                     <connections>
                         <outlet property="creditView" destination="ZT4-JR-yzV" id="0Tw-v7-4vO"/>
+                        <outlet property="doneButton" destination="fL1-Qe-sMK" id="l8t-fF-v2F"/>
                         <outlet property="instructionView" destination="iPo-vb-oyr" id="iqI-Bd-lhT"/>
                     </connections>
                 </viewController>
@@ -448,12 +449,12 @@ Quand tous ont effectué les étapes 1 à 3:
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" red="0.2196078431372549" green="0.21176470588235294" blue="0.16862745098039217" alpha="1" colorSpace="calibratedRGB"/>
                                         </view>
-                                        <view contentMode="scaleToFill" id="Myk-pu-8mM">
+                                        <view tag="12" contentMode="scaleToFill" id="Myk-pu-8mM">
                                             <rect key="frame" x="0.0" y="-100" width="15" height="400"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" red="0.94509803920000002" green="0.0" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </view>
-                                        <view contentMode="scaleToFill" id="Y49-KC-DjG">
+                                        <view tag="13" contentMode="scaleToFill" id="Y49-KC-DjG">
                                             <rect key="frame" x="305" y="-95" width="15" height="400"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" red="0.94509803920000002" green="0.0" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -462,9 +463,6 @@ Quand tous ont effectué les étapes 1 à 3:
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.47362967909999998" green="0.0" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="insetFor6xAndEarlier" minX="0.0" minY="64" maxX="0.0" maxY="-64"/>
-                                <connections>
-                                    <segue destination="mQg-cd-CSa" kind="push" identifier="IncomeToCountrySegue" id="c1M-5X-nt5"/>
-                                </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="TopLeft" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DistributionCell" rowHeight="50" id="Qgn-6i-MuS">
                                 <rect key="frame" x="0.0" y="96" width="320" height="132"/>
@@ -522,12 +520,12 @@ Quand tous ont effectué les étapes 1 à 3:
                                                 <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
                                             </accessibility>
                                         </view>
-                                        <view contentMode="scaleToFill" id="hDc-bl-E9C">
+                                        <view tag="12" contentMode="scaleToFill" id="hDc-bl-E9C">
                                             <rect key="frame" x="0.0" y="0.0" width="15" height="50"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" red="0.94509803920000002" green="0.0" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </view>
-                                        <view contentMode="scaleToFill" id="IfL-4P-wTr">
+                                        <view tag="13" contentMode="scaleToFill" id="IfL-4P-wTr">
                                             <rect key="frame" x="305" y="0.0" width="15" height="50"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" red="0.94509803920000002" green="0.0" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -593,7 +591,7 @@ Quand tous ont effectué les étapes 1 à 3:
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" red="0.88235294119999996" green="0.0" blue="0.090196078430000007" alpha="1" colorSpace="calibratedRGB"/>
                                         </view>
-                                        <view contentMode="scaleToFill" id="9uD-d1-Nnp">
+                                        <view tag="12" contentMode="scaleToFill" id="9uD-d1-Nnp">
                                             <rect key="frame" x="0.0" y="-101" width="15" height="400"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" red="0.94509803920000002" green="0.0" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -603,7 +601,7 @@ Quand tous ont effectué les étapes 1 à 3:
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" red="0.94509803920000002" green="0.0" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </view>
-                                        <view contentMode="scaleToFill" id="8Uf-5e-Gjx">
+                                        <view tag="13" contentMode="scaleToFill" id="8Uf-5e-Gjx">
                                             <rect key="frame" x="315" y="-91" width="15" height="400"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" red="0.94509803920000002" green="0.0" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -626,8 +624,8 @@ Quand tous ont effectué les étapes 1 à 3:
                     <navigationItem key="navigationItem" id="HxO-kw-Ycf">
                         <nil key="title"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="Bjl-IS-Jdd">
-                            <rect key="frame" x="47" y="8" width="226" height="29"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <rect key="frame" x="87" y="8" width="146" height="29"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="YOU"/>
                                 <segment title="INCOME"/>
@@ -681,17 +679,17 @@ Quand tous ont effectué les étapes 1 à 3:
                                 <rect key="frame" x="15" y="5" width="120" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="GINI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Rnv-fp-fet">
-                                        <rect key="frame" x="0.0" y="5" width="120" height="40"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="nFC-2k-umA">
+                                        <rect key="frame" x="0.0" y="17" width="120" height="144"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="70"/>
                                         <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="nFC-2k-umA">
-                                        <rect key="frame" x="0.0" y="16" width="120" height="144"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="GINI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Rnv-fp-fet">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="70"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
                                         <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -833,6 +831,7 @@ Quand tous ont effectué les étapes 1 à 3:
                     <navigationItem key="navigationItem" id="HRt-LP-uIi"/>
                     <connections>
                         <outlet property="distributionLabel" destination="Cqz-zY-VVt" id="1dz-me-c4K"/>
+                        <outlet property="distributionView" destination="mVL-I6-v4I" id="l5H-JR-4Xl"/>
                         <outlet property="giniInfo" destination="3S1-oZ-Njj" id="lQi-uH-Whq"/>
                         <outlet property="giniLabel" destination="nFC-2k-umA" id="pbd-Dl-EBm"/>
                         <outlet property="incomeInfo" destination="egb-0O-xGl" id="Wa1-dL-J9T"/>
@@ -841,6 +840,7 @@ Quand tous ont effectué les étapes 1 à 3:
                         <outlet property="q3View" destination="rl2-1I-TSi" id="yam-5E-hDJ"/>
                         <outlet property="q4View" destination="Vpz-mF-IFN" id="gip-XJ-kva"/>
                         <outlet property="q5View" destination="tuV-1y-LZA" id="rTO-mX-oNw"/>
+                        <outlet property="whatLabel" destination="Rnv-fp-fet" id="cv4-2U-Ixk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ySw-E3-r42" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1081,17 +1081,17 @@ Quand tous ont effectué les étapes 1 à 3:
                                 <rect key="frame" x="15" y="5" width="120" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="GINI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ttL-MU-CDu">
-                                        <rect key="frame" x="0.0" y="5" width="120" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
-                                        <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="5tI-Y7-yMZ">
                                         <rect key="frame" x="0.0" y="16" width="120" height="144"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="70"/>
+                                        <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="GINI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ttL-MU-CDu">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
                                         <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -1152,11 +1152,13 @@ Quand tous ont effectué les étapes 1 à 3:
                     </view>
                     <navigationItem key="navigationItem" id="Qz6-aq-sjJ"/>
                     <connections>
+                        <outlet property="distributionLabel" destination="gcU-gh-EsF" id="0Ss-VB-C2c"/>
                         <outlet property="distributionView" destination="Gz3-ca-J3a" id="2tM-S1-7I3"/>
                         <outlet property="giniInfo" destination="t4c-I8-UiM" id="AeC-LN-AW5"/>
                         <outlet property="giniLabel" destination="5tI-Y7-yMZ" id="HkH-BT-ZhA"/>
                         <outlet property="incomeInfo" destination="tDN-qp-Xo1" id="4gt-WS-uYe"/>
                         <outlet property="q5View" destination="bbh-R9-XWc" id="1Fd-xQ-SJE"/>
+                        <outlet property="whatLabel" destination="ttL-MU-CDu" id="KEQ-Zb-raa"/>
                         <segue destination="nqc-8v-JzC" kind="push" identifier="CountrySegue" id="ln8-jU-tpa"/>
                     </connections>
                 </viewController>
@@ -1177,8 +1179,7 @@ Quand tous ont effectué les étapes 1 à 3:
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="ln8-jU-tpa"/>
+        <segue reference="vtn-ik-YBz"/>
         <segue reference="wWr-I6-Hjg"/>
-        <segue reference="c1M-5X-nt5"/>
     </inferredMetricsTieBreakers>
 </document>

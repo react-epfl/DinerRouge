@@ -34,12 +34,16 @@ static BillManager   *sharedBillManager = nil;
             sharedBillManager.buttoncolor=[UIColor blackColor];
             
             //sharedBillManager.maincolor=[UIColor colorWithRed:230.0/255.0 green:230.0/255.0 blue:230.0/255.0 alpha:1.0];
-            //sharedBillManager.buttonTextColor=sharedBillManager.maincolor;
+            //sharedBillManager.buttonTextColor=[UIColor colorWithRed:220.0/255.0 green:210.0/255.0 blue:178.0/255.0 alpha:1.0];
             //sharedBillManager.secondarycolor=[UIColor blackColor];
-            //sharedBillManager.buttoncolor=[UIColor colorWithRed:11.0/255.0 green:11.0/255.0 blue:150.0/255.0 alpha:1.0];
+            //sharedBillManager.buttoncolor=[UIColor colorWithRed:241.0/255.0 green:0.0/255.0 blue:35.0/255.0 alpha:1.0];
             
         }
         //  [sharedBillManager setFriends:[NSMutableArray array]];
+        
+        
+       
+        
     }
     return sharedBillManager;
 }

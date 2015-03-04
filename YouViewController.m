@@ -41,6 +41,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.view.backgroundColor=[[BillManager sharedBillManager] maincolor];
     // instructionView.text=NSLocalizedString(@"INFO_HOW", nil) ;
     //setup nav bar title
     UINavigationItem *navigationItem = [super navigationItem];
@@ -52,7 +53,8 @@
     navigationItem.titleView = customLabel;
     customLabel.text=[self.country.name uppercaseString];
     self.giniLabel.text=[NSString stringWithFormat:@"%.f", [[[BillManager sharedBillManager] gini] floatValue] ];
-    
+    self.giniLabel.textColor=[[BillManager sharedBillManager] buttonTextColor];
+    self.giniLabel.backgroundColor=[[BillManager sharedBillManager] buttoncolor];
     // BACK BUTTON
     UIButton *newBackButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [newBackButton setImage:[UIImage imageNamed: @"a_bouton_back.png"] forState:UIControlStateNormal];
@@ -74,13 +76,17 @@
     [self.view addSubview:goToInequalityButton];
     
     
-    NSString* type = NSLocalizedString(@"INCOME", nil);
+   // NSString* type = NSLocalizedString(@"INCOME", nil);
     
     self.whatLabel.text=NSLocalizedString(@"GINI", nil) ;
+    self.whatLabel.backgroundColor= [[BillManager sharedBillManager] buttoncolor];
+    self.whatLabel.textColor= [[BillManager sharedBillManager] buttonTextColor];
     self.giniInfo.text=[NSString stringWithFormat: NSLocalizedString(@"INFO_GINI", nil),[NSString stringWithFormat:@"%.f", [[[BillManager sharedBillManager] gini] floatValue]], [[Country inequalityWithGini:[[BillManager sharedBillManager] gini]] lowercaseString]];
    
     
-    self.distributionLabel.text= [[NSString stringWithFormat:  NSLocalizedString(@"DISTRIBUTION_LABEL", nil),  NSLocalizedString(type, nil),  NSLocalizedString(self.country.name, nil)]  uppercaseString];
+    self.distributionLabel.text=  NSLocalizedString(@"TOTAL_INCOME_OF_THE_TABLE", nil);
+    
+    self.distributionLabel.textColor=[[BillManager sharedBillManager] buttonTextColor];
 
     
     //Get the number of friends
@@ -88,12 +94,15 @@
     //for each firend ga
     
     self.inequalityLabel.text=[country inequality:NSLocalizedString(@"INCOME", nil)];
-    
+     self.distributionView.backgroundColor= [[BillManager sharedBillManager] buttoncolor];
+    self.inequalityLabel.textColor= [[BillManager sharedBillManager] buttonTextColor];
     long numberOfFriends=[[[BillManager sharedBillManager] friends] count];
     float friendNumber=1;
     float x=0;
     float totalIncome = [[[BillManager sharedBillManager] totalIncome] floatValue];
     self.incomeInfo.text=NSLocalizedString(@"TABLE_ONE_PERSON_ONLY_INFO", nil);
+    self.incomeInfo.textColor= [[BillManager sharedBillManager] secondarycolor];
+    self.giniInfo.textColor= [[BillManager sharedBillManager] secondarycolor];
     for (Friend* friend in [self sortedFriends]){
         UIView* friendView =  [[UIView alloc] initWithFrame:q5View.frame];
         CGRect frm = friendView.frame;
@@ -103,10 +112,10 @@
         friendView.frame = frm;
         float alpha=0.8*(1-(friendNumber/numberOfFriends));
         [friendView setBackgroundColor:[UIColor colorWithRed:70.0/255.0 green:70.0/255.0 blue:70.0/255.0 alpha:alpha]];
+       
         [self.distributionView addSubview:friendView];
 
-        if (friendNumber==0) {
-            
+        if (friendNumber==1) {
              self.incomeInfo.text=[NSString stringWithFormat:  NSLocalizedString(@"TABLE_INFO", nil), [NSString stringWithFormat:@"%.f", ([friend.income floatValue]/totalIncome)*100]];
         }
         friendNumber++;

@@ -88,6 +88,8 @@
 
 "INEQUALITY" = "INEQUALITY";
 
+"STATS" = "STATS";
+
 "WEALTH_INFO"="The distribution of wealth graph shows how much of the total wealth the top possesses. Here the richest %@%% possess %@%% of the total wealth.";
 
 "INCOME_INFO"="The distribution graph above shows how much of all the income that each fifth of the population possess. Here the richest 20%% earn %@%%, whereas the poorest 20%% earn %@%% of the total income.";
@@ -119,5 +121,7 @@
 "HIDE"="HIDE";
 
 "DISTRIBUTION_LABEL" = "TOTAL %@ IN %@";
+
+"TOTAL_INCOME_OF_THE_TABLE"="TOTAL INCOME OF THE TABLE";
 
 

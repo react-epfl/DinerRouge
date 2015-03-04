@@ -31,7 +31,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    self.view.backgroundColor=[[BillManager sharedBillManager] maincolor];
     //setup nav bar title
     UINavigationItem *navigationItem = [super navigationItem];
     UILabel *customLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 120.0f, 44.0f)];
@@ -50,17 +50,13 @@
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:newBackButton];
     
     instructionView.text=NSLocalizedString(@"INFO_HOW", nil) ;
-   // titleView.text=NSLocalizedString(@"INFO_WHAT", nil) ;
     creditView.text=NSLocalizedString(@"INFO_WHO", nil) ;
-    //whoLabel.text=NSLocalizedString(@"WHO", nil) ;
-   // whatLabel.text=NSLocalizedString(@"WHAT", nil) ;
-    //howLabel.text=NSLocalizedString(@"HOW", nil) ;
+    instructionView.textColor=[[BillManager sharedBillManager] secondarycolor];
+    creditView.textColor=[[BillManager sharedBillManager] secondarycolor];
     
-    [doneButton setTitle:NSLocalizedString(@"DONE_BUTTON", nil) forState:UIControlStateNormal];
+    [doneButton setTitle:NSLocalizedString(@"STATS", nil) forState:UIControlStateNormal];
     [self.instructionView setFont:[UIFont fontWithName:[[BillManager sharedBillManager] fontNameBold] size:[[BillManager sharedBillManager] smallFont]]];
     [self.creditView setFont:[UIFont fontWithName:[[BillManager sharedBillManager] fontNameBold] size:[[BillManager sharedBillManager] smallFont]]];
-    instructionView.textColor=[[BillManager sharedBillManager] buttonTextColor];
-    creditView.textColor=[[BillManager sharedBillManager] buttonTextColor];
     doneButton.backgroundColor=[[BillManager sharedBillManager] buttoncolor] ;
     [doneButton  setTitleColor:[[BillManager sharedBillManager] buttonTextColor] forState:UIControlStateNormal];
     

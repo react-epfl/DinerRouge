@@ -37,6 +37,7 @@
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.separatorColor = [UIColor whiteColor];
     
+    self.tableView.backgroundColor=[[BillManager sharedBillManager] maincolor];
     
     // BACK BUTTON START
     UIButton *newBackButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -52,7 +53,7 @@
     [self.segmentedControl setSelectedSegmentIndex:WEALTH];// a small routine to avoid a weird color bug
     [self.segmentedControl setSelectedSegmentIndex:INCOME];
     NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:
-                                [UIFont fontWithName:[[BillManager sharedBillManager] fontNameBold] size:[[BillManager sharedBillManager] largeFont]], NSFontAttributeName,
+                                [UIFont fontWithName:[[BillManager sharedBillManager] fontNameBold] size:[[BillManager sharedBillManager] mediumFont]], NSFontAttributeName,
                                 [[BillManager sharedBillManager] secondarycolor], NSForegroundColorAttributeName, nil  ];
     [self.segmentedControl setTitleTextAttributes:attributes forState:UIControlStateNormal];
     NSDictionary *highlightedAttributes = [NSDictionary dictionaryWithObjectsAndKeys:
@@ -91,7 +92,6 @@
     // SORT SEGMENTED CONTROL
     [self.sortSegmentedControl setTitle:NSLocalizedString(@"COUNTRY", nil) forSegmentAtIndex:COUNTRY];
     [self.sortSegmentedControl setTitle:NSLocalizedString(@"GINI", nil) forSegmentAtIndex:GINI];
-    //self.sortSegmentedControl.contentHorizontalAlignment=UIControlContentHorizontalAlignmentRight;
     NSDictionary *attributes2 = [NSDictionary dictionaryWithObjectsAndKeys:
                                 [UIFont fontWithName:FontName size:SmallFontSize], NSFontAttributeName,
                                 [[BillManager sharedBillManager] secondarycolor], NSForegroundColorAttributeName, nil  ];
@@ -201,16 +201,23 @@
     if (country.isMyTable) {
         CellIdentifier = @"MyTableCell";
     }
+    
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     UILabel *numberLabel = (UILabel *)[cell viewWithTag:1];
+    numberLabel.textColor=[[BillManager sharedBillManager] buttonTextColor];
     numberLabel.text=[NSString stringWithFormat:@"%d", [self countryRankingForIndexPath:indexPath ]];
     UILabel *nameLabel = (UILabel *)[cell viewWithTag:2];
+    nameLabel.textColor=[[BillManager sharedBillManager] buttonTextColor];
     nameLabel.text=country.name;
     UILabel *giniLabel = (UILabel *)[cell viewWithTag:3];
     giniLabel.text= [NSString stringWithFormat:@"%.f", [country.gini floatValue] ] ;
+    giniLabel.textColor=[[BillManager sharedBillManager] buttonTextColor];
+    
+    cell.backgroundColor=[[BillManager sharedBillManager] buttoncolor];
     
     UIView *q1View = (UIView *)[cell viewWithTag:5];
     UIView *q2View = (UIView *)[cell viewWithTag:6];
@@ -218,6 +225,12 @@
     UIView *q4View = (UIView *)[cell viewWithTag:8];
     UIView *q5View = (UIView *)[cell viewWithTag:9];
     
+    UIView *redL = (UIView *)[cell viewWithTag:12];
+    UIView *redR = (UIView *)[cell viewWithTag:13];
+    redL.backgroundColor=[[BillManager sharedBillManager] maincolor];
+    redR.backgroundColor=[[BillManager sharedBillManager] maincolor];
+    
+    self.segmentedControl.tintColor=[[BillManager sharedBillManager] maincolor];
     
     if(self.segmentedControl.selectedSegmentIndex==INCOME){
         CGRect frm = q1View.frame;
@@ -237,7 +250,6 @@
         frm.origin.x=q3View.frame.origin.x+q3View.frame.size.width;
         q4View.frame = frm;
         NSLog(@"%@ %.f %.f",country.name, [country.q1 floatValue], q1View.frame.size.width);
-        
     }else{
         CGRect frm = q2View.frame;
         frm.size.width = q1View.frame.size.width*[country.q5 floatValue]/100;

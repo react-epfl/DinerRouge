@@ -133,4 +133,8 @@
 "TABLE_INFO"="La barre de distribution du revenu montre combien du revenu total chaque personne autour de la table possède (une couleur par personne). La personne la plus riche possède %@%% du revenu total de la table.";
 "TABLE_ONE_PERSON_ONLY_INFO"="La barre de distribution du revenu montre combien du revenu total chaque personne autour de la table possède (une couleur par personne). C'est évidemment plus intéressant avec plus d'une personne :)";
 
+"DISTRIBUTION_LABEL" = "TOTAL %@ EN %@";
+
+"TOTAL_INCOME_OF_THE_TABLE"="REVENU TOTAL DE LA TABLE";
+
 

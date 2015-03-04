@@ -96,7 +96,7 @@
 
     
     // TUTORIAL TEXT VIEW
-    self.tutorialTextView = [[UITextView alloc] initWithFrame:CGRectMake(10,170,self.view.frame.size.width,500)];
+    self.tutorialTextView = [[UITextView alloc] initWithFrame:CGRectMake(10,250,self.view.frame.size.width,500)];
     self.tutorialTextView.backgroundColor = [[BillManager sharedBillManager] maincolor];
     [self.tutorialTextView setTextColor: [[BillManager sharedBillManager] secondarycolor]];
     [self.tutorialTextView setFont:[UIFont fontWithName:[[BillManager sharedBillManager] fontNameBold] size:[[BillManager sharedBillManager] mediumFont]]];

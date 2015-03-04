@@ -10,6 +10,7 @@
 #import "GAIDictionaryBuilder.h"
 #import "GAIFields.h"
 #import "CountryViewController.h"
+#import "BillManager.h"
 
 @implementation CountryViewController
 
@@ -27,6 +28,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.view.backgroundColor=[[BillManager sharedBillManager] maincolor];
    // instructionView.text=NSLocalizedString(@"INFO_HOW", nil) ;
     //setup nav bar title
     UINavigationItem *navigationItem = [super navigationItem];
@@ -34,11 +36,12 @@
     customLabel.backgroundColor= [UIColor clearColor];
     customLabel.textAlignment = NSTextAlignmentCenter;
     [customLabel setFont:[UIFont fontWithName:@"AvenirNext-Bold" size:22]];
-    customLabel.textColor =  [UIColor colorWithRed:220.0/255.0 green:210.0/255.0 blue:178.0/255.0 alpha:1.0];
+    customLabel.textColor =  [[BillManager sharedBillManager] secondarycolor];
     navigationItem.titleView = customLabel;
     customLabel.text=[self.country.name uppercaseString];
     self.giniLabel.text=[NSString stringWithFormat:@"%.f", [self.country.gini floatValue] ];
-
+    self.giniLabel.textColor=[[BillManager sharedBillManager] buttonTextColor];
+    self.giniLabel.backgroundColor=[[BillManager sharedBillManager] buttoncolor];
     // BACK BUTTON START
     UIButton *newBackButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [newBackButton setImage:[UIImage imageNamed: @"a_bouton_back.png"] forState:UIControlStateNormal];
@@ -59,16 +62,23 @@
         pourcentString=@"20";
         value = [country.q2 intValue];
     }
-    
+    self.wealthInfo.textColor=[[BillManager sharedBillManager] secondarycolor];
     self.wealthInfo.text=[NSString stringWithFormat:  NSLocalizedString(@"WEALTH_INFO", nil), pourcentString,[NSString stringWithFormat:@"%.f",value]]   ;
     NSString* type = NSLocalizedString(@"WEALTH", nil);
     if(self.isIncome){
         type = NSLocalizedString(@"INCOME", nil);
     }
     self.whatLabel.text=NSLocalizedString(@"GINI", nil) ;
+    self.whatLabel.backgroundColor=[[BillManager sharedBillManager] buttoncolor];
+    self.whatLabel.textColor=[[BillManager sharedBillManager] buttonTextColor];
     self.giniInfo.text=[NSString stringWithFormat: NSLocalizedString(@"INFO_GINI", nil),[NSString stringWithFormat:@"%.f", [self.country.gini floatValue]], [[country inequality:NSLocalizedString(type , nil)] lowercaseString]];
+    self.giniInfo.textColor=[[BillManager sharedBillManager] secondarycolor];
     self.incomeInfo.text=[NSString stringWithFormat:  NSLocalizedString(@"INCOME_INFO", nil), [NSString stringWithFormat:@"%.f", [country.q5 floatValue]],[NSString stringWithFormat:@"%.f", [country.q1 floatValue]]]   ;
+    self.incomeInfo.textColor=[[BillManager sharedBillManager] secondarycolor];
     self.distributionLabel.text= [[NSString stringWithFormat:  NSLocalizedString(@"DISTRIBUTION_LABEL", nil),  NSLocalizedString(type, nil),  NSLocalizedString(self.country.name, nil)]  uppercaseString];
+    self.distributionLabel.textColor=[[BillManager sharedBillManager] buttonTextColor];
+    self.distributionView.backgroundColor=[[BillManager sharedBillManager] buttoncolor];
+    
 
     if(self.isIncome){
          self.inequalityLabel.text=[country inequality:NSLocalizedString(@"INCOME", nil)];
