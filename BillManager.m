@@ -7,6 +7,9 @@
 //
 #import "Friend.h"
 #import "BillManager.h"
+#import "GAI.h"
+#import "GAIDictionaryBuilder.h"
+#import "GAIFields.h"
 
 @implementation BillManager
 
@@ -41,7 +44,14 @@ static BillManager   *sharedBillManager = nil;
                 
             }
             
-            sharedBillManager.styleIsCommunist=NO;
+           
+            if ([[BillManager sharedBillManager] styleIsCommunist]) {
+                [[[GAI sharedInstance] defaultTracker] send:[[GAIDictionaryBuilder createEventWithCategory:@"ui_action"  action:@"button_press" label:@"launch-C" value:nil] build]];
+            }else{
+                [[[GAI sharedInstance] defaultTracker] send:[[GAIDictionaryBuilder createEventWithCategory:@"ui_action"  action:@"button_press" label:@"launch-NC" value:nil] build]];
+            }
+            
+            //sharedBillManager.styleIsCommunist=NO;
 
             
             sharedBillManager.maincolor=[UIColor colorWithRed:241.0/255.0 green:0.0/255.0 blue:35.0/255.0 alpha:1.0];
@@ -58,7 +68,7 @@ static BillManager   *sharedBillManager = nil;
                  sharedBillManager.backBoutonImage=[UIImage imageNamed: @"a_bouton_back.png"];
                  sharedBillManager.cameraImage=[UIImage imageNamed: @"cameraButton.png"];
                  sharedBillManager.infoImage=[UIImage imageNamed: @"a_bouton_info.png"];
-                sharedBillManager.friendOrComrade=NSLocalizedString(@"CORMADE", nil);
+                sharedBillManager.friendOrComrade=NSLocalizedString(@"COMRADE", nil);
             }else{
                 sharedBillManager.fontNameBold=@"ArialRoundedMTBold";
                 sharedBillManager.fontName=@"ArialRoundedMTBold";

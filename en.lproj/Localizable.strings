@@ -81,7 +81,7 @@
 
 "INFO_WHO" = "CONCEPT: S. Bendahan \nUX DESIGN & CODE: A. Holzer \nDESIGN: A76, G. Vulliens, B. Syfert \nNAME: J. Salom \nCODE: B. Fritscher, U. Rosselet \nTHANKS: A. Métrailler,\nT. Boillat, F. Vessaz, F. Andreae";
 
-"INFO_GINI" = "The GINI coefficient is a measure of inequality from 0 (no inequality) to 100 (maximal inequality). A score of %@ means %@ inequality.";
+"INFO_GINI" = "The GINI coefficient is a measure of inequality from 0 (no inequality) to 100 (maximal inequality). A score of %@ means %@.";
 
 "COUNTRY" = "COUNTRY";
 

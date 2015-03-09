@@ -72,8 +72,13 @@
 }
 
 -(void)viewDidAppear:(BOOL)animated{
-    [[[GAI sharedInstance] defaultTracker] set:kGAIScreenName value:@"Info Screen"];
-    [[[GAI sharedInstance] defaultTracker] send:[[GAIDictionaryBuilder createAppView] build]];
+    if ([[BillManager sharedBillManager] styleIsCommunist]) {
+        [[[GAI sharedInstance] defaultTracker] set:kGAIScreenName value:@"Info Screen-C"];
+        [[[GAI sharedInstance] defaultTracker] send:[[GAIDictionaryBuilder createAppView] build]];
+    }else{
+        [[[GAI sharedInstance] defaultTracker] set:kGAIScreenName value:@"Info Screen-NC"];
+        [[[GAI sharedInstance] defaultTracker] send:[[GAIDictionaryBuilder createAppView] build]];
+    }
 }
 
 
@@ -84,7 +89,7 @@
 
 -(IBAction)goToWebSite {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.dinerrouge.com"]];
-    [[[GAI sharedInstance] defaultTracker] send:[[GAIDictionaryBuilder createEventWithCategory:@"ui_action"  action:@"button_press" label:@"go_to_website" value:nil] build]];
+    //[[[GAI sharedInstance] defaultTracker] send:[[GAIDictionaryBuilder createEventWithCategory:@"ui_action"  action:@"button_press" label:@"go_to_website" value:nil] build]];
 }
 
 @end

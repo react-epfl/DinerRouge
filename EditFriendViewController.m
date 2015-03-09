@@ -230,8 +230,13 @@
         [imageScrollView scrollRectToVisible:CGRectMake(0,0, imageScrollView.frame.size.width, imageScrollView.frame.size.height) animated:YES];
     }
     firstTimeLoading=NO;
-    [[[GAI sharedInstance] defaultTracker] set:kGAIScreenName value:@"Edit Screen"];
-    [[[GAI sharedInstance] defaultTracker] send:[[GAIDictionaryBuilder createAppView] build]];
+    if ([[BillManager sharedBillManager] styleIsCommunist]) {
+        [[[GAI sharedInstance] defaultTracker] set:kGAIScreenName value:@"Edit Screen-C"];
+        [[[GAI sharedInstance] defaultTracker] send:[[GAIDictionaryBuilder createAppView] build]];
+    }else{
+        [[[GAI sharedInstance] defaultTracker] set:kGAIScreenName value:@"Edit Screen-NC"];
+        [[[GAI sharedInstance] defaultTracker] send:[[GAIDictionaryBuilder createAppView] build]];
+    }
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

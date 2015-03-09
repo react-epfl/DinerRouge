@@ -47,8 +47,13 @@
 }
 
 -(void)viewDidAppear:(BOOL)animated{
-    [[[GAI sharedInstance] defaultTracker] set:kGAIScreenName value:@"Home Screen"];
-    [[[GAI sharedInstance] defaultTracker] send:[[GAIDictionaryBuilder createAppView] build]];
+    if ([[BillManager sharedBillManager] styleIsCommunist]) {
+        [[[GAI sharedInstance] defaultTracker] set:kGAIScreenName value:@"Home Screen-C"];
+        [[[GAI sharedInstance] defaultTracker] send:[[GAIDictionaryBuilder createAppView] build]];
+    }else{
+        [[[GAI sharedInstance] defaultTracker] set:kGAIScreenName value:@"Home Screen-NC"];
+        [[[GAI sharedInstance] defaultTracker] send:[[GAIDictionaryBuilder createAppView] build]];
+    }
      [self placeInputView];
 }
 
@@ -204,7 +209,14 @@
     [self placeInputView];
     [[BillManager sharedBillManager] checkOut];
     [self.amountTextField resignFirstResponder];
-    [[[GAI sharedInstance] defaultTracker] send:[[GAIDictionaryBuilder createEventWithCategory:@"ui_action"  action:@"button_press" label:@"ok_amount" value:nil] build]];
+    
+    if ([[BillManager sharedBillManager] styleIsCommunist]) {
+        [[[GAI sharedInstance] defaultTracker] send:[[GAIDictionaryBuilder createEventWithCategory:@"ui_action"  action:@"button_press" label:@"ok_amount-C" value:nil] build]];
+    }else{
+        [[[GAI sharedInstance] defaultTracker] send:[[GAIDictionaryBuilder createEventWithCategory:@"ui_action"  action:@"button_press" label:@"ok_amount-NC" value:nil] build]];
+    }
+    
+    
 }
 
 - (void)viewTapped:(UITapGestureRecognizer *)tgr
@@ -490,10 +502,14 @@
     if(buttonIndex==1)
     {
         [[BillManager sharedBillManager] reset];
-        [[[GAI sharedInstance] defaultTracker] send:[[GAIDictionaryBuilder createEventWithCategory:@"ui_action"  action:@"button_press" label:@"reset" value:nil] build]];
         self.STEP--;
         [[self collectionView] reloadData];
         [self placeInputView];
+        if ([[BillManager sharedBillManager] styleIsCommunist]) {
+            [[[GAI sharedInstance] defaultTracker] send:[[GAIDictionaryBuilder createEventWithCategory:@"ui_action"  action:@"button_press" label:@"reset-C" value:nil] build]];
+        }else{
+            [[[GAI sharedInstance] defaultTracker] send:[[GAIDictionaryBuilder createEventWithCategory:@"ui_action"  action:@"button_press" label:@"reset-NC" value:nil] build]];
+        }
     }
 }
 

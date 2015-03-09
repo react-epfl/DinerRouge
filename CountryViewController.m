@@ -166,8 +166,14 @@
 }
 
 -(void)viewDidAppear:(BOOL)animated{
-    [[[GAI sharedInstance] defaultTracker] set:kGAIScreenName value:@"Info Screen"];
-    [[[GAI sharedInstance] defaultTracker] send:[[GAIDictionaryBuilder createAppView] build]];
+    if ([[BillManager sharedBillManager] styleIsCommunist]) {
+        [[[GAI sharedInstance] defaultTracker] set:kGAIScreenName value:@"Info Screen-C"];
+        [[[GAI sharedInstance] defaultTracker] send:[[GAIDictionaryBuilder createAppView] build]];
+    }else{
+        [[[GAI sharedInstance] defaultTracker] set:kGAIScreenName value:@"Info Screen-NC"];
+        [[[GAI sharedInstance] defaultTracker] send:[[GAIDictionaryBuilder createAppView] build]];
+    }
+
 }
 
 @end

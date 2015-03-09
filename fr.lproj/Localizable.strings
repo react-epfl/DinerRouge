@@ -87,7 +87,7 @@
 
 "INFO_WHO" = "CONCEPTE: S. Bendahan \nUX DESIGN & CODE: A. Holzer \nDESIGN: A76, G. Vulliens, B. Syfert \nNOM: J. Salom \nCODE: B. Fritscher, U. Rosselet \nMERCI: A. Métrailler, T. Boillat, F. Vessaz, \nF. Andreae";
 
-"INFO_GINI" = "Le coefficient de GINI est une mesure dinégalité variant entre 0 (égalité) et 100 (inégalité maximale). Un score de %@ implique qu’%@.";
+"INFO_GINI" = "Le coefficient de GINI est une mesure dinégalité variant entre 0 (égalité) et 100 (inégalité maximale). Un score de %@ implique une inégalité %@.";
 
 
 "COUNTRY" = "PAYS";
@@ -131,7 +131,7 @@
 "EXTREME"="EXTREME";
 "ALMOST MAXIMAL"="QUASI MAXIMALE";
 "MAXIMAL"="MAXIMALE";
-"HERE_INEQUALITY"="ICI L’INÉGALITÉ DE %@ EST";
+"HERE_INEQUALITY"="";
 "YOU_INEQUALITY"="L’INÉGALITÉ EST";
 "RESET"="ANNULER";
 "REVEAL_BUTTON"="DEVOILER";

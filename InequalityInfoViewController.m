@@ -10,6 +10,7 @@
 #import "GAIDictionaryBuilder.h"
 #import "GAIFields.h"
 #import "InequalityInfoViewController.h"
+#import "BillManager.h"
 
 @interface InequalityInfoViewController ()
 
@@ -47,8 +48,13 @@
 }
 
 -(void)viewDidAppear:(BOOL)animated{
-    [[[GAI sharedInstance] defaultTracker] set:kGAIScreenName value:@"Inequality Info Screen"];
-    [[[GAI sharedInstance] defaultTracker] send:[[GAIDictionaryBuilder createAppView] build]];
+    if ([[BillManager sharedBillManager] styleIsCommunist]) {
+        [[[GAI sharedInstance] defaultTracker] set:kGAIScreenName value:@"Inequality Info Screen-C"];
+        [[[GAI sharedInstance] defaultTracker] send:[[GAIDictionaryBuilder createAppView] build]];
+    }else{
+        [[[GAI sharedInstance] defaultTracker] set:kGAIScreenName value:@"Inequality Info Screen-NC"];
+        [[[GAI sharedInstance] defaultTracker] send:[[GAIDictionaryBuilder createAppView] build]];
+    }
 }
 
 -(IBAction)done:(id)sender{

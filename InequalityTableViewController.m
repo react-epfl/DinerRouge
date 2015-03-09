@@ -137,8 +137,14 @@
 {
     [self sort];
     [self placeInputView]; // need this since view did load does not correctly calculate the size of the screen
-    [[[GAI sharedInstance] defaultTracker] set:kGAIScreenName value:@"Inequality Screen"];
-    [[[GAI sharedInstance] defaultTracker] send:[[GAIDictionaryBuilder createAppView] build]];
+    
+    if ([[BillManager sharedBillManager] styleIsCommunist]) {
+        [[[GAI sharedInstance] defaultTracker] set:kGAIScreenName value:@"Inequality Table Screen-C"];
+        [[[GAI sharedInstance] defaultTracker] send:[[GAIDictionaryBuilder createAppView] build]];
+    }else{
+        [[[GAI sharedInstance] defaultTracker] set:kGAIScreenName value:@"Inequality Table Screen-NC"];
+        [[[GAI sharedInstance] defaultTracker] send:[[GAIDictionaryBuilder createAppView] build]];
+    }
 }
 
 #pragma mark - Table view data source
@@ -313,10 +319,19 @@
     NSInteger selectedSegment = seg.selectedSegmentIndex;
     if (selectedSegment == WEALTH) {
         currentCountryArray= [wealthCountryArray mutableCopy];
-        [[[GAI sharedInstance] defaultTracker] send:[[GAIDictionaryBuilder createEventWithCategory:@"ui_action"  action:@"button_press" label:@"change_to_wealth" value:nil] build]];
+        
+        if ([[BillManager sharedBillManager] styleIsCommunist]) {
+            [[[GAI sharedInstance] defaultTracker] send:[[GAIDictionaryBuilder createEventWithCategory:@"ui_action"  action:@"button_press" label:@"change_to_wealth-C" value:nil] build]];
+        }else{
+            [[[GAI sharedInstance] defaultTracker] send:[[GAIDictionaryBuilder createEventWithCategory:@"ui_action"  action:@"button_press" label:@"change_to_wealth-NC" value:nil] build]];
+        }
     }else if(selectedSegment == INCOME){
-        currentCountryArray = [incomeCountryArray mutableCopy];
-        [[[GAI sharedInstance] defaultTracker] send:[[GAIDictionaryBuilder createEventWithCategory:@"ui_action"  action:@"button_press" label:@"change_to_income" value:nil] build]];
+        if ([[BillManager sharedBillManager] styleIsCommunist]) {
+            [[[GAI sharedInstance] defaultTracker] send:[[GAIDictionaryBuilder createEventWithCategory:@"ui_action"  action:@"button_press" label:@"change_to_income-C" value:nil] build]];
+        }else{
+            [[[GAI sharedInstance] defaultTracker] send:[[GAIDictionaryBuilder createEventWithCategory:@"ui_action"  action:@"button_press" label:@"change_to_income-NC" value:nil] build]];
+        }
+        
     }
     [self sort];
     [self.tableView reloadData];
