@@ -10,7 +10,7 @@
 
 @implementation BillManager
 
-@synthesize totalAmount,totalIncome, friends, delegate,isRevealed, avatarImages, avatarImagesLeft, gini,buttonTextColor,totalAmountString,largeFont, mediumFont, smallFont, maincolor, secondarycolor, buttoncolor, fontName,fontNameBold;
+@synthesize totalAmount,totalIncome, friends, delegate,isRevealed, avatarImages, avatarImagesLeft, gini,buttonTextColor,totalAmountString,largeFont, mediumFont, smallFont, maincolor, secondarycolor, buttoncolor, fontName,fontNameBold,styleIsCommunist, backBoutonImage, cameraImage, infoImage, refreshImage,friendOrComrade;
 
 static BillManager   *sharedBillManager = nil;
 
@@ -19,31 +19,63 @@ static BillManager   *sharedBillManager = nil;
         if (sharedBillManager == nil){
             sharedBillManager = [[self alloc] init];
             [sharedBillManager reset];
-            sharedBillManager.avatarImages = [[NSArray alloc] initWithObjects:[UIImage imageNamed:@"guest0.png"],[UIImage imageNamed:@"guest1.png"],[UIImage imageNamed:@"guest2.png"],[UIImage imageNamed:@"guest3.png"],[UIImage imageNamed:@"guest4.png"],[UIImage imageNamed:@"guest5.png"],[UIImage imageNamed:@"guest6.png"],nil];
-            sharedBillManager.avatarImagesLeft=[sharedBillManager.avatarImages mutableCopy];
             sharedBillManager.gini=nil;
             sharedBillManager.largeFont=22;
             sharedBillManager.mediumFont=18;
             sharedBillManager.smallFont=14;
-            sharedBillManager.fontNameBold=@"AvenirNext-Bold";
-            sharedBillManager.fontName=@"AvenirNext";
+            
+            
+            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+            if([defaults boolForKey:@"isCommunist"]){
+                sharedBillManager.styleIsCommunist = [defaults boolForKey:@"isCommunist"];
+            }else {
+                sharedBillManager.styleIsCommunist=NO;
+                int randomNumber = (int)arc4random_uniform(1000) % 2;
+                if (randomNumber==1) {
+                    NSLog(@"IS COMMUNIST");
+                    sharedBillManager.styleIsCommunist=YES;
+                    [defaults setBool:sharedBillManager.styleIsCommunist forKey:@"isCommunist"];
+                }else{
+                    NSLog(@"IS NOT COMMUNIST");
+                }
+                
+            }
+            
+            sharedBillManager.styleIsCommunist=NO;
+
             
             sharedBillManager.maincolor=[UIColor colorWithRed:241.0/255.0 green:0.0/255.0 blue:35.0/255.0 alpha:1.0];
-            sharedBillManager.secondarycolor=[UIColor colorWithRed:220.0/255.0 green:210.0/255.0 blue:178.0/255.0 alpha:1.0];
-            sharedBillManager.buttonTextColor=sharedBillManager.secondarycolor;
-            sharedBillManager.buttoncolor=[UIColor blackColor];
             
-            //sharedBillManager.maincolor=[UIColor colorWithRed:230.0/255.0 green:230.0/255.0 blue:230.0/255.0 alpha:1.0];
-            //sharedBillManager.buttonTextColor=[UIColor colorWithRed:220.0/255.0 green:210.0/255.0 blue:178.0/255.0 alpha:1.0];
-            //sharedBillManager.secondarycolor=[UIColor blackColor];
-            //sharedBillManager.buttoncolor=[UIColor colorWithRed:241.0/255.0 green:0.0/255.0 blue:35.0/255.0 alpha:1.0];
+            if (sharedBillManager.styleIsCommunist) {
+                sharedBillManager.fontNameBold=@"AvenirNext-Bold";
+                sharedBillManager.fontName=@"AvenirNext";
+                sharedBillManager.secondarycolor=[UIColor colorWithRed:220.0/255.0 green:210.0/255.0 blue:178.0/255.0 alpha:1.0];
+                sharedBillManager.buttonTextColor=sharedBillManager.secondarycolor;
+                sharedBillManager.buttoncolor=[UIColor blackColor];
+                sharedBillManager.avatarImages = [[NSArray alloc] initWithObjects:[UIImage imageNamed:@"guest0.png"],[UIImage imageNamed:@"guest1.png"],[UIImage imageNamed:@"guest2.png"],[UIImage imageNamed:@"guest3.png"],[UIImage imageNamed:@"guest4.png"],[UIImage imageNamed:@"guest5.png"],[UIImage imageNamed:@"guest6.png"],nil];
+                
+                sharedBillManager.refreshImage=[UIImage imageNamed: @"refresh.png"];
+                 sharedBillManager.backBoutonImage=[UIImage imageNamed: @"a_bouton_back.png"];
+                 sharedBillManager.cameraImage=[UIImage imageNamed: @"cameraButton.png"];
+                 sharedBillManager.infoImage=[UIImage imageNamed: @"a_bouton_info.png"];
+                sharedBillManager.friendOrComrade=NSLocalizedString(@"CORMADE", nil);
+            }else{
+                sharedBillManager.fontNameBold=@"ArialRoundedMTBold";
+                sharedBillManager.fontName=@"ArialRoundedMTBold";
+                sharedBillManager.buttonTextColor=[UIColor whiteColor];
+                sharedBillManager.secondarycolor=[UIColor whiteColor];
+                sharedBillManager.buttoncolor=[UIColor blackColor];
+                sharedBillManager.avatarImages = [[NSArray alloc] initWithObjects:[UIImage imageNamed:@"Xguest0.png"],[UIImage imageNamed:@"Xguest1.png"],[UIImage imageNamed:@"Xguest2.png"],[UIImage imageNamed:@"Xguest3.png"],[UIImage imageNamed:@"Xguest4.png"],[UIImage imageNamed:@"Xguest5.png"],[UIImage imageNamed:@"Xguest6.png"],nil];
+                
+                sharedBillManager.refreshImage=[UIImage imageNamed: @"Xrefresh.png"];
+                sharedBillManager.backBoutonImage=[UIImage imageNamed: @"Xa_bouton_back.png"];
+                sharedBillManager.cameraImage=[UIImage imageNamed: @"XcameraButton.png"];
+                sharedBillManager.infoImage=[UIImage imageNamed: @"Xa_bouton_info.png"];
+                sharedBillManager.friendOrComrade=NSLocalizedString(@"FRIEND", nil);
+            }
             
+            sharedBillManager.avatarImagesLeft=[sharedBillManager.avatarImages mutableCopy];
         }
-        //  [sharedBillManager setFriends:[NSMutableArray array]];
-        
-        
-       
-        
     }
     return sharedBillManager;
 }
@@ -227,43 +259,43 @@ static BillManager   *sharedBillManager = nil;
 }
 
 -(NSString*)yourInequality{
-        NSString* adjective;
-        if ([gini intValue]==0 ) {
-            adjective= NSLocalizedString(@"INEXISTANT", nil);
-        }else if ([gini intValue]<10 ) {
-            adjective=  NSLocalizedString(@"ALMOST INEXISTANT", nil);
+    NSString* adjective;
+    if ([gini intValue]==0 ) {
+        adjective= NSLocalizedString(@"INEXISTANT", nil);
+    }else if ([gini intValue]<10 ) {
+        adjective=  NSLocalizedString(@"ALMOST INEXISTANT", nil);
+    }else
+        if ([gini intValue]<20 ) {
+            adjective=  NSLocalizedString(@"VERY LOW", nil);
         }else
-            if ([gini intValue]<20 ) {
-                adjective=  NSLocalizedString(@"VERY LOW", nil);
+            if ([gini intValue]<30 ) {
+                adjective=  NSLocalizedString(@"LOW", nil);
             }else
-                if ([gini intValue]<30 ) {
-                    adjective=  NSLocalizedString(@"LOW", nil);
+                if ([gini intValue]<40 ) {
+                    adjective=  NSLocalizedString(@"MEDIUM", nil);
                 }else
-                    if ([gini intValue]<40 ) {
-                        adjective=  NSLocalizedString(@"MEDIUM", nil);
+                    if ([gini intValue]<50 ) {
+                        adjective=  NSLocalizedString(@"MEDIUM HIGH", nil);
                     }else
-                        if ([gini intValue]<50 ) {
-                            adjective=  NSLocalizedString(@"MEDIUM HIGH", nil);
+                        if ([gini intValue]<60 ) {
+                            adjective=  NSLocalizedString(@"HIGH", nil);
                         }else
-                            if ([gini intValue]<60 ) {
-                                adjective=  NSLocalizedString(@"HIGH", nil);
+                            if ([gini intValue]<70 ) {
+                                adjective=  NSLocalizedString(@"VERY HIGH", nil);
                             }else
-                                if ([gini intValue]<70 ) {
-                                    adjective=  NSLocalizedString(@"VERY HIGH", nil);
+                                if ([gini intValue]<80 ) {
+                                    adjective=  NSLocalizedString(@"VERY VERY HIGH", nil);
                                 }else
-                                    if ([gini intValue]<80 ) {
-                                        adjective=  NSLocalizedString(@"VERY VERY HIGH", nil);
+                                    if ([gini intValue]<90 ) {
+                                        adjective=  NSLocalizedString(@"EXTREME", nil);
                                     }else
-                                        if ([gini intValue]<90 ) {
-                                            adjective=  NSLocalizedString(@"EXTREME", nil);
-                                        }else
-                                            if ([gini intValue]<100 ) {
-                                                adjective=  NSLocalizedString(@"ALMOST MAXIMAL", nil);
-                                            }else{
-                                                adjective=  NSLocalizedString(@"MAXIMAL", nil);
-                                            }
-        NSString* prePhrase=[NSString stringWithFormat:  NSLocalizedString(@"YOU_INEQUALITY", nil)];
-        return [NSString stringWithFormat:@"%@ %@", prePhrase, adjective];
+                                        if ([gini intValue]<100 ) {
+                                            adjective=  NSLocalizedString(@"ALMOST MAXIMAL", nil);
+                                        }else{
+                                            adjective=  NSLocalizedString(@"MAXIMAL", nil);
+                                        }
+    NSString* prePhrase=[NSString stringWithFormat:  NSLocalizedString(@"YOU_INEQUALITY", nil)];
+    return [NSString stringWithFormat:@"%@ %@", prePhrase, adjective];
 }
 
 

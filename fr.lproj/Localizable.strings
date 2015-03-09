@@ -22,11 +22,11 @@
 
 "CHECKOUT_BUTTON" = "PAYER";
 
-"PICKER_NO_ONE" = "POUR L'INSTANT PERSONNE N'EST PRET A PAYER";
+"PICKER_NO_ONE" = "POUR L’INSTANT PERSONNE N’EST PRET A PAYER";
 
 "PICKER_ONE" = "UNE PERSONNE PAYE TOUT?";
 
-"PICKER_MANY" = "CAMARADES SE PARTAGENT L'ADDITION";
+"PICKER_MANY" = "CAMARADES SE PARTAGENT L’ADDITION";
 
 "INCOME_FIELD_PLACEHOLDER" = "REVENU";
 
@@ -47,9 +47,9 @@
 
 // CHECKOUT SCREEN
 
-"CHECKOUT_TITLE" = "L'ADDITION";
+"CHECKOUT_TITLE" = "L’ADDITION";
 
-"CHECK_FIELD_PLACEHOLDER" = "ENTRER L'ADDITION";
+"CHECK_FIELD_PLACEHOLDER" = "ENTRER L’ADDITION";
 
 "BACK_BUTTON" = "RETOUR";
 
@@ -77,27 +77,34 @@
 
 "WHAT" = "QUOI";
 
-"INFO_WHAT" = "PARTAGER L'ADDITION SELON LE REVENU";
+"INFO_WHAT" = "PARTAGER L’ADDITION SELON LE REVENU";
 
+"INSTRUCTIONS"="Partager l’addition selon le revenu \n1) Ajouter des gens \n2) Entrer le montant à payer \n3) Dévoiler qui paie combien \n4) Voir la distribution des revenus \n5) Discuter des inégalités";
 
 //"INFO_HOW" = " 1 - Appuyer sur 'AJOUTER CAMARADE' \n 2 - Ajouter sa photo et son revenu \n 3 - Appuyer sur 'AJOUTER' \n Quand tous ont effectué les étapes 1 à 3 \n 4 - Entrer le montant de l'addition \n 5 - Appuyer sur 'REVELER' \n 6 - Voir ce que chacun doit payer";
 
-"INFO_HOW" = "DINER ROUGE brings income inequality to the table by providing a provocative way to split the bill at the restaurant, namely according the income of each person. Furthermore, DINER ROUGE provides information about the distribution of income around the table and allows to compare it to different countries around the world. Enjoy!";
+"INFO_HOW" = "DINER ROUGE amène les inégalité de revenu autour de la table en offrant une manière insolite de partager l’addition au restaurant; selon le revenu de chacun. DINER ROUGE permet aussi de consulter les inégalités autour de la table et de les comparer avec les inégalités à travers le monde. Amusez-vous!";
 
-"INFO_WHO" = "CONCEPTE: S. Bendahan \nUX DESIGN & CODE: A. Holzer \nDESIGN: A76, G. Vulliens, B. Syfert \nNOM: J. Salom \nCODE: B. Fritscher, U. Rosselet \nMERCI: A. Métrailler,\nT. Boillat, F. Vessaz, F. Andreae";
+"INFO_WHO" = "CONCEPTE: S. Bendahan \nUX DESIGN & CODE: A. Holzer \nDESIGN: A76, G. Vulliens, B. Syfert \nNOM: J. Salom \nCODE: B. Fritscher, U. Rosselet \nMERCI: A. Métrailler, T. Boillat, F. Vessaz, \nF. Andreae";
 
-"INFO_GINI" = "Le coefficient de GINI est une mesure d'inégalité variant entre 0 (égalité) et 100 (inégalité maximale).";
+"INFO_GINI" = "Le coefficient de GINI est une mesure dinégalité variant entre 0 (égalité) et 100 (inégalité maximale). Un score de %@ implique qu’%@.";
 
-"COUNTRY" = "  PAYS  ";
+
+"COUNTRY" = "PAYS";
 
 "WEALTH" = "FORTUNE";
 
 "INCOME" = "REVENU";
-"INEQUALITY" = "INEGALITE";
+"INEQUALITY" = "INÉGALITÉ";
+
+//"The richest 20%"="Les 20% les plus riches";
+//"The richest 10%"="Les 10% les plus riches";
+//"The richest 5%"="Les 5% les plus riches";
+//"The 1%"="Le top 1%";
 
 
-
-
+"FRIEND" = "AMI";
+"COMRADE" = "CAMARADE";
 
 
 "WEALTH_INFO"="La barre de distribution de la fortune montre combien de la fortune totale est possedée par les plus riches. Ici les %@%% les plus riches possèdent %@%% de la fortune totale du pays.";
@@ -106,8 +113,11 @@
 
 "Your table" = "Votre tablée";
 
-"EXPLANATION" = "Pays classés par index GINI de 0 (pas d'inégalité) à 100 (inégalité maximale)";
+"EXPLANATION" = "Pays classés par index GINI de 0 (pas d’inégalité) à 100 (inégalité maximale)";
+"SEE COUNTRIES" = "VOIR LES PAYS";
 
+"SEE INEQUALITY"= "VOIR NIVEAU D’INÉGALITÉ";
+"DONE"="TERMINÉ";
 "Equal Country" = "Egalistan";
 "INEXISTANT"="INEXISTANTE";
 "ALMOST INEXISTANT"="QUASI INEXISTANTE";
@@ -116,22 +126,22 @@
 "MEDIUM"="MOYENNE";
 "MEDIUM HIGH"="ASSEZ FORTE";
 "HIGH"="FORTE";
-"VERY HIGH"="TRES FORTE";
+"VERY HIGH"="TRÈS FORTE";
 "VERY VERY HIGH"="TRES TRES FORTE";
 "EXTREME"="EXTREME";
 "ALMOST MAXIMAL"="QUASI MAXIMALE";
 "MAXIMAL"="MAXIMALE";
-"HERE_INEQUALITY"="ICI L'INEGALITE DE %@ EST";
-"YOU_INEQUALITY"="L'INEGALITE EST";
+"HERE_INEQUALITY"="ICI L’INÉGALITÉ DE %@ EST";
+"YOU_INEQUALITY"="L’INÉGALITÉ EST";
 "RESET"="ANNULER";
 "REVEAL_BUTTON"="DEVOILER";
 "HIDE"="CACHER";
 
 
-"COUNTRIES_INEQUALITY"="Pays où l'inégalité est %@";
+"COUNTRIES_INEQUALITY"="Pays où l’inégalité est %@";
 
 "TABLE_INFO"="La barre de distribution du revenu montre combien du revenu total chaque personne autour de la table possède (une couleur par personne). La personne la plus riche possède %@%% du revenu total de la table.";
-"TABLE_ONE_PERSON_ONLY_INFO"="La barre de distribution du revenu montre combien du revenu total chaque personne autour de la table possède (une couleur par personne). C'est évidemment plus intéressant avec plus d'une personne :)";
+"TABLE_ONE_PERSON_ONLY_INFO"="La barre de distribution du revenu montre combien du revenu total chaque personne autour de la table possède (une couleur par personne). C’est évidemment plus intéressant avec plus d’une personne :)";
 
 "DISTRIBUTION_LABEL" = "TOTAL %@ EN %@";
 

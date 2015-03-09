@@ -13,6 +13,9 @@
 
 "PICKER_TITLE" = "FRIEND";
 
+"FRIEND" = "FRIEND";
+"COMRADE" = "COMRADE";
+
 "NEW_BUTTON" = "RESTART";
 
 "INCOME_FIELD_PLACEHOLDER" = "INCOME";
@@ -88,15 +91,18 @@
 
 "INEQUALITY" = "INEQUALITY";
 
+"INSTRUCTIONS"="Split the bill by income \n1) Add people \n2) Enter the amount to pay \n3) See how much each must pay \n4) View  income distribution \n5) Discuss inequality";
+
 "STATS" = "STATS";
 
 "WEALTH_INFO"="The distribution of wealth graph shows how much of the total wealth the top possesses. Here the richest %@%% possess %@%% of the total wealth.";
 
 "INCOME_INFO"="The distribution graph above shows how much of all the income that each fifth of the population possess. Here the richest 20%% earn %@%%, whereas the poorest 20%% earn %@%% of the total income.";
 
-"TABLE_INFO"="The distribution graph above shows how much of all the income that each of the people around the table possess. The richest friend earns %@%% of the total income.";
+"TABLE_INFO"="The distribution graph above shows how much of all the income that each of the people around the table possess. The richest person earns %@%% of the total income.";
 "TABLE_ONE_PERSON_ONLY_INFO"="The distribution graph above shows how much of all the income that each of the people around the table possess. Of course this is more interesting with more than just one person :)";
 
+"SEE COUNTRIES"="SEE COUNTRIES";
 
 "Your table" = "Your table";
 "COUNTRIES_INEQUALITY"="Countries with %@ inequality";

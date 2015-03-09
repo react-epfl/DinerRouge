@@ -44,7 +44,7 @@
     
     // BACK BUTTON START
     UIButton *newBackButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [newBackButton setImage:[UIImage imageNamed: @"a_bouton_back.png"] forState:UIControlStateNormal];
+    [newBackButton setImage:[[BillManager sharedBillManager]backBoutonImage] forState:UIControlStateNormal];
     [newBackButton addTarget:self.navigationController  action:@selector(popViewControllerAnimated:) forControlEvents:UIControlEventTouchUpInside];
     newBackButton.frame = CGRectMake(5, 5, 30, 30);
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:newBackButton];
@@ -54,11 +54,13 @@
     instructionView.textColor=[[BillManager sharedBillManager] secondarycolor];
     creditView.textColor=[[BillManager sharedBillManager] secondarycolor];
     
-    [doneButton setTitle:NSLocalizedString(@"STATS", nil) forState:UIControlStateNormal];
-    [self.instructionView setFont:[UIFont fontWithName:[[BillManager sharedBillManager] fontNameBold] size:[[BillManager sharedBillManager] smallFont]]];
+    [doneButton setTitle:NSLocalizedString(@"SEE COUNTRIES", nil) forState:UIControlStateNormal];
+    [self.instructionView setFont:[UIFont fontWithName:[[BillManager sharedBillManager] fontNameBold] size:[[BillManager sharedBillManager] mediumFont]]];
     [self.creditView setFont:[UIFont fontWithName:[[BillManager sharedBillManager] fontNameBold] size:[[BillManager sharedBillManager] smallFont]]];
     doneButton.backgroundColor=[[BillManager sharedBillManager] buttoncolor] ;
     [doneButton  setTitleColor:[[BillManager sharedBillManager] buttonTextColor] forState:UIControlStateNormal];
+    
+     [self.doneButton.titleLabel setFont:[UIFont fontWithName:[[BillManager sharedBillManager] fontNameBold] size:[[BillManager sharedBillManager] mediumFont]]];
     
 	//[doneButton setImage:[UIImage imageNamed:@"bouton_done_2.png" ] forState:UIControlStateHighlighted];
 }

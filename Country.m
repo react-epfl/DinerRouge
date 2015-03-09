@@ -42,35 +42,35 @@
     NSString* adjective;
     if ([gini intValue]==0 ) {
         adjective= NSLocalizedString(@"INEXISTANT", nil);
-    }else if ([gini intValue]<10 ) {
+    }else if ([gini intValue]<=10 ) {
         adjective=  NSLocalizedString(@"ALMOST INEXISTANT", nil);
     }else
-    if ([gini intValue]<20 ) {
+    if ([gini intValue]<=20 ) {
         adjective=  NSLocalizedString(@"VERY LOW", nil);
     }else
-    if ([gini intValue]<30 ) {
+    if ([gini intValue]<=30 ) {
         adjective=  NSLocalizedString(@"LOW", nil);
     }else
-    if ([gini intValue]<40 ) {
+    if ([gini intValue]<=40 ) {
         adjective=  NSLocalizedString(@"MEDIUM", nil);
     }else
-    if ([gini intValue]<50 ) {
+    if ([gini intValue]<=50 ) {
         adjective=  NSLocalizedString(@"MEDIUM HIGH", nil);
     }else
-    if ([gini intValue]<60 ) {
+    if ([gini intValue]<=60 ) {
         adjective=  NSLocalizedString(@"HIGH", nil);
     }else
-    if ([gini intValue]<70 ) {
+    if ([gini intValue]<=70 ) {
         adjective=  NSLocalizedString(@"VERY HIGH", nil);
     }else
-    if ([gini intValue]<80 ) {
-        adjective=  NSLocalizedString(@"VERY VERY HIGH", nil);
-    }else
-    if ([gini intValue]<90 ) {
+    if ([gini intValue]<=80 ) {
         adjective=  NSLocalizedString(@"EXTREME", nil);
     }else
-    if ([gini intValue]<100 ) {
+    if ([gini intValue]<=90 ) {
         adjective=  NSLocalizedString(@"ALMOST MAXIMAL", nil);
+    }else
+    if ([gini intValue]<=100 ) {
+        adjective=  NSLocalizedString(@"MAXIMAL", nil);
     }else{
     adjective=  NSLocalizedString(@"MAXIMAL", nil);
     }
@@ -107,13 +107,13 @@
                                 adjective=  NSLocalizedString(@"VERY HIGH", nil);
                             }else
                                 if ([gini intValue]<=80 ) {
-                                    adjective=  NSLocalizedString(@"VERY VERY HIGH", nil);
+                                    adjective=  NSLocalizedString(@"EXTREME", nil);
                                 }else
                                     if ([gini intValue]<=90 ) {
-                                        adjective=  NSLocalizedString(@"EXTREME", nil);
+                                        adjective=  NSLocalizedString(@"ALMOST MAXIMAL", nil);
                                     }else
-                                        if ([gini intValue]<100 ) {
-                                            adjective=  NSLocalizedString(@"ALMOST MAXIMAL", nil);
+                                        if ([gini intValue]<=100 ) {
+                                            adjective=  NSLocalizedString(@"MAXIMAL", nil);
                                         }else{
                                             adjective=  NSLocalizedString(@"MAXIMAL", nil);
                                         }
@@ -126,35 +126,35 @@
 +(NSString*)inequalityWithGini:(NSNumber*)aGini{
     if ([aGini intValue]==0 ) {
         return NSLocalizedString(@"INEXISTANT", nil);
-    }else if ([aGini intValue]<10 ) {
+    }else if ([aGini intValue]<=10 ) {
         return  NSLocalizedString(@"ALMOST INEXISTANT", nil);
     }else
-        if ([aGini intValue]<20 ) {
+        if ([aGini intValue]<=20 ) {
            return NSLocalizedString(@"VERY LOW", nil);
         }else
-            if ([aGini intValue]<30 ) {
+            if ([aGini intValue]<=30 ) {
                 return  NSLocalizedString(@"LOW", nil);
             }else
-                if ([aGini intValue]<40 ) {
+                if ([aGini intValue]<=40 ) {
                     return NSLocalizedString(@"MEDIUM", nil);
                 }else
-                    if ([aGini intValue]<50 ) {
+                    if ([aGini intValue]<=50 ) {
                         return NSLocalizedString(@"MEDIUM HIGH", nil);
                     }else
-                        if ([aGini intValue]<60 ) {
+                        if ([aGini intValue]<=60 ) {
                             return NSLocalizedString(@"HIGH", nil);
                         }else
-                            if ([aGini intValue]<70 ) {
+                            if ([aGini intValue]<=70 ) {
                                 return NSLocalizedString(@"VERY HIGH", nil);
                             }else
-                                if ([aGini intValue]<80 ) {
-                                    return  NSLocalizedString(@"VERY VERY HIGH", nil);
+                                if ([aGini intValue]<=80 ) {
+                                    return  NSLocalizedString(@"EXTREME", nil);
                                 }else
-                                    if ([aGini intValue]<90 ) {
-                                        return  NSLocalizedString(@"EXTREME", nil);
+                                    if ([aGini intValue]<=90 ) {
+                                        return  NSLocalizedString(@"ALMOST MAXIMAL", nil);
                                     }else
-                                        if ([aGini intValue]<100 ) {
-                                           return  NSLocalizedString(@"ALMOST MAXIMAL", nil);
+                                        if ([aGini intValue]<=100 ) {
+                                           return  NSLocalizedString(@"MAXIMAL", nil);
                                         }else{
                                            return  NSLocalizedString(@"MAXIMAL", nil);
                                         }

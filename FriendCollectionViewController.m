@@ -35,7 +35,7 @@
 @implementation FriendCollectionViewController
 
 
-@synthesize totalAmountTextField,inputView,addFriendDoneButton,keyboardHeight,backButton,customLabel,keyboardIsVisible,STEP,amountDoneButton, amountLabel, amountTextField, statButton, tutorialTextView ;
+@synthesize totalAmountTextField,inputView,addFriendDoneButton,keyboardHeight,backButton,customLabel,keyboardIsVisible,STEP,amountDoneButton, amountLabel, amountTextField, statButton, tutorialTextView,infoButton ;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -96,12 +96,13 @@
 
     
     // TUTORIAL TEXT VIEW
-    self.tutorialTextView = [[UITextView alloc] initWithFrame:CGRectMake(10,250,self.view.frame.size.width,500)];
+    self.tutorialTextView = [[UITextView alloc] initWithFrame:CGRectMake(10,self.view.frame.size.width/2,self.view.frame.size.width,500)];
     self.tutorialTextView.backgroundColor = [[BillManager sharedBillManager] maincolor];
     [self.tutorialTextView setTextColor: [[BillManager sharedBillManager] secondarycolor]];
     [self.tutorialTextView setFont:[UIFont fontWithName:[[BillManager sharedBillManager] fontNameBold] size:[[BillManager sharedBillManager] mediumFont]]];
     [self.tutorialTextView setEditable:NO];
-    self.tutorialTextView.text=@"SPLIT THE BILL BY INCOME \n1) ADD FRIENDS \n2) ENTER AMOUNT TO PAY \n3) REVEAL SPLIT \n4) SEE STATISTICS \n5) DISCUSS INEQUALITY";
+    self.tutorialTextView.text=NSLocalizedString(@"INSTRUCTIONS", nil);
+    
     [self.view addSubview:tutorialTextView];
     
     // STATISTICS BUTTON
@@ -124,14 +125,18 @@
     [self.addFriendDoneButton.titleLabel setFont:[UIFont fontWithName:[[BillManager sharedBillManager] fontNameBold] size:[[BillManager sharedBillManager] mediumFont]]];
     [self.addFriendDoneButton addTarget:self action:@selector(addFriendDone:) forControlEvents:UIControlEventTouchUpInside];
     [self.addFriendDoneButton setTitle:NSLocalizedString(@"DONE", nil) forState:UIControlStateNormal];
+    
     self.addFriendDoneButton.frame = CGRectMake(SIDE_PADDING, INPUT_TOP_PADDING , self.view.frame.size.width-(2*SIDE_PADDING) , INPUT_HEIGHT);
     self.addFriendDoneButton.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
     [self.inputView addSubview:addFriendDoneButton];
     
+     [self.infoButton setImage:[[BillManager sharedBillManager]infoImage]];
+    [self.infoButton setTintColor:[[BillManager sharedBillManager]secondarycolor]];
     //AMOUNT FIELD
     self.amountTextField = [[UITextField alloc] init];
     self.amountTextField.backgroundColor=[UIColor whiteColor];
     self.amountTextField.frame= CGRectMake(SIDE_PADDING, INPUT_TOP_PADDING , self.view.frame.size.width-(3*SIDE_PADDING+DONE_BUTTON_WIDTH) , INPUT_HEIGHT);
+    self.amountTextField.adjustsFontSizeToFitWidth=YES;
     [self.amountTextField setFont:[UIFont fontWithName:[[BillManager sharedBillManager] fontNameBold] size:[[BillManager sharedBillManager] mediumFont]]];
     self.amountTextField.placeholder=NSLocalizedString(@"CHECK_FIELD_PLACEHOLDER", nil);
     [self.amountTextField setClearButtonMode:UITextFieldViewModeAlways];
@@ -149,12 +154,13 @@
     [self.amountDoneButton addTarget:self action:@selector(okPressed:) forControlEvents:UIControlEventTouchUpInside];
     [self.amountDoneButton setTitle:NSLocalizedString(@"DONE", nil) forState:UIControlStateNormal];
     self.amountDoneButton.frame = CGRectMake(self.amountTextField.frame.size.width+ 2*SIDE_PADDING, INPUT_TOP_PADDING , DONE_BUTTON_WIDTH , INPUT_HEIGHT);
+    self.amountDoneButton.titleLabel.adjustsFontSizeToFitWidth=YES;
     self.amountDoneButton.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
     [self.inputView addSubview:amountDoneButton];
     
     // BACK BUTTON START
     self.backButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [backButton setImage:[UIImage imageNamed: @"a_bouton_back.png"] forState:UIControlStateNormal];
+    [backButton setImage:[[BillManager sharedBillManager]refreshImage] forState:UIControlStateNormal];
     [backButton addTarget:self action:@selector(backToPreviousStep:) forControlEvents:UIControlEventTouchUpInside];
     backButton.frame = CGRectMake(5, 5, 30, 30);
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
@@ -297,8 +303,10 @@
         cell.addComradeBottom.hidden=NO;
         cell.addComradeBottom.textColor=[[BillManager sharedBillManager] buttonTextColor];
         cell.addComradeTop.textColor=[[BillManager sharedBillManager] buttonTextColor];
+        [cell.addComradeTop setFont:[UIFont fontWithName:[[BillManager sharedBillManager] fontNameBold] size:[[BillManager sharedBillManager] mediumFont]]];
+        [cell.addComradeBottom setFont:[UIFont fontWithName:[[BillManager sharedBillManager] fontNameBold] size:[[BillManager sharedBillManager] mediumFont]]];
         cell.addComradeTop.text=NSLocalizedString(@"ADD_COMRADE_LABEL_TOP", nil);
-        cell.addComradeBottom.text=NSLocalizedString(@"ADD_COMRADE_LABEL_BOTTOM", nil);
+        cell.addComradeBottom.text=[[BillManager sharedBillManager ]friendOrComrade];
         
     }else{
         cell.resetButton.hidden=YES;
@@ -310,10 +318,14 @@
         
         Friend  *friend = [[[BillManager sharedBillManager] friends] objectAtIndex:(indexPath.section*2 + indexPath.row)];
         [cell setFriend:friend];
+        [cell.incomelabel setFont:[UIFont fontWithName:[[BillManager sharedBillManager] fontNameBold] size:[[BillManager sharedBillManager] smallFont]]];
+        [cell.amountDuelabel setFont:[UIFont fontWithName:[[BillManager sharedBillManager] fontNameBold] size:[[BillManager sharedBillManager] smallFont]]];
+
         if([friend.income doubleValue]<100000000){
             NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
             [formatter setNumberStyle:NSNumberFormatterDecimalStyle];
             NSString *friendIncome = [formatter stringFromNumber: friend.income];
+
             cell.incomelabel.text = [NSString stringWithFormat:@"%@ %@",NSLocalizedString(@"EARNS", nil), friendIncome];
         }else{
             cell.incomelabel.text = [NSString stringWithFormat:@"%@ %@",NSLocalizedString(@"EARNS", nil), NSLocalizedString(@"EARNS_TOO_MUCH", nil)];

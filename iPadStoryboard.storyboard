@@ -13,21 +13,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="960"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="TiA-h3-45L">
-                                <rect key="frame" x="100" y="873" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Button" image="logo50.png">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="goToWebSite" destination="6To-bj-AkI" eventType="touchUpInside" id="RKd-uT-N9o"/>
-                                </connections>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="0YT-Xc-Egv">
                                 <rect key="frame" x="100" y="50" width="568" height="240"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -43,7 +28,7 @@ Quand tous ont effectué les étapes 1 à 3:
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="cW4-3a-7iP">
-                                <rect key="frame" x="588" y="873" width="80" height="30"/>
+                                <rect key="frame" x="95" y="873" width="573" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
@@ -220,6 +205,7 @@ Quand tous ont effectué les étapes 1 à 3:
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="infoButton" destination="GAI-aS-gPq" id="ExX-DZ-frZ"/>
                         <segue destination="3Sd-t2-fwa" kind="push" identifier="InequalitySegue" id="Wsi-G5-DvO"/>
                     </connections>
                 </collectionViewController>
@@ -354,6 +340,7 @@ Quand tous ont effectué les étapes 1 à 3:
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="cameraButton" destination="dtR-56-0HW" id="E56-eG-L04"/>
                         <outlet property="deleteButton" destination="XYd-rE-so2" id="jcL-nH-Q5S"/>
                         <outlet property="imageButton" destination="DKX-B8-fzU" id="8Qi-C2-ohV"/>
                         <outlet property="imageScrollView" destination="frs-4e-uuX" id="jlu-9i-xHa"/>
@@ -619,7 +606,7 @@ Quand tous ont effectué les étapes 1 à 3:
                     <navigationItem key="navigationItem" id="odw-5U-hgL">
                         <nil key="title"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="vMB-cU-O5s">
-                            <rect key="frame" x="311" y="8" width="146" height="29"/>
+                            <rect key="frame" x="311" y="7.5" width="146" height="29"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="YOU"/>
@@ -868,17 +855,17 @@ Quand tous ont effectué les étapes 1 à 3:
                                 <rect key="frame" x="177" y="100" width="182" height="223"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="GINI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qvm-E7-pKm">
-                                        <rect key="frame" x="0.0" y="0.0" width="182" height="45"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
-                                        <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WLn-Rb-h1C">
                                         <rect key="frame" x="0.0" y="16" width="182" height="207"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="120"/>
+                                        <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="GINI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qvm-E7-pKm">
+                                        <rect key="frame" x="0.0" y="0.0" width="182" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
                                         <color key="textColor" red="0.86274516580000005" green="0.82352948189999997" blue="0.69803923369999998" alpha="1" colorSpace="deviceRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -1166,7 +1153,6 @@ Quand tous ont effectué les étapes 1 à 3:
         <image name="a_bouton_info.png" width="30" height="30"/>
         <image name="cameraButton.png" width="50" height="30"/>
         <image name="filter.png" width="100" height="140"/>
-        <image name="logo50.png" width="80" height="80"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -1174,7 +1160,7 @@ Quand tous ont effectué les étapes 1 à 3:
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="CPY-Eb-HGm"/>
         <segue reference="osi-EM-wiA"/>
+        <segue reference="9qT-42-DBO"/>
     </inferredMetricsTieBreakers>
 </document>

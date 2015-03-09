@@ -25,6 +25,7 @@
 
 @property(strong, nonatomic) IBOutlet UITextField * totalAmountTextField;
 @property(strong, nonatomic) IBOutlet UIButton * checkoutButton;
+@property(strong, nonatomic) IBOutlet UIBarButtonItem * infoButton;
 
 @property(strong, nonatomic)  UIView * inputView;
 

@@ -42,6 +42,7 @@
 @property (nonatomic,weak) IBOutlet UIToolbar *toolbar;
 @property (strong, nonatomic) IBOutlet UILabel *numberOfFriendslabel;
 @property (strong, nonatomic) IBOutlet UILabel *yourPhotoLabel;
+@property(strong, nonatomic) IBOutlet UIButton * cameraButton;
 
 @property (nonatomic,weak) IBOutlet UIView *swipeView;
 

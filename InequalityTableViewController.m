@@ -41,7 +41,7 @@
     
     // BACK BUTTON START
     UIButton *newBackButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [newBackButton setImage:[UIImage imageNamed: @"a_bouton_back.png"] forState:UIControlStateNormal];
+    [newBackButton setImage:[[BillManager sharedBillManager]backBoutonImage] forState:UIControlStateNormal];
     [newBackButton addTarget:self.navigationController action:@selector(popViewControllerAnimated:) forControlEvents:UIControlEventTouchUpInside];
     newBackButton.frame = CGRectMake(5, 5, 30, 30);
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:newBackButton];
@@ -53,7 +53,7 @@
     [self.segmentedControl setSelectedSegmentIndex:WEALTH];// a small routine to avoid a weird color bug
     [self.segmentedControl setSelectedSegmentIndex:INCOME];
     NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:
-                                [UIFont fontWithName:[[BillManager sharedBillManager] fontNameBold] size:[[BillManager sharedBillManager] mediumFont]], NSFontAttributeName,
+                                [UIFont fontWithName:[[BillManager sharedBillManager] fontNameBold] size:19], NSFontAttributeName,
                                 [[BillManager sharedBillManager] secondarycolor], NSForegroundColorAttributeName, nil  ];
     [self.segmentedControl setTitleTextAttributes:attributes forState:UIControlStateNormal];
     NSDictionary *highlightedAttributes = [NSDictionary dictionaryWithObjectsAndKeys:
@@ -107,6 +107,11 @@
      self.explanationLine.font = [UIFont fontWithName:[[BillManager sharedBillManager] fontNameBold] size:14];
     self.explanationLine.textColor = [[BillManager sharedBillManager] secondarycolor];
     self.explanationLine.text=NSLocalizedString(@"EXPLANATION", nil);
+    
+ 
+    
+    
+    
 }
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
@@ -216,6 +221,10 @@
     UILabel *giniLabel = (UILabel *)[cell viewWithTag:3];
     giniLabel.text= [NSString stringWithFormat:@"%.f", [country.gini floatValue] ] ;
     giniLabel.textColor=[[BillManager sharedBillManager] buttonTextColor];
+    
+    [numberLabel setFont:[UIFont fontWithName:[[BillManager sharedBillManager] fontNameBold] size:[[BillManager sharedBillManager] smallFont]]];
+    [nameLabel setFont:[UIFont fontWithName:[[BillManager sharedBillManager] fontNameBold] size:[[BillManager sharedBillManager] smallFont]]];
+     [giniLabel setFont:[UIFont fontWithName:[[BillManager sharedBillManager] fontNameBold] size:[[BillManager sharedBillManager] smallFont]]];
     
     cell.backgroundColor=[[BillManager sharedBillManager] buttoncolor];
     

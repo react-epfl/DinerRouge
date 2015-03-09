@@ -35,19 +35,28 @@
     UILabel *customLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 120.0f, 44.0f)];
     customLabel.backgroundColor= [UIColor clearColor];
     customLabel.textAlignment = NSTextAlignmentCenter;
-    [customLabel setFont:[UIFont fontWithName:@"AvenirNext-Bold" size:22]];
     customLabel.textColor =  [[BillManager sharedBillManager] secondarycolor];
     navigationItem.titleView = customLabel;
+    [customLabel setFont:[UIFont fontWithName:[[BillManager sharedBillManager] fontNameBold] size:[[BillManager sharedBillManager] largeFont]]];
     customLabel.text=[self.country.name uppercaseString];
     self.giniLabel.text=[NSString stringWithFormat:@"%.f", [self.country.gini floatValue] ];
     self.giniLabel.textColor=[[BillManager sharedBillManager] buttonTextColor];
     self.giniLabel.backgroundColor=[[BillManager sharedBillManager] buttoncolor];
     // BACK BUTTON START
     UIButton *newBackButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [newBackButton setImage:[UIImage imageNamed: @"a_bouton_back.png"] forState:UIControlStateNormal];
+    [newBackButton setImage: [[BillManager sharedBillManager]backBoutonImage] forState:UIControlStateNormal];
     [newBackButton addTarget:self.navigationController action:@selector(popViewControllerAnimated:) forControlEvents:UIControlEventTouchUpInside];
     newBackButton.frame = CGRectMake(5, 5, 30, 30);
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:newBackButton];
+    
+    
+    [self.giniLabel setFont:[UIFont fontWithName:[[BillManager sharedBillManager] fontNameBold] size: 65]];
+    [self.whatLabel setFont:[UIFont fontWithName:[[BillManager sharedBillManager] fontNameBold] size:[[BillManager sharedBillManager] largeFont]]];
+    [self.giniInfo setFont:[UIFont fontWithName:[[BillManager sharedBillManager] fontNameBold] size:[[BillManager sharedBillManager] smallFont]]];
+    [self.distributionLabel setFont:[UIFont fontWithName:[[BillManager sharedBillManager] fontNameBold] size:[[BillManager sharedBillManager] smallFont]]];
+    [self.inequalityLabel setFont:[UIFont fontWithName:[[BillManager sharedBillManager] fontNameBold] size:[[BillManager sharedBillManager] smallFont]]];
+    [self.incomeInfo setFont:[UIFont fontWithName:[[BillManager sharedBillManager] fontNameBold] size:[[BillManager sharedBillManager] smallFont]]];
+    [self.wealthInfo  setFont:[UIFont fontWithName:[[BillManager sharedBillManager] fontNameBold] size:[[BillManager sharedBillManager] smallFont]]];
     
     //check if the q5 exists
     NSString* pourcentString=@"1";

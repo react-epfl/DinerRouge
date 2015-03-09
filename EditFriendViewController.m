@@ -25,7 +25,7 @@
 
 @implementation EditFriendViewController
 
-@synthesize imageView,toolbar, incomeTextField, friend, saveButton, deleteButton,  imageButton, numberOfFriendslabel, yourPhotoLabel, swipeView, indexOfAvatarCurrentlyDisplayed,imageScrollView,isEditingExistingFriend ;
+@synthesize imageView,toolbar, incomeTextField, friend, saveButton, deleteButton,  imageButton, numberOfFriendslabel, yourPhotoLabel, swipeView, indexOfAvatarCurrentlyDisplayed,imageScrollView,isEditingExistingFriend ,cameraButton;
 
 - (void)didReceiveMemoryWarning
 {
@@ -61,6 +61,7 @@
     //[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed: @"background_nav.png"] forBarMetrics:UIBarMetricsDefault];
     
     
+    [self.cameraButton setImage:[[BillManager sharedBillManager]cameraImage] forState:UIControlStateNormal];
     
     //setup nav bar title
     UINavigationItem *navigationItem = [super navigationItem];
@@ -68,7 +69,7 @@
     customLabel.backgroundColor= [UIColor clearColor];
     customLabel.textAlignment = NSTextAlignmentCenter;
     [customLabel setFont:[UIFont fontWithName:[[BillManager sharedBillManager] fontNameBold] size:[[BillManager sharedBillManager] largeFont]]];
-    customLabel.text = NSLocalizedString(@"PICKER_TITLE", nil);
+    customLabel.text = [[BillManager sharedBillManager] friendOrComrade];
     customLabel.textColor =  [[BillManager sharedBillManager] secondarycolor];
     navigationItem.titleView = customLabel;
     
@@ -87,14 +88,18 @@
     }else{
         [nf setNumberStyle:NSNumberFormatterNoStyle];
     }
+    [incomeTextField setFont:[UIFont fontWithName:[[BillManager sharedBillManager] fontNameBold] size:[[BillManager sharedBillManager] mediumFont]]];
     [incomeTextField setText:[nf stringFromNumber:friend.income]];
     saveButton.titleLabel.numberOfLines = 1;
     saveButton.backgroundColor=[[BillManager sharedBillManager] buttoncolor] ;
     saveButton.titleLabel.textColor=[[BillManager sharedBillManager] buttonTextColor];
     [saveButton setTitleColor:[[BillManager sharedBillManager] buttonTextColor] forState:UIControlStateNormal];
+    [saveButton.titleLabel setFont:[UIFont fontWithName:[[BillManager sharedBillManager] fontNameBold] size:[[BillManager sharedBillManager] mediumFont]]];
     saveButton.titleLabel.adjustsFontSizeToFitWidth = YES;
     [saveButton setTitle:NSLocalizedString(@"SAVE_BUTTON", nil) forState:UIControlStateNormal];
     deleteButton.titleLabel.numberOfLines = 1;
+    [deleteButton.titleLabel setFont:[UIFont fontWithName:[[BillManager sharedBillManager] fontNameBold] size:[[BillManager sharedBillManager] mediumFont]]];
+
     deleteButton.backgroundColor=[[BillManager sharedBillManager] buttoncolor] ;
     [deleteButton setTitle:NSLocalizedString(@"DELETE_BUTTON", nil) forState:UIControlStateNormal];
     
@@ -113,7 +118,7 @@
     // Back Button
     // BACK BUTTON START
     UIButton *newBackButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [newBackButton setImage:[UIImage imageNamed: @"a_bouton_back.png"] forState:UIControlStateNormal];
+    [newBackButton setImage:[[BillManager sharedBillManager]backBoutonImage] forState:UIControlStateNormal];
     [newBackButton addTarget:self action:@selector(customBack:) forControlEvents:UIControlEventTouchUpInside];
     newBackButton.frame = CGRectMake(5, 5, 30, 30);
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:newBackButton];

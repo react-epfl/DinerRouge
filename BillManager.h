@@ -51,6 +51,13 @@
 @property (nonatomic) int largeFont;
 @property (nonatomic) int mediumFont;
 @property (nonatomic) int smallFont;
+@property (nonatomic) BOOL  styleIsCommunist;
+@property(strong, nonatomic)  UIImage * backBoutonImage;
+@property(strong, nonatomic)  UIImage * refreshImage;
+@property(strong, nonatomic)  UIImage * cameraImage;
+@property(strong, nonatomic)  UIImage * infoImage;
+@property (strong, nonatomic) NSString* friendOrComrade;
+
 
 
 
