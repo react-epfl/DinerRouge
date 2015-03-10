@@ -29,19 +29,21 @@ static BillManager   *sharedBillManager = nil;
             
             
             NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-            if([defaults boolForKey:@"isCommunist"]){
-                sharedBillManager.styleIsCommunist = [defaults boolForKey:@"isCommunist"];
+            if([defaults objectForKey:@"isCommunist"]){
+                NSNumber* styleNumber = [defaults objectForKey:@"isCommunist"];
+                sharedBillManager.styleIsCommunist = [styleNumber boolValue];
             }else {
                 sharedBillManager.styleIsCommunist=NO;
                 int randomNumber = (int)arc4random_uniform(1000) % 2;
                 if (randomNumber==1) {
                     NSLog(@"IS COMMUNIST");
                     sharedBillManager.styleIsCommunist=YES;
-                    [defaults setBool:sharedBillManager.styleIsCommunist forKey:@"isCommunist"];
                 }else{
                     NSLog(@"IS NOT COMMUNIST");
                 }
-                
+                NSNumber* style = [NSNumber numberWithBool:sharedBillManager.styleIsCommunist];
+                [defaults setObject:style forKey:@"isCommunist"];
+                [defaults synchronize];
             }
             
            
@@ -75,7 +77,8 @@ static BillManager   *sharedBillManager = nil;
                 sharedBillManager.buttonTextColor=[UIColor whiteColor];
                 sharedBillManager.secondarycolor=[UIColor whiteColor];
                 sharedBillManager.buttoncolor=[UIColor blackColor];
-                sharedBillManager.avatarImages = [[NSArray alloc] initWithObjects:[UIImage imageNamed:@"Xguest0.png"],[UIImage imageNamed:@"Xguest1.png"],[UIImage imageNamed:@"Xguest2.png"],[UIImage imageNamed:@"Xguest3.png"],[UIImage imageNamed:@"Xguest4.png"],[UIImage imageNamed:@"Xguest5.png"],[UIImage imageNamed:@"Xguest6.png"],nil];
+                
+                sharedBillManager.avatarImages = [[NSArray alloc] initWithObjects:[UIImage imageNamed:@"Wguest0.jpg"],[UIImage imageNamed:@"Wguest1.jpg"],[UIImage imageNamed:@"Wguest2.jpg"],[UIImage imageNamed:@"Wguest3.jpg"],[UIImage imageNamed:@"Wguest4.jpg"],[UIImage imageNamed:@"Wguest5.jpg"],nil];
                 
                 sharedBillManager.refreshImage=[UIImage imageNamed: @"Xrefresh.png"];
                 sharedBillManager.backBoutonImage=[UIImage imageNamed: @"Xa_bouton_back.png"];

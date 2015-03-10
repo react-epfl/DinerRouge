@@ -326,6 +326,8 @@
             [[[GAI sharedInstance] defaultTracker] send:[[GAIDictionaryBuilder createEventWithCategory:@"ui_action"  action:@"button_press" label:@"change_to_wealth-NC" value:nil] build]];
         }
     }else if(selectedSegment == INCOME){
+        currentCountryArray= [incomeCountryArray mutableCopy];
+        
         if ([[BillManager sharedBillManager] styleIsCommunist]) {
             [[[GAI sharedInstance] defaultTracker] send:[[GAIDictionaryBuilder createEventWithCategory:@"ui_action"  action:@"button_press" label:@"change_to_income-C" value:nil] build]];
         }else{
